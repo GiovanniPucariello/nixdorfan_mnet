@@ -1,0 +1,36 @@
+#  properties file for different Connections
+
+#supported db-types : oracle, mysql, access, Postgres
+#
+# Datenbank die verwendet werden soll
+#initdatabase=MySQL
+#initdatabase=Access
+#initdatabase=Oracle
+initdatabase=Postgres
+
+#urlMySQL=jdbc:mysql://virtdranU804:3306/bite
+#initialuser=
+#initialpwd=
+
+#urlAccess=jdbc:odbc:movies_db
+#initialuser=kA
+#initialpwd=kA
+
+#urlOracle=jdbc:oracle:thin:@localhost:1521:oracljj
+#initialuser=
+#initialpwd=
+
+#
+urlPostgres=jdbc:postgresql://main-nixdorfan:5432/bite_ajax_webapp
+initialuser=nixdorfan
+initialpwd=476wcpmmvwx0240juk
+
+
+driverMySQL=com.mysql.jdbc.Driver
+driverAccess=sun.jdbc.odbc.JdbcOdbcDriver
+driverOracle=oracle.jdbc.driver.OracleDriver
+driverPostgres=org.postgresql.Driver
+
+#connection via jndi
+jContext=null
+jDatasource=null

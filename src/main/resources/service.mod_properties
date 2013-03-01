@@ -1,0 +1,44 @@
+#################################################################################################
+# B I T E - F R A M E W O R K
+# nixdorfan, (c) 2011/2012
+# M-net Telekommunikations GmbH
+#
+#
+# D E F A U L T - P R O P E R T I E S
+
+# P r o p e r t i e s   N a m e
+name=service
+
+# D e f a u l t  C o n t r o l l e r
+service.controller=de.bite.framework.service.batch.exporter.controller.ModulServiceImporter
+
+# D e f a u l t  V i e w
+service.view=de.bite.framework.view.impl.DefaultView
+
+#D e f a u l t  S o u r c e
+service.source=de.bite.framework.source.impl.DefaultSource
+
+# D e f a u l t  M o d e l
+service.model=de.bite.framework.model.impl.DefaultModel
+
+# D e f a u l t  D B - C o n n e c t i o n
+service.datenbank=de.bite.framework.utilities.db.impl.DatenbankObj
+
+# D e f a u l t XML-Handler
+service.xmlhandler=de.verbindungsraum.webbuilder.process.WebbuilderParserHandler
+
+# D e f a u l t XML-Parser
+service.xmlparser=org.apache.xerces.parsers.SAXParser
+
+
+# A n d e r e  W e r t e  f u e r  E i n l e s e n
+
+# Programme
+service.directorypath=C:/Temp/gsal/conf
+service.db=C:/Temp/gsal/conf/db
+#service.db.clean=drop table applications,applications_key_value,template_application
+service.db.clean=delete from applications;delete from applications_key_value;delete from template_application
+service.db.sequence.nameid=nextval('s_aid')
+service.db.sequence.nameappid=nextval('s_app_id')
+service.db.sequence.template=nextval('s_t_aid')
+service.db.sequence.keyvalue=nextval('s_akvid')

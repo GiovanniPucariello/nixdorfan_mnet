@@ -1,0 +1,58 @@
+# B I T E - F R A M E W O R K
+# nixdorfan, 04/05 2011
+#
+#
+#
+# C M S - P R O P E R T I E S
+
+# P r o p e r t i e s N a m e
+name=cms
+
+# C M S C o n t r o l l e r
+cms.controller=de.verbindungsraum.cms.backend.user.ui.controller.DBInfoController
+
+# C M S V i e w
+cms.view=de.bite.framework.view.impl.DefaultView
+
+# C M S S o u r c e
+cms.source=de.bite.framework.source.impl.DefaultSource
+
+# C M S M o d e l
+cms.model=de.bite.framework.model.impl.DefaultModel
+
+# C M S D B - C o n n e c t i o n
+cms.datenbank=de.bite.framework.utilities.db.impl.DatenbankObj
+
+# C M S XML-Handler
+cms.xmlhandler=de.verbindungsraum.bildbearbeitung.xml.parserhandler.WebbuilderParserHandlerPictures
+
+# C M S XML-Parser
+cms.xmlparser=org.apache.xerces.parsers.SAXParser
+
+# C M S INDIVIDUELLE KLASSEN
+# DB
+#cms.db.conf=C:/Temp/gsal/conf/dbtEST
+cms.db.conf=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/resources/db
+# DB - Queries
+cms.db.sql.categories=select * from
+
+#
+#
+#
+# DB - Models
+cms.db.model.category=de.verbindungsraum.cms.backend.db.model.impl.Category
+#
+
+# C M S UI
+# MainBase UI
+cms.ui.base=de.verbindungsraum.cms.backend.user.ui.BaseCMSFrame
+# DB - Konfig UI
+cms.ui.dbkonf=de.verbindungsraum.cms.backend.user.ui.CMSDBKonfigurator
+# DB Forward - Backward Navigator
+cms.ui.dbkonf.navigator=de.verbindungsraum.cms.backend.user.ui.db.navigation.impl.Navigator
+# DB QueryBuilder
+cms.ui.dbkonf.querybuilder=de.verbindungsraum.cms.backend.user.ui.db.querybuilder.impl.QueryBuilder
+#
+# C M S TreeUserContext
+cms.treecontext=de.verbindungsraum.bildbearbeitung.models.tree.TreeUserContext
+

@@ -1,0 +1,18 @@
+#################################################################################################
+# B I T E - F R A M E W O R K
+# nixdorfan, (c) 2011/2012
+# M-net Telekommunikations GmbH
+#
+#
+# B A S E - P R O P E R T I E S
+
+# P r o p e r t i e s   N a m e
+name=base
+
+# F a c t o r y
+default=de.bite.framework.factories.impl.DefaultFactory
+
+# L o g g i n g
+
+logging=C:/Project/gsal/conf/log4j.properties
+logging_delay=1000
