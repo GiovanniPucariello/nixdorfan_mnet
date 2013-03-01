@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: jsr181-api.jar:jsr181-api.jar:1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jsr181-api/jar/jsr181-api.jar/1.0/jsr181-api.jar-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/jsr181-api/jar/jsr181-api.jar/1.0/jsr181-api.jar-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/jsr181-api/jar/jsr181-api.jar/1.0/jsr181-api.jar-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
