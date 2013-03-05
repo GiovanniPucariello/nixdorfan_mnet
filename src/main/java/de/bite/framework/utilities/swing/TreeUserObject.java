@@ -12,6 +12,9 @@ package de.bite.framework.utilities.swing;
 
 //~--- classes ----------------------------------------------------------------
 
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author nixdorfan
@@ -28,8 +31,18 @@ public class TreeUserObject
   private String  name;
   private String  path;
   private String  type;
+  private ImageIcon image;
 
+  
   //~--- methods --------------------------------------------------------------
+
+  public ImageIcon getImage() {
+    return image;
+  }
+
+  public void setImage(ImageIcon image) {
+    this.image = image;
+  }
 
   /**
    *

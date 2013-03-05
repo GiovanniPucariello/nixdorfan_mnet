@@ -22,6 +22,7 @@ package de.bite.framework.utilities.swing;
 import de.bite.framework.constants.Constants;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.IContext;
+import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.utilities.system.SystemInformation;
 
 import org.apache.log4j.Logger;
@@ -48,6 +49,7 @@ public class NodeGenerator
   private IContext               iContext = null;
   private DefaultMutableTreeNode rooter   = new DefaultMutableTreeNode();
   private Logger                 logger   = Logger.getLogger(NodeGenerator.class);
+  private TreeUserContext treecontext = null;
 
   //~--- constructors ---------------------------------------------------------
 
@@ -58,6 +60,7 @@ public class NodeGenerator
   public NodeGenerator(IContext iContext)
   {
     this.iContext = iContext;
+    this.treecontext = (TreeUserContext)this.iContext.getObject("treecontext", ContextType.NEW,null);
   }
 
 
@@ -135,9 +138,8 @@ public class NodeGenerator
           user.setName(fileName);
           user.setPath(aryFileName);
 
-          DefaultMutableTreeNode tempNode = new DefaultMutableTreeNode(fileName);
-
-          this.iContext.setObject(ContextStatus.AKTIV, user, fileName, null);
+          DefaultMutableTreeNode tempNode = new DefaultMutableTreeNode(fileName); 
+          this.treecontext.setTreeUserObject( fileName, user);
           node.add(tempNode);
           logger.info(Constants.info_message + " Knoten (Nodes) fuer File wird generiert :: " + fileName);
         }
@@ -153,12 +155,14 @@ public class NodeGenerator
 
           DefaultMutableTreeNode tempDirNode = new DefaultMutableTreeNode(dirName);
 
-          this.iContext.setObject(ContextStatus.AKTIV, user, dirName, null);
+          this.treecontext.setTreeUserObject( dirName, user);
+          
           node.add(tempDirNode);
           logger.info(Constants.info_message + " Knoten (Nodes) fuer Directory wird generiert :: " + dirName);
           this.createTree(tempDirNode, aryDirName);
         }
       }
+      this.iContext.setObject(ContextStatus.AKTIV, this.treecontext, "tree_context",null);
     }
     catch(Exception ex)
     {

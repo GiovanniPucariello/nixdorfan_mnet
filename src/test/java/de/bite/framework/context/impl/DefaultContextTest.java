@@ -23,14 +23,13 @@ public class DefaultContextTest extends TestCase {
     String[] ary = new String[6];
     IContext context;
     
-
     public DefaultContextTest() {
-        //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_framework/src/main/resources"; 
-        //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_framework/src/main/resources/db"; 
-        //ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_framework/nixdorfan_framework/src/main/resources"; 
-        //ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_framework/nixdorfan_framework/src/main/resources/db"; 
-        ary[0] = "path=C:/Project/gsal/conf"; 
-        ary[1] = "dbkonfig=C:/Project/gsal/conf/db"; 
+        //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources"; 
+        //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db"; 
+        ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources"; 
+        ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db"; 
+        //ary[0] = "path=C:/Project/gsal/conf"; 
+        //ary[1] = "dbkonfig=C:/Project/gsal/conf/db"; 
         ary[2] = "useGUI=false";
         ary[3] = "propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader";      
         ary[4] = "resource=path"; 
