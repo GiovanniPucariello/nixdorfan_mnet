@@ -32,9 +32,18 @@ public class TreeUserObject
   private String  path;
   private String  type;
   private ImageIcon image;
+  private int nodeIndex = 0;
+
+  //~--- methods --------------------------------------------------------------
 
   
-  //~--- methods --------------------------------------------------------------
+    public int getNodeIndex() {
+        return nodeIndex;
+    }
+
+    public void setNodeIndex(int nodeIndex) {
+        this.nodeIndex = nodeIndex;
+    }
 
   public ImageIcon getImage() {
     return image;

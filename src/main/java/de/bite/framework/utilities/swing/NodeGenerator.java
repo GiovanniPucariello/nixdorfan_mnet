@@ -141,6 +141,8 @@ public class NodeGenerator
           DefaultMutableTreeNode tempNode = new DefaultMutableTreeNode(fileName); 
           this.treecontext.setTreeUserObject( fileName, user);
           node.add(tempNode);
+          user.setNodeIndex(node.getIndex(tempNode));
+          
           logger.info(Constants.info_message + " Knoten (Nodes) fuer File wird generiert :: " + fileName);
         }
         else
@@ -158,6 +160,8 @@ public class NodeGenerator
           this.treecontext.setTreeUserObject( dirName, user);
           
           node.add(tempDirNode);
+          user.setNodeIndex(node.getIndex(tempDirNode));
+          
           logger.info(Constants.info_message + " Knoten (Nodes) fuer Directory wird generiert :: " + dirName);
           this.createTree(tempDirNode, aryDirName);
         }

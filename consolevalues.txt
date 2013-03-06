@@ -2,3 +2,6 @@ path=[path to configurationfiles] dbkonfig=[path to db-file] useGUI=false proper
 
 
 path=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/resources dbkonfig=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/resources/db useGUI=true propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader resource=path dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj
+
+
+path=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources dbkonfig=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/db useGUI=true propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader resource=path dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj
