@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.12
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -17,16 +17,13 @@
  */
 package de.bite.framework.utilities.file;
 
+//~--- non-JDK imports --------------------------------------------------------
+
+import org.apache.log4j.Logger;
+
 //~--- JDK imports ------------------------------------------------------------
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 import java.nio.channels.ByteChannel;
 import java.nio.channels.FileChannel;
@@ -46,9 +43,11 @@ import java.util.List;
 public class FileUtilsAN
 {
 
-  //~--- methods --------------------------------------------------------------
+  //~--- static fields --------------------------------------------------------
 
-  // private static Logger logger = logger.getLogger(FileUtilsAN.class);
+  private static Logger logger = Logger.getLogger(FileUtilsAN.class);
+
+  //~--- methods --------------------------------------------------------------
 
   /**
    *  is File a Directory ?
@@ -158,6 +157,58 @@ public class FileUtilsAN
   }
 
   /**
+   *    read Textfile (buffered) and returns List<String> consisting the lines of the textfile
+   *    encoding can be set explicitly
+   *
+   *   @param fileName String
+   *   @param encoding String
+   *    @return List<String>
+   *    @throws Exception
+   */
+  public static List< String > readBufferedLine(String fileName, String encoding) throws Exception
+  {
+
+    logger.debug(" starting readBufferedLine(String fileName, String encoding)");
+
+    if(fileName == null)
+    {
+      logger.error(" readBufferedLine(String fileName, String encoding) FileName == NULL ");
+      throw new Exception("no filename to process.");
+    }
+
+    if((encoding == null) || (encoding == ""))
+    {
+      logger.error(" readBufferedLine(String fileName, String encoding) encoding == NULL oder encoding == \"\" ");
+      throw new Exception("no encoding set.");
+    }
+
+    ArrayList< String > vec = new ArrayList< String >();
+    String              line;
+
+    try
+    {
+      InputStream    fileInputStream = new FileInputStream(fileName);
+      Reader         fileReader      = new InputStreamReader(fileInputStream, encoding);
+      BufferedReader br              = new BufferedReader(fileReader);
+
+      while((line = br.readLine()) != null)
+      {
+        vec.add(line);
+      }
+
+      br.close();
+
+      return vec;
+    }
+    catch(IOException ex)
+    {
+      logger.error(" readBufferedLine( String fileName, String encoding ) " + ex);
+      throw new RuntimeException(ex);
+    }
+
+  }
+
+  /**
    *  write Textfile (buffered) and returns true or false (if exception takes place)
    *  writes only in a file which already exists
    *
@@ -196,6 +247,58 @@ public class FileUtilsAN
     {
 
       // logger.error(BiteConstants.error_message + " writeBuffered(String fileName,String toSafe) " + ex);
+      return false;
+    }
+
+  }
+
+  /**
+   *  write Textfile (buffered) and returns true or false (if exception takes place)
+   *  writes only in a file which already exists
+   *
+   * @param fileName String
+   * @param toSafe String
+   * @param encoding String
+   *
+   * @return boolean
+   */
+  public static boolean writeBuffered(String fileName, String toSafe, String encoding)
+  {
+
+    if(fileName == null)
+    {
+      logger.error(" writeBuffered(String fileName,String toSafe) FileName == NULL ");
+
+      return false;
+    }
+
+    if(toSafe == null)
+    {
+      logger.error(" writeBuffered(String fileName,String toSafe) toSafe == NULL ");
+
+      return false;
+    }
+
+    if((encoding == null) || (encoding == ""))
+    {
+      logger.error(" readBufferedLine(String fileName, String encoding) encoding == NULL oder encoding == \"\" ");
+
+      return false;
+    }
+
+    try
+    {
+      OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(fileName), encoding);
+
+      out.write(toSafe);
+      out.close();
+
+      return true;
+    }
+    catch(IOException ex)
+    {
+      logger.error(" writeBuffered(String fileName,String toSafe) " + ex);
+
       return false;
     }
 

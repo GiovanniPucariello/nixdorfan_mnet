@@ -5,8 +5,8 @@
   <artifactId>framework</artifactId>
   <packaging>jar</packaging>
   <name>bite.framework</name>
-  <version>3.5.1</version>
-  <!-- framework configs und modulcommends-->
+  <version>3.5.2</version>
+  <!-- Framework FileReader und FileWriter auf Encoding umgestellt-->
   <url>http://maven.apache.org</url>
 <distributionManagement>
    <!-- <repository>

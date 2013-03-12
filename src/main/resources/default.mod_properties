@@ -30,9 +30,10 @@ default.xmlhandler=de.verbindungsraum.webbuilder.process.WebbuilderParserHandler
 # D e f a u l t XML-Parser
 default.xmlparser=org.apache.xerces.parsers.SAXParser
 
-#test ddd ddd
 
 # A n d e r e  W e r t e  f u e r  E i n l e s e n
 
 default.db.table.info=de.bite.framework.utilities.db.impl.DBTable
+default.file.write.encoding=UTF-8
+default.file.read.encoding=UTF-8
 
