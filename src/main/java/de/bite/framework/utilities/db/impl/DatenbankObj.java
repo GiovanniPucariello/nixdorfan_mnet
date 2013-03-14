@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -44,9 +44,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import java.util.Properties;
 import java.util.TreeSet;
 
@@ -66,10 +66,10 @@ public class DatenbankObj implements Datenbank
 
   //~--- fields ---------------------------------------------------------------
 
-  Connection con;
-  Properties dbprops;
-  String     objdb;
-  Statement  stmt;
+  Connection      con;
+  Properties      dbprops;
+  String          objdb;
+  Statement       stmt;
   CryptoProcessor crypto = new CryptoProcessor();
 
   //~--- methods --------------------------------------------------------------
@@ -86,7 +86,7 @@ public class DatenbankObj implements Datenbank
   {
     this.dbprops = dbprops;
     objdb        = dbprops.getProperty("initdatabase");
-    
+
     this.setStatement();
 
     return true;
@@ -104,7 +104,6 @@ public class DatenbankObj implements Datenbank
   {
     try
     {
-         
       Class.forName(dbprops.getProperty("driver" + objdb));
 
       con = DriverManager.getConnection(dbprops.getProperty("url" + objdb), dbprops.getProperty("initialuser"), this.crypto.doAReallyHeavyDecryption(dbprops.getProperty("initialpwd")));
@@ -267,96 +266,149 @@ public class DatenbankObj implements Datenbank
     this.setStatement();
   }
 
-    @Override
-    public HashMap<String, String> getDBMetaData() {
-        try{
-            HashMap<String,String> informations = new HashMap<String,String>();
-            DatabaseMetaData dbMetaData = this.con.getMetaData();
+  /**
+   *
+   * @return HashMap<String,String>
+   */
+  @Override
+  public HashMap< String, String > getDBMetaData()
+  {
 
-            informations.put("Part_1", "DB-Information");
+    try
+    {
+      HashMap< String, String > informations = new HashMap< String, String >();
+      DatabaseMetaData          dbMetaData   = this.con.getMetaData();
 
-            informations.put("DB-Version (Major)", dbMetaData.getDatabaseMajorVersion()+"");
-            informations.put("DB-Version (Minor)", dbMetaData.getDatabaseMinorVersion()+"");
-            informations.put("Produktname", dbMetaData.getDatabaseProductName()+"");
-            informations.put("Produktversion", dbMetaData.getDatabaseProductVersion()+"");
-                            
-            
-            informations.put("Part_2", "Tabellen-Information");
-  
-            // get all tables within this DB
-            ResultSet tables = dbMetaData.getTables(null, null, null, null);
-            while(tables.next()){
-                informations.put(tables.getString(3), tables.getString(3));
-            }
-            return informations;
-        } catch(SQLException ex ){
-            ex.printStackTrace();
-            return new HashMap<String, String>();
-        }
-    }
-    
-    public HashMap<String,String> getTableInformation(String tablename){
-            //System.out.println("getTableInformation" + tablename);
-            HashMap<String,String> informations = new HashMap<String,String>();
-            try{
-                DatabaseMetaData dbMetaData = this.con.getMetaData();        
-                ResultSet result = dbMetaData.getColumns(null, null,  tablename, null);
-                //System.out.println("getTableInformation result" + result);
-                while(result.next()){
-                    //System.out.println("getTableInformation result.next()" + result);
-                    String columnName = result.getString("COLUMN_NAME");
-                    int    columnType = result.getInt("DATA_TYPE");
-                    //System.out.println("Name " + columnName +" Type " + columnType);
-                    informations.put(columnName,columnType+"");
-                }               
-                return informations;
-             } catch(SQLException ex ){
-            ex.printStackTrace();
-            return new HashMap<String, String>();
-        }
-    
-    }
-    
-    public HashMap<String,String> getTables(){
-    
-            try{
-                HashMap<String,String> informations = new HashMap<String,String>();
-                DatabaseMetaData dbMetaData = this.con.getMetaData();
+      informations.put("Part_1", "DB-Information");
+      informations.put("DB-Version (Major)", dbMetaData.getDatabaseMajorVersion() + "");
+      informations.put("DB-Version (Minor)", dbMetaData.getDatabaseMinorVersion() + "");
+      informations.put("Produktname", dbMetaData.getDatabaseProductName() + "");
+      informations.put("Produktversion", dbMetaData.getDatabaseProductVersion() + "");
+      informations.put("Part_2", "Tabellen-Information");
 
-                // get all tables within this DB
-                ResultSet tables = dbMetaData.getTables(null, "public", null, null);
-                while(tables.next()){
-                    informations.put(tables.getString(3), tables.getString(3));
-                }
-                return informations;
-             } catch(SQLException ex ){
-            ex.printStackTrace();
-            return new HashMap<String, String>();
-        }
-    
+      // get all tables within this DB
+      ResultSet tables = dbMetaData.getTables(null, null, null, null);
+
+      while(tables.next())
+      {
+        informations.put(tables.getString(3), tables.getString(3));
+      }
+
+      return informations;
     }
-    
-    public ArrayList<IDBTable> getAggregatedTableInformation(IContext context){
-        
-        HashMap<String , String> allTables = getTables();
-        ArrayList<IDBTable> tableObj = new ArrayList<IDBTable>();
-        
-        for(String table : allTables.keySet()){
-            
-            //IDBTable singleTable = (IDBTable)context.getUnboundObject("default.db.table.info");
-            IDBTable singleTable = new DBTable();
-            singleTable.setTablename(table);
-            HashMap<String,String> tableInfo = getTableInformation(table);
-            
-            //System.out.println("getAggregatedTableInformation" + tableInfo.size());
-            for(String colName : tableInfo.keySet()){
-                singleTable.setCols_and_types(colName,tableInfo.get(colName));
-            }
-            
-            tableObj.add(singleTable);
-        }
-        return tableObj;
+    catch(SQLException ex)
+    {
+      ex.printStackTrace();
+
+      return new HashMap< String, String >();
     }
+
+  }
+
+  /**
+   * 
+   * @param tablename String
+   *
+   * @return HashMap<String,String>
+   */
+  public HashMap< String, String > getTableInformation(String tablename)
+  {
+
+    // System.out.println("getTableInformation" + tablename);
+    HashMap< String, String > informations = new HashMap< String, String >();
+
+    try
+    {
+      DatabaseMetaData dbMetaData = this.con.getMetaData();
+      ResultSet        result     = dbMetaData.getColumns(null, null, tablename, null);
+
+      // System.out.println("getTableInformation result" + result);
+      while(result.next())
+      {
+
+        // System.out.println("getTableInformation result.next()" + result);
+        String columnName = result.getString("COLUMN_NAME");
+        int    columnType = result.getInt("DATA_TYPE");
+
+        // System.out.println("Name " + columnName +" Type " + columnType);
+        informations.put(columnName, columnType + "");
+      }
+
+      return informations;
+    }
+    catch(SQLException ex)
+    {
+      ex.printStackTrace();
+
+      return new HashMap< String, String >();
+    }
+  }
+
+  /**
+   *
+   * @return HashMap<String,String>
+   */
+  public HashMap< String, String > getTables()
+  {
+
+    try
+    {
+      HashMap< String, String > informations = new HashMap< String, String >();
+      DatabaseMetaData          dbMetaData   = this.con.getMetaData();
+
+      // get all tables within this DB
+      ResultSet                 tables       = dbMetaData.getTables(null, "public", null, null);
+
+      while(tables.next())
+      {
+        informations.put(tables.getString(3), tables.getString(3));
+      }
+
+      return informations;
+    }
+    catch(SQLException ex)
+    {
+      ex.printStackTrace();
+
+      return new HashMap< String, String >();
+    }
+
+  }
+
+  /**
+   * 
+   * @param context IContext
+   *
+   * @return ArrayList<IDBTable>
+   */
+  public ArrayList< IDBTable > getAggregatedTableInformation(IContext context)
+  {
+
+    HashMap< String, String > allTables = getTables();
+    ArrayList< IDBTable >     tableObj  = new ArrayList< IDBTable >();
+
+    for(String table : allTables.keySet())
+    {
+
+      // IDBTable singleTable = (IDBTable)context.getUnboundObject("default.db.table.info");
+      IDBTable singleTable = new DBTable();
+
+      singleTable.setTablename(table);
+
+      HashMap< String, String > tableInfo = getTableInformation(table);
+
+      // System.out.println("getAggregatedTableInformation" + tableInfo.size());
+      for(String colName : tableInfo.keySet())
+      {
+        singleTable.setCols_and_types(colName, tableInfo.get(colName));
+      }
+
+      tableObj.add(singleTable);
+    }
+
+    return tableObj;
+
+  }
 }
 
 

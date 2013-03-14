@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -27,6 +27,7 @@ import org.apache.log4j.Logger;
 //~--- JDK imports ------------------------------------------------------------
 
 import java.io.Serializable;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -42,12 +43,12 @@ public class DefaultContext extends AbstractContext implements Serializable
   //~--- static fields --------------------------------------------------------
 
   private static final long serialVersionUID = -3918161219521028951L;
-  private static Logger logger = Logger.getLogger(DefaultContext.class);
+  private static Logger     logger           = Logger.getLogger(DefaultContext.class);
 
-
+  //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param propertyName String
    *
    * @return Object[]
@@ -68,21 +69,21 @@ public class DefaultContext extends AbstractContext implements Serializable
   public Object[] getObjectHistory()
   {
 
-    Set allObjectKeys = this.contextcontainer.keySet();
-    Object[] cextHistory=null;
+    Set      allObjectKeys = this.contextcontainer.keySet();
+    Object[] cextHistory   = null;
 
-     this.getLogger().info("                               ");
-     this.getLogger().info("                               ");
-     this.getLogger().info("                               ");
-     this.getLogger().info("                               ");
-     this.getLogger().info("                               ");
-     this.getLogger().info("S T A T U S  AKTIVER CONTEXT :: [Anzahl enthaltener Objekte] :: " + allObjectKeys.size());
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               | ");
+    this.getLogger().info("                               ");
+    this.getLogger().info("                               ");
+    this.getLogger().info("                               ");
+    this.getLogger().info("                               ");
+    this.getLogger().info("                               ");
+    this.getLogger().info("S T A T U S  AKTIVER CONTEXT :: [Anzahl enthaltener Objekte] :: " + allObjectKeys.size());
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               | ");
 
     Iterator iter = allObjectKeys.iterator();
 
@@ -91,29 +92,28 @@ public class DefaultContext extends AbstractContext implements Serializable
       String           key  = (String)iter.next();
       ContextExtension cext = (ContextExtension)this.contextcontainer.get(key);
 
-       this.getLogger().info("Object :: [NAME] :: " + key + " ---- " + cext);
-       this.getLogger().info("                               | ");
+      this.getLogger().info("Object :: [NAME] :: " + key + " ---- " + cext);
+      this.getLogger().info("                               | ");
 
       cextHistory = cext.getObjectHistory();
 
       for(int i = 0; i < cextHistory.length; i++)
       {
-         this.getLogger().info("                               | ");
-         this.getLogger().info("                               |----- " + cextHistory[i]);
-         this.getLogger().info("                               | ");
-         this.getLogger().info("                               | ");
-         this.getLogger().info("                               | ");
+        this.getLogger().info("                               | ");
+        this.getLogger().info("                               |----- " + cextHistory[i]);
+        this.getLogger().info("                               | ");
+        this.getLogger().info("                               | ");
+        this.getLogger().info("                               | ");
       }
     }
 
-     this.getLogger().info("                               | ");
-     this.getLogger().info("                               |----------- EOF CONTEXT ");
+    this.getLogger().info("                               | ");
+    this.getLogger().info("                               |----------- EOF CONTEXT ");
 
     // logger.info( Constants.impl_message + " getObjectHistory()"  );
     return cextHistory;
 
   }
-
 }
 
 

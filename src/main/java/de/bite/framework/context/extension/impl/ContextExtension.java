@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -13,8 +13,8 @@ package de.bite.framework.context.extension.impl;
 //~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.constants.Constants;
-import de.bite.framework.context.IContext;
 import de.bite.framework.context.extension.IContextExtension;
+import de.bite.framework.context.IContext;
 import de.bite.framework.exceptions.ContextExtensionException;
 import de.bite.framework.utilities.clone.CloneUtil;
 
@@ -23,6 +23,7 @@ import org.apache.log4j.Logger;
 //~--- JDK imports ------------------------------------------------------------
 
 import java.io.Serializable;
+
 import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
@@ -37,8 +38,9 @@ public class ContextExtension implements IContextExtension, Serializable
 {
 
   //~--- static fields --------------------------------------------------------
-	private static final long serialVersionUID = 1L;
-  private static Logger logger = Logger.getLogger(ContextExtension.class);
+
+  private static final long serialVersionUID = 1L;
+  private static Logger     logger           = Logger.getLogger(ContextExtension.class);
 
   //~--- fields ---------------------------------------------------------------
 
@@ -47,7 +49,7 @@ public class ContextExtension implements IContextExtension, Serializable
   private HashMap< String, Long >          objectNameTime         = new HashMap< String, Long >();
   private HashMap< String, ContextStatus > objectNameStatus       = new HashMap< String, ContextStatus >();
   private HashMap< String, Object >        objectNameConversation = new HashMap< String, Object >();
-  private IContext context;
+  private IContext                         context;
 
   //~--- methods --------------------------------------------------------------
 
@@ -96,7 +98,7 @@ public class ContextExtension implements IContextExtension, Serializable
     }
     catch(Exception ex)
     {
-      this.context.getLogger().error(Constants.error_message + " set(Object object) :: "+ object.toString()  +"  " + ex.getLocalizedMessage());
+      this.context.getLogger().error(Constants.error_message + " set(Object object) :: " + object.toString() + "  " + ex.getLocalizedMessage());
     }
   }
 
@@ -112,13 +114,13 @@ public class ContextExtension implements IContextExtension, Serializable
       if((this.objectNameStatus.get(objectToReturn) == ContextStatus.CONVERSATION_AKTIV) || (this.objectNameStatus.get(objectToReturn) == ContextStatus.AKTIV))
       {
         this.context.getLogger().info(Constants.info_message + " Object == " + objectToReturn + " ::::: Status == " + this.objectNameStatus.get(objectToReturn) + " ::::: Timestamp == " +
-                    this.objectNameTime.get(objectToReturn));
+                                      this.objectNameTime.get(objectToReturn));
 
         return this.objectNameObject.get(objectToReturn);
       }
     }
 
-    this.context.getLogger().info(Constants.warning_message + " get aktives Object :: NICHT ERFOLGREICH fuer ConstextExtension " + this.getName() );
+    this.context.getLogger().info(Constants.warning_message + " get aktives Object :: NICHT ERFOLGREICH fuer ConstextExtension " + this.getName());
 
     return null;
   }
@@ -138,7 +140,8 @@ public class ContextExtension implements IContextExtension, Serializable
 
     if(!this.objectNameConversation.containsValue(conversationFlow))
     {
-      this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " + this.getName());
+      this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " +
+                                    this.getName());
 
       return null;
     }
@@ -147,14 +150,14 @@ public class ContextExtension implements IContextExtension, Serializable
     {
       if((this.objectNameConversation.get(objectToReturn).equals(conversationFlow)))
       {
-        this.context.getLogger().info(Constants.info_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " ERFOLGREICH == " + objectToReturn +" fuer " + this.getName());
-
+        this.context.getLogger().info(Constants.info_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " ERFOLGREICH == " + objectToReturn +
+                                      " fuer " + this.getName());
 
         return this.objectNameObject.get(objectToReturn);
       }
     }
 
-    this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object :: NICHT definierbar fuer " + this.getName()); 
+    this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object :: NICHT definierbar fuer " + this.getName());
 
     return null;
 
@@ -244,7 +247,8 @@ public class ContextExtension implements IContextExtension, Serializable
              *
              */
             this.objectNameConversation.put(objektName, contextFlow);
-            this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " + this.getName());
+            this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " +
+                                          this.getName());
 
             /**  */
             this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
@@ -291,7 +295,7 @@ public class ContextExtension implements IContextExtension, Serializable
           }
           catch(Exception ex)
           {
-            throw new ContextExtensionException(Constants.error_message + " Klonierung Objekt fehlgeschlagen :: " + ex.getLocalizedMessage()+ " fuer " + this.getName());
+            throw new ContextExtensionException(Constants.error_message + " Klonierung Objekt fehlgeschlagen :: " + ex.getLocalizedMessage() + " fuer " + this.getName());
           }
         }
       }
@@ -303,10 +307,15 @@ public class ContextExtension implements IContextExtension, Serializable
 
   }
 
-    @Override
-    public void setContext(IContext context) {
-        this.context = context;
-    }
+  /**
+   * 
+   * @param context IContext
+   */
+  @Override
+  public void setContext(IContext context)
+  {
+    this.context = context;
+  }
 }
 
 

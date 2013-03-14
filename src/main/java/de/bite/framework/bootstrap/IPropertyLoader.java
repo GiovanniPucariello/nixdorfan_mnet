@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -30,20 +30,27 @@ public interface IPropertyLoader
    * @throws Exception
    */
   public abstract Properties[] loadProperties(String pathOrFile) throws Exception;
-  
-  
-  public void isInputStringValid(String pathOrFile) throws Exception;
 
   /**
    * 
    * @param pathOrFile String
    *
+   * @throws Exception
+   */
+  public void isInputStringValid(String pathOrFile) throws Exception;
+
+  /**
+   *
+   * @param pathOrFile String
+   *
    * @return boolean
+   *
+   * @throws Exception
    */
   public boolean isInputStringDirectory(String pathOrFile) throws Exception;
 
   /**
-   * 
+   *
    * @param pathToProperty String
    *
    * @throws Exception
@@ -51,7 +58,7 @@ public interface IPropertyLoader
   public void checkSingleFileAsPropertyFile(String pathToProperty) throws Exception;
 
   /**
-   * 
+   *
    * @param filesToLoad ArrayList<?>
    *
    * @return ArrayList<String>

@@ -1,3 +1,13 @@
+/**
+ *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
+ */
+
 package de.verbindungsraum.gsal.view;
 
 //~--- non-JDK imports --------------------------------------------------------
@@ -23,8 +33,6 @@ import de.verbindungsraum.gsal.models.TreeNodeGenerator;
 import de.verbindungsraum.gsal.utilities.ModulAnalyzer;
 
 import org.apache.log4j.Logger;
-
-
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -86,7 +94,9 @@ public class GSALView extends javax.swing.JFrame
   private javax.swing.JPopupMenu.Separator jSeparator8;
   private javax.swing.JTabbedPane          jTabbedPane1;
   private javax.swing.JTextArea            jTextArea1;
-// End of variables declaration//GEN-END:variables
+
+//End of variables declaration//GEN-END:variables
+
   //~--- constructors ---------------------------------------------------------
 
   /**
@@ -320,7 +330,7 @@ public class GSALView extends javax.swing.JFrame
     setJMenuBar(jMenuBar1);
     pack();
 
-  }// </editor-fold>//GEN-END:initComponents
+  }    // </editor-fold>//GEN-END:initComponents
 
   /**
    *

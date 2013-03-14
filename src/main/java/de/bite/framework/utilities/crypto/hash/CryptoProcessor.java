@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -23,6 +23,7 @@ import java.io.UnsupportedEncodingException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 import java.util.HashMap;
 
 //~--- classes ----------------------------------------------------------------
@@ -36,9 +37,9 @@ public class CryptoProcessor
 
   //~--- fields ---------------------------------------------------------------
 
-  private String encoding = "";
-  HashMap<String,String> myReallyNiceRomanRoleDecryption=null;
-  HashMap<String,String> myReallyNiceRomanRoleEncryption=null;
+  private String            encoding                        = "";
+  HashMap< String, String > myReallyNiceRomanRoleDecryption = null;
+  HashMap< String, String > myReallyNiceRomanRoleEncryption = null;
 
   //~--- constructors ---------------------------------------------------------
 
@@ -47,6 +48,7 @@ public class CryptoProcessor
   public CryptoProcessor()
   {
     this.encoding = "iso-8859-1";
+
     initialize();
   }
 
@@ -60,98 +62,104 @@ public class CryptoProcessor
   public CryptoProcessor(String encoding)
   {
     this.encoding = encoding;
+
     initialize();
   }
 
 
 
-  private void initialize(){
-      
-      myReallyNiceRomanRoleDecryption = new HashMap<String,String>();
-      
-      myReallyNiceRomanRoleDecryption.put("a", "z");
-      myReallyNiceRomanRoleDecryption.put("b", "v");
-      myReallyNiceRomanRoleDecryption.put("c", "s");
-      myReallyNiceRomanRoleDecryption.put("d", "t");
-      myReallyNiceRomanRoleDecryption.put("e", "r");
-      myReallyNiceRomanRoleDecryption.put("f", "u");
-      myReallyNiceRomanRoleDecryption.put("g", "h");
-      myReallyNiceRomanRoleDecryption.put("h", "j");
-      myReallyNiceRomanRoleDecryption.put("i", "x");
-      myReallyNiceRomanRoleDecryption.put("j", "w");
-      myReallyNiceRomanRoleDecryption.put("k", "y");
-      myReallyNiceRomanRoleDecryption.put("l", "o");
-      myReallyNiceRomanRoleDecryption.put("m", "n");
-      myReallyNiceRomanRoleDecryption.put("n", "p");
-      myReallyNiceRomanRoleDecryption.put("o", "q");
-      myReallyNiceRomanRoleDecryption.put("p", "m");
-      myReallyNiceRomanRoleDecryption.put("q", "l");
-      myReallyNiceRomanRoleDecryption.put("r", "k");
-      myReallyNiceRomanRoleDecryption.put("s", "i");
-      myReallyNiceRomanRoleDecryption.put("t", "g");
-      myReallyNiceRomanRoleDecryption.put("u", "f");
-      myReallyNiceRomanRoleDecryption.put("v", "d");
-      myReallyNiceRomanRoleDecryption.put("w", "e");
-      myReallyNiceRomanRoleDecryption.put("x", "a");
-      myReallyNiceRomanRoleDecryption.put("y", "c");
-      myReallyNiceRomanRoleDecryption.put("z", "b");
-      myReallyNiceRomanRoleDecryption.put("1", "0");
-      myReallyNiceRomanRoleDecryption.put("2", "9");
-      myReallyNiceRomanRoleDecryption.put("3", "8");
-      myReallyNiceRomanRoleDecryption.put("4", "7");
-      myReallyNiceRomanRoleDecryption.put("5", "6");
-      myReallyNiceRomanRoleDecryption.put("6", "5");
-      myReallyNiceRomanRoleDecryption.put("7", "4");
-      myReallyNiceRomanRoleDecryption.put("8", "3");
-      myReallyNiceRomanRoleDecryption.put("9", "2");
-      myReallyNiceRomanRoleDecryption.put("0", "1");
-      myReallyNiceRomanRoleDecryption.put("#", "#");
-      myReallyNiceRomanRoleDecryption.put("!", "!");
-      
-      myReallyNiceRomanRoleEncryption = new HashMap<String,String>();
-      
-      myReallyNiceRomanRoleEncryption.put("z", "a");
-      myReallyNiceRomanRoleEncryption.put("v", "b");
-      myReallyNiceRomanRoleEncryption.put("s", "c");
-      myReallyNiceRomanRoleEncryption.put("t", "d");
-      myReallyNiceRomanRoleEncryption.put("r", "e");
-      myReallyNiceRomanRoleEncryption.put("f", "u");
-      myReallyNiceRomanRoleEncryption.put("h", "g");
-      myReallyNiceRomanRoleEncryption.put("j", "h");
-      myReallyNiceRomanRoleEncryption.put("x", "i");
-      myReallyNiceRomanRoleEncryption.put("w", "j");
-      myReallyNiceRomanRoleEncryption.put("y", "k");
-      myReallyNiceRomanRoleEncryption.put("o", "l");
-      myReallyNiceRomanRoleEncryption.put("n", "m");
-      myReallyNiceRomanRoleEncryption.put("p", "n");
-      myReallyNiceRomanRoleEncryption.put("q", "o");
-      myReallyNiceRomanRoleEncryption.put("m", "p");
-      myReallyNiceRomanRoleEncryption.put("l", "q");
-      myReallyNiceRomanRoleEncryption.put("k", "r");
-      myReallyNiceRomanRoleEncryption.put("i", "s");
-      myReallyNiceRomanRoleEncryption.put("g", "t");
-      myReallyNiceRomanRoleEncryption.put("f", "u");
-      myReallyNiceRomanRoleEncryption.put("d", "v");
-      myReallyNiceRomanRoleEncryption.put("e", "w");
-      myReallyNiceRomanRoleEncryption.put("a", "x");
-      myReallyNiceRomanRoleEncryption.put("c", "y");
-      myReallyNiceRomanRoleEncryption.put("b", "z");
-      myReallyNiceRomanRoleEncryption.put("u", "f");
-      myReallyNiceRomanRoleEncryption.put("0", "1");
-      myReallyNiceRomanRoleEncryption.put("9", "2");
-      myReallyNiceRomanRoleEncryption.put("8", "3");
-      myReallyNiceRomanRoleEncryption.put("7", "4");
-      myReallyNiceRomanRoleEncryption.put("6", "5");
-      myReallyNiceRomanRoleEncryption.put("5", "6");
-      myReallyNiceRomanRoleEncryption.put("4", "7");
-      myReallyNiceRomanRoleEncryption.put("3", "8");
-      myReallyNiceRomanRoleEncryption.put("2", "9");
-      myReallyNiceRomanRoleEncryption.put("1", "0");
-      myReallyNiceRomanRoleEncryption.put("#", "#");
-      myReallyNiceRomanRoleEncryption.put("!", "!");
-  }
 
   //~--- methods --------------------------------------------------------------
+
+  /**
+   */
+  private void initialize()
+  {
+
+    myReallyNiceRomanRoleDecryption = new HashMap< String, String >();
+
+    myReallyNiceRomanRoleDecryption.put("a", "z");
+    myReallyNiceRomanRoleDecryption.put("b", "v");
+    myReallyNiceRomanRoleDecryption.put("c", "s");
+    myReallyNiceRomanRoleDecryption.put("d", "t");
+    myReallyNiceRomanRoleDecryption.put("e", "r");
+    myReallyNiceRomanRoleDecryption.put("f", "u");
+    myReallyNiceRomanRoleDecryption.put("g", "h");
+    myReallyNiceRomanRoleDecryption.put("h", "j");
+    myReallyNiceRomanRoleDecryption.put("i", "x");
+    myReallyNiceRomanRoleDecryption.put("j", "w");
+    myReallyNiceRomanRoleDecryption.put("k", "y");
+    myReallyNiceRomanRoleDecryption.put("l", "o");
+    myReallyNiceRomanRoleDecryption.put("m", "n");
+    myReallyNiceRomanRoleDecryption.put("n", "p");
+    myReallyNiceRomanRoleDecryption.put("o", "q");
+    myReallyNiceRomanRoleDecryption.put("p", "m");
+    myReallyNiceRomanRoleDecryption.put("q", "l");
+    myReallyNiceRomanRoleDecryption.put("r", "k");
+    myReallyNiceRomanRoleDecryption.put("s", "i");
+    myReallyNiceRomanRoleDecryption.put("t", "g");
+    myReallyNiceRomanRoleDecryption.put("u", "f");
+    myReallyNiceRomanRoleDecryption.put("v", "d");
+    myReallyNiceRomanRoleDecryption.put("w", "e");
+    myReallyNiceRomanRoleDecryption.put("x", "a");
+    myReallyNiceRomanRoleDecryption.put("y", "c");
+    myReallyNiceRomanRoleDecryption.put("z", "b");
+    myReallyNiceRomanRoleDecryption.put("1", "0");
+    myReallyNiceRomanRoleDecryption.put("2", "9");
+    myReallyNiceRomanRoleDecryption.put("3", "8");
+    myReallyNiceRomanRoleDecryption.put("4", "7");
+    myReallyNiceRomanRoleDecryption.put("5", "6");
+    myReallyNiceRomanRoleDecryption.put("6", "5");
+    myReallyNiceRomanRoleDecryption.put("7", "4");
+    myReallyNiceRomanRoleDecryption.put("8", "3");
+    myReallyNiceRomanRoleDecryption.put("9", "2");
+    myReallyNiceRomanRoleDecryption.put("0", "1");
+    myReallyNiceRomanRoleDecryption.put("#", "#");
+    myReallyNiceRomanRoleDecryption.put("!", "!");
+
+    myReallyNiceRomanRoleEncryption = new HashMap< String, String >();
+
+    myReallyNiceRomanRoleEncryption.put("z", "a");
+    myReallyNiceRomanRoleEncryption.put("v", "b");
+    myReallyNiceRomanRoleEncryption.put("s", "c");
+    myReallyNiceRomanRoleEncryption.put("t", "d");
+    myReallyNiceRomanRoleEncryption.put("r", "e");
+    myReallyNiceRomanRoleEncryption.put("f", "u");
+    myReallyNiceRomanRoleEncryption.put("h", "g");
+    myReallyNiceRomanRoleEncryption.put("j", "h");
+    myReallyNiceRomanRoleEncryption.put("x", "i");
+    myReallyNiceRomanRoleEncryption.put("w", "j");
+    myReallyNiceRomanRoleEncryption.put("y", "k");
+    myReallyNiceRomanRoleEncryption.put("o", "l");
+    myReallyNiceRomanRoleEncryption.put("n", "m");
+    myReallyNiceRomanRoleEncryption.put("p", "n");
+    myReallyNiceRomanRoleEncryption.put("q", "o");
+    myReallyNiceRomanRoleEncryption.put("m", "p");
+    myReallyNiceRomanRoleEncryption.put("l", "q");
+    myReallyNiceRomanRoleEncryption.put("k", "r");
+    myReallyNiceRomanRoleEncryption.put("i", "s");
+    myReallyNiceRomanRoleEncryption.put("g", "t");
+    myReallyNiceRomanRoleEncryption.put("f", "u");
+    myReallyNiceRomanRoleEncryption.put("d", "v");
+    myReallyNiceRomanRoleEncryption.put("e", "w");
+    myReallyNiceRomanRoleEncryption.put("a", "x");
+    myReallyNiceRomanRoleEncryption.put("c", "y");
+    myReallyNiceRomanRoleEncryption.put("b", "z");
+    myReallyNiceRomanRoleEncryption.put("u", "f");
+    myReallyNiceRomanRoleEncryption.put("0", "1");
+    myReallyNiceRomanRoleEncryption.put("9", "2");
+    myReallyNiceRomanRoleEncryption.put("8", "3");
+    myReallyNiceRomanRoleEncryption.put("7", "4");
+    myReallyNiceRomanRoleEncryption.put("6", "5");
+    myReallyNiceRomanRoleEncryption.put("5", "6");
+    myReallyNiceRomanRoleEncryption.put("4", "7");
+    myReallyNiceRomanRoleEncryption.put("3", "8");
+    myReallyNiceRomanRoleEncryption.put("2", "9");
+    myReallyNiceRomanRoleEncryption.put("1", "0");
+    myReallyNiceRomanRoleEncryption.put("#", "#");
+    myReallyNiceRomanRoleEncryption.put("!", "!");
+
+  }
 
   /**
    *
@@ -207,51 +215,65 @@ public class CryptoProcessor
 
     return convertToHex(md5hash);
   }
-  
-  
-  
-  public String doAReallyHeavyDecryption(String password){
- 
-      String theReallyPWD = password.substring(3,password.length() - 3);
-      
-      char[] singleCharacters = theReallyPWD.toCharArray();
-      char[] newSingleCharacters = new char[singleCharacters.length];
-      
-      
-      for(int i = 0;i<singleCharacters.length;i++){
 
-          newSingleCharacters[i] = myReallyNiceRomanRoleDecryption.get(singleCharacters[i]+"").toCharArray()[0];
-      }
-      
-      String decrypted="";
-      for(int i=0;i<newSingleCharacters.length;i++){
-          decrypted += newSingleCharacters[i];
-      }
-      
-      return decrypted;
+  /**
+   * 
+   * @param password String
+   *
+   * @return String
+   */
+  public String doAReallyHeavyDecryption(String password)
+  {
+    String theReallyPWD        = password.substring(3, password.length() - 3);
+    char[] singleCharacters    = theReallyPWD.toCharArray();
+    char[] newSingleCharacters = new char[singleCharacters.length];
+
+    for(int i = 0; i < singleCharacters.length; i++)
+    {
+      newSingleCharacters[i] = myReallyNiceRomanRoleDecryption.get(singleCharacters[i] + "").toCharArray()[0];
+    }
+
+    String decrypted = "";
+
+    for(int i = 0; i < newSingleCharacters.length; i++)
+    {
+      decrypted += newSingleCharacters[i];
+    }
+
+    return decrypted;
   }
-  
-  public String doAReallyHeavyEncryption(String wordToPassword){
- 
-      char[] singleCharacters = wordToPassword.toCharArray();
-      char[] newSingleCharacters = new char[singleCharacters.length];
-      
-      
-      for(int i = 0;i<singleCharacters.length;i++){
-          try{
-            newSingleCharacters[i] = myReallyNiceRomanRoleEncryption.get(singleCharacters[i]+"").toCharArray()[0];
-          } catch(NullPointerException ex){
-            
-          }
+
+  /**
+   * 
+   * @param wordToPassword String
+   *
+   * @return String
+   */
+  public String doAReallyHeavyEncryption(String wordToPassword)
+  {
+
+    char[] singleCharacters    = wordToPassword.toCharArray();
+    char[] newSingleCharacters = new char[singleCharacters.length];
+
+    for(int i = 0; i < singleCharacters.length; i++)
+    {
+      try
+      {
+        newSingleCharacters[i] = myReallyNiceRomanRoleEncryption.get(singleCharacters[i] + "").toCharArray()[0];
       }
-      
-      String decrypted="";
-      for(int i=0;i<newSingleCharacters.length;i++){
-          decrypted += newSingleCharacters[i];
-      }
-      
-      //System.out.println(decrypted);
-      return "dib" + decrypted + "ilm";
+      catch(NullPointerException ex) {}
+    }
+
+    String decrypted = "";
+
+    for(int i = 0; i < newSingleCharacters.length; i++)
+    {
+      decrypted += newSingleCharacters[i];
+    }
+
+    // System.out.println(decrypted);
+    return "dib" + decrypted + "ilm";
+
   }
 }
 

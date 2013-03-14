@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -17,14 +17,17 @@
  */
 package de.bite.framework.utilities.db;
 
-//~--- JDK imports ------------------------------------------------------------
+//~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.context.IContext;
+
+//~--- JDK imports ------------------------------------------------------------
+
 import java.sql.ResultSet;
 import java.sql.Statement;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import java.util.Properties;
 import java.util.TreeSet;
 
@@ -32,6 +35,7 @@ import java.util.TreeSet;
 
 public interface Datenbank
 {
+
   //~--- methods --------------------------------------------------------------
 
   /**
@@ -91,16 +95,34 @@ public interface Datenbank
   /**
    */
   public abstract void setNewStatement();
-  
-  public abstract HashMap<String,String> getDBMetaData();
-  
-  public abstract HashMap<String,String> getTableInformation(String tablename);
-  
-  public HashMap<String,String> getTables();
-  
-  public ArrayList<IDBTable> getAggregatedTableInformation(IContext context);
-  
-  
+
+  /**
+   *
+   * @return HashMap<String,String>
+   */
+  public abstract HashMap< String, String > getDBMetaData();
+
+  /**
+   * 
+   * @param tablename String
+   *
+   * @return HashMap<String,String>
+   */
+  public abstract HashMap< String, String > getTableInformation(String tablename);
+
+  /**
+   *
+   * @return HashMap<String,String>
+   */
+  public HashMap< String, String > getTables();
+
+  /**
+   * 
+   * @param context IContext
+   *
+   * @return ArrayList<IDBTable>
+   */
+  public ArrayList< IDBTable > getAggregatedTableInformation(IContext context);
 }
 
 

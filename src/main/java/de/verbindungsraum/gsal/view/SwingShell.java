@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2012.10.05
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
@@ -395,7 +395,7 @@ public class SwingShell
     //~--- methods ------------------------------------------------------------
 
     /**
-     * 
+     *
      * @param lines String
      */
     public void setContent(String lines)
@@ -425,7 +425,7 @@ public class SwingShell
       //~--- methods ----------------------------------------------------------
 
       /**
-       * 
+       *
        * @param data byte[]
        * @param len int
        */
@@ -562,7 +562,7 @@ public class SwingShell
     //~--- methods ------------------------------------------------------------
 
     /**
-     * 
+     *
      * @param hostname String
      * @param port int
      * @param serverHostKeyAlgorithm String
@@ -672,7 +672,7 @@ public class SwingShell
     /* the callback may be invoked several times, depending on how many questions-sets the server sends */
 
     /**
-     * 
+     *
      * @param name String
      * @param instruction String
      * @param numPrompts int

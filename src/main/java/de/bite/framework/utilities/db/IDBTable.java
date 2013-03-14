@@ -1,29 +1,70 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
+
 package de.bite.framework.utilities.db;
+
+//~--- JDK imports ------------------------------------------------------------
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeSet;
 
+//~--- interfaces -------------------------------------------------------------
+
 /**
  *
  * @author AN
  */
-public interface IDBTable {
+public interface IDBTable
+{
+  //~--- methods --------------------------------------------------------------
 
-    HashMap<String, String> getCols_and_types();
+  /**
+   *
+   * @return HashMap<String,String>
+   */
+  HashMap< String, String > getCols_and_types();
 
-    ArrayList<String> getColumns();
+  /**
+   *
+   * @return ArrayList<String>
+   */
+  ArrayList< String > getColumns();
 
-    String getTablename();
+  /**
+   *
+   * @return String
+   */
+  String getTablename();
 
-    void setCols_and_types(String cols, String types);
+  /**
+   * 
+   * @param cols String
+   * @param types String
+   */
+  void setCols_and_types(String cols, String types);
 
-    void setColumns(String columns);
+  /**
+   * 
+   * @param columns String
+   */
+  void setColumns(String columns);
 
-    void setTablename(String tablename);
-    
+  /**
+   * 
+   * @param tablename String
+   */
+  void setTablename(String tablename);
 }
+
+
+/* ||\
+ * ---------------------------------------------------------
+ */

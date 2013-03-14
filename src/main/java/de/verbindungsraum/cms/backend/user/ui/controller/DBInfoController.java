@@ -1,26 +1,65 @@
+/**
+ *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
+ */
+
 package de.verbindungsraum.cms.backend.user.ui.controller;
+
+//~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.controller.impl.AbstractController;
+
 import de.verbindungsraum.cms.backend.user.ui.CMSDBKonfigurator;
 
-public class DBInfoController extends AbstractController {
+//~--- classes ----------------------------------------------------------------
 
-	@Override
-	public void dispatch() {
-		CMSDBKonfigurator konfig = (CMSDBKonfigurator)this.iContext.getObject("cms.ui.dbkonf", ContextType.NEW, null);
-		konfig.initTree();
-		konfig.setVisible(true);
-	}
+/**
+ *
+ * @author         nixdorfan    
+ */
+public class DBInfoController extends AbstractController
+{
+  //~--- methods --------------------------------------------------------------
 
-	@Override
-	public boolean isSuccessful() {
-		return true;
-	}
+  /**
+   */
+  @Override
+  public void dispatch()
+  {
+    CMSDBKonfigurator konfig = (CMSDBKonfigurator)this.iContext.getObject("cms.ui.dbkonf", ContextType.NEW, null);
 
-	@Override
-	public String actualControllerState() {
-		return "UI gestartet";
-	}
+    konfig.initTree();
+    konfig.setVisible(true);
+  }
 
+  /**
+   *
+   * @return boolean
+   */
+  @Override
+  public boolean isSuccessful()
+  {
+    return true;
+  }
+
+  /**
+   *
+   * @return String
+   */
+  @Override
+  public String actualControllerState()
+  {
+    return "UI gestartet";
+  }
 }
+
+
+/* ||\
+ * ---------------------------------------------------------
+ */

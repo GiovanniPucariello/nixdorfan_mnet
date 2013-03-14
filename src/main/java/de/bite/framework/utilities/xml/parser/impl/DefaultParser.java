@@ -1,15 +1,25 @@
+/**
+ *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
+ */
+
 package de.bite.framework.utilities.xml.parser.impl;
 
-import de.bite.framework.context.extension.impl.ContextType;
+//~--- non-JDK imports --------------------------------------------------------
 
 /**
  *
  * Copyright (c) 2012.03.08
  * M-net Telekommunikations GmbH
- * 
+ *
  * @author nixdorfan
  * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
- * 
+ *
  */
 
 /*
@@ -19,11 +29,8 @@ import de.bite.framework.context.extension.impl.ContextType;
 * @author nixdorfan
 *
  */
-
-
-//~--- non-JDK imports --------------------------------------------------------
-
 import de.bite.framework.constants.Constants;
+import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
 import de.bite.framework.utilities.xml.parser.handler.XMLParserHandler;
 import de.bite.framework.utilities.xml.parser.XMLParser;
@@ -50,22 +57,25 @@ import java.util.Properties;
  */
 public class DefaultParser implements XMLParser, Serializable
 {
-    
+
+  //~--- fields ---------------------------------------------------------------
+
   public IContext         iContext;
   public XMLParserHandler xmlHandler;
-  public XMLReader        xmlread;  
+  public XMLReader        xmlread;
+
   //~--- methods --------------------------------------------------------------
 
-    
   /**
-   * 
+   *
    * @param iContext IContext
-   * 
+   *
    */
   @Override
   public void setContext(IContext iContext)
   {
-      this.iContext=iContext;
+    this.iContext = iContext;
+
     // TODO Auto-generated method stub
   }
 
@@ -74,15 +84,17 @@ public class DefaultParser implements XMLParser, Serializable
   @Override
   public void setParser()
   {
-
-    try{
-    this.xmlread      = XMLReaderFactory.createXMLReader( this.iContext.getStringValueFromProperties("default.xmlparser"));
-    } catch (SAXException ex){
-        this.iContext.getLogger().error(Constants.error_message + " SAX-Parser nicht gefunden " + ex.getLocalizedMessage());
+    try
+    {
+      this.xmlread = XMLReaderFactory.createXMLReader(this.iContext.getStringValueFromProperties("default.xmlparser"));
+    }
+    catch(SAXException ex)
+    {
+      this.iContext.getLogger().error(Constants.error_message + " SAX-Parser nicht gefunden " + ex.getLocalizedMessage());
     }
 
     /** Hole Parser-Handler */
-    this.xmlHandler = (XMLParserHandler)this.iContext.getObject("default.xmlhandler", ContextType.NEW,null);
+    this.xmlHandler = (XMLParserHandler)this.iContext.getObject("default.xmlhandler", ContextType.NEW, null);
 
     /** setze Context */
     this.xmlHandler.setContext(iContext);
@@ -92,7 +104,7 @@ public class DefaultParser implements XMLParser, Serializable
   }
 
   /**
-   * 
+   *
    * @param xmldata String
    *
    * @return HashMap<String,Object>
@@ -101,7 +113,7 @@ public class DefaultParser implements XMLParser, Serializable
   public HashMap< String, Object > parseXML(String xmldata)
   {
 
-   HashMap< String, Object > data = null;
+    HashMap< String, Object > data = null;
 
     try
     {
@@ -123,6 +135,7 @@ public class DefaultParser implements XMLParser, Serializable
 
       return data;
     }
+
   }
 }
 

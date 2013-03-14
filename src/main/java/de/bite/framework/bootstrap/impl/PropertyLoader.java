@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -38,7 +38,7 @@ import java.util.Properties;
 
 /**
  *
- * @author         nixdorfan    
+ * @author         nixdorfan
  */
 public class PropertyLoader implements IPropertyLoader
 {
@@ -50,7 +50,7 @@ public class PropertyLoader implements IPropertyLoader
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @return Properties[]
@@ -107,7 +107,7 @@ public class PropertyLoader implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @throws Exception
@@ -121,7 +121,7 @@ public class PropertyLoader implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @return boolean
@@ -132,7 +132,7 @@ public class PropertyLoader implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param pathToProperty String
    *
    * @throws Exception
@@ -146,7 +146,7 @@ public class PropertyLoader implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param filesToLoad ArrayList<?>
    *
    * @return ArrayList<String>

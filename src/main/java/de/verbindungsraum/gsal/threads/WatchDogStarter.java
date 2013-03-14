@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2013.01.25
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
@@ -52,7 +52,7 @@ public class WatchDogStarter extends DefaultGSALThread
         for(WatchEvent< ? > event : key.pollEvents())
         {
           this.context.getLogger().info("WatchDogStarter detect event on GSAL-Filesystem: " + event.kind() + ", on File " + event.context());
-          this.context.updateContextConfiguration(event.context()+"");
+          this.context.updateContextConfiguration(event.context() + "");
         }
 
         key.reset();

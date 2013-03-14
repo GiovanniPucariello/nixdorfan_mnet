@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2013.01.25
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
@@ -29,7 +29,7 @@ public class DefaultGSALThread implements Runnable
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param context IContext
    */
   public void setContext(IContext context)

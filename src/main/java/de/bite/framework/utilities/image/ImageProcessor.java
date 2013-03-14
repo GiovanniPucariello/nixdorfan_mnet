@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -20,13 +20,13 @@ package de.bite.framework.utilities.image;
 //~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.constants.Constants;
-import java.awt.Image;
 
 import org.apache.log4j.Logger;
 
 //~--- JDK imports ------------------------------------------------------------
 
 import java.awt.geom.AffineTransform;
+import java.awt.Image;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
@@ -43,6 +43,7 @@ import javax.imageio.ImageIO;
  */
 public class ImageProcessor
 {
+
   //~--- static fields --------------------------------------------------------
 
   private static Logger logger = Logger.getLogger(ImageProcessor.class);
@@ -102,7 +103,19 @@ public class ImageProcessor
       return false;
     }
   }
-  
+
+  /**
+   * 
+   * @param x double
+   * @param y double
+   * @param interpolationtype int
+   * @param imageFile File
+   * @param imagepostfix String
+   * @param miniaturname String
+   * @param newPath String
+   *
+   * @return Image
+   */
   public static Image returnThumbnailImage(double x, double y, int interpolationtype, File imageFile, String imagepostfix, String miniaturname, String newPath)
   {
 
@@ -132,7 +145,7 @@ public class ImageProcessor
       AffineTransformOp op          = new AffineTransformOp(transform, interpolationtype);
       BufferedImage     scaledImage = op.filter(img, null);
 
-      //ImageIO.write(scaledImage, imagepostfix, new File(newPath + miniaturname + "_" + imageFile.getName()));
+      // ImageIO.write(scaledImage, imagepostfix, new File(newPath + miniaturname + "_" + imageFile.getName()));
       logger.info(Constants.info_message + " Bild neu berechnet ==  " + newPath + miniaturname + "_" + imageFile.getName());
 
       return scaledImage;

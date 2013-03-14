@@ -1,19 +1,20 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
 package de.bite.framework.utilities.swing;
 
-//~--- classes ----------------------------------------------------------------
+//~--- JDK imports ------------------------------------------------------------
 
 import javax.swing.ImageIcon;
 
+//~--- classes ----------------------------------------------------------------
 
 /**
  *
@@ -24,32 +25,51 @@ public class TreeUserObject
 
   //~--- fields ---------------------------------------------------------------
 
-  private String  comment;
-  private boolean isActive;
-  private String  linkName;
-  private String  multimediaType;
-  private String  name;
-  private String  path;
-  private String  type;
+  private String    comment;
+  private boolean   isActive;
+  private String    linkName;
+  private String    multimediaType;
+  private String    name;
+  private String    path;
+  private String    type;
   private ImageIcon image;
-  private int nodeIndex = 0;
+  private int       nodeIndex = 0;
 
   //~--- methods --------------------------------------------------------------
 
-  
-    public int getNodeIndex() {
-        return nodeIndex;
-    }
+  /**
+   *
+   * @return int
+   */
+  public int getNodeIndex()
+  {
+    return nodeIndex;
+  }
 
-    public void setNodeIndex(int nodeIndex) {
-        this.nodeIndex = nodeIndex;
-    }
+  /**
+   * 
+   * @param nodeIndex int
+   */
+  public void setNodeIndex(int nodeIndex)
+  {
+    this.nodeIndex = nodeIndex;
+  }
 
-  public ImageIcon getImage() {
+  /**
+   *
+   * @return ImageIcon
+   */
+  public ImageIcon getImage()
+  {
     return image;
   }
 
-  public void setImage(ImageIcon image) {
+  /**
+   * 
+   * @param image ImageIcon
+   */
+  public void setImage(ImageIcon image)
+  {
     this.image = image;
   }
 

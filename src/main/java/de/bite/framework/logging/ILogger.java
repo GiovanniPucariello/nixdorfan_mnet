@@ -1,33 +1,47 @@
-
-/*
- * @(#)ILogger.java   12/02/07
- * 
- * Copyright (c) 2011 M-net GmbH | bi/te
- * @author nixdorfan
+/**
  *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
-
-
 
 package de.bite.framework.logging;
 
-public interface ILogger {
-    
-    public void setGUIObject(Object guiObject);
-    
-    public void debug(String message);
+//~--- interfaces -------------------------------------------------------------
 
-    public void info(String message);
+public interface ILogger
+{
+  //~--- methods --------------------------------------------------------------
 
-    public void error(String message);
+  /**
+   * 
+   * @param guiObject Object
+   */
+  public void setGUIObject(Object guiObject);
+
+  /**
+   * 
+   * @param message String
+   */
+  public void debug(String message);
+
+  /**
+   * 
+   * @param message String
+   */
+  public void info(String message);
+
+  /**
+   * 
+   * @param message String
+   */
+  public void error(String message);
 }
 
-/*
- * @(#)ILogger.java   12/02/07
- * 
- * Copyright (c) 2011 M-net GmbH | bi/te
+
+/* ||\
+ * ---------------------------------------------------------
  */
-
-
-//~ Formatted in Default Code Convention on 12/02/07
-

@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -18,7 +18,7 @@ import java.util.Properties;
 
 /**
  *
- * @author         nixdorfan    
+ * @author         nixdorfan
  */
 public class ContextPropertyHolder
 {
@@ -31,7 +31,7 @@ public class ContextPropertyHolder
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param propertiesName String
    */
   public void setName(String propertiesName)
@@ -58,7 +58,7 @@ public class ContextPropertyHolder
   }
 
   /**
-   * 
+   *
    * @param properties Properties
    */
   public void setProperties(Properties properties)
@@ -67,7 +67,7 @@ public class ContextPropertyHolder
   }
 
   /**
-   * 
+   *
    * @param key String
    *
    * @return String
@@ -78,7 +78,7 @@ public class ContextPropertyHolder
   }
 
   /**
-   * 
+   *
    * @param key String
    *
    * @return boolean
@@ -89,7 +89,7 @@ public class ContextPropertyHolder
   }
 
   /**
-   * 
+   *
    * @param value String
    *
    * @return boolean

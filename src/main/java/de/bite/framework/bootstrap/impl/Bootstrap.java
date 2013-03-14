@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2013.02.20
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan

@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -42,21 +42,24 @@ public class IndividualParser extends DefaultParser implements IndividualXMLPars
   //~--- methods --------------------------------------------------------------
 
   /**
+   *
    * 
-   * @param context_member_name String
+   * @param mod_properties String
    */
   @Override
   public void setParser(String mod_properties)
   {
-
-    try{
-        this.xmlread      = XMLReaderFactory.createXMLReader( this.iContext.getStringValueFromProperties(mod_properties +".xmlparser"));
-    } catch (SAXException ex){
-        this.iContext.getLogger().error(Constants.error_message + " SAX-Parser nicht gefunden " + ex.getLocalizedMessage());
+    try
+    {
+      this.xmlread = XMLReaderFactory.createXMLReader(this.iContext.getStringValueFromProperties(mod_properties + ".xmlparser"));
+    }
+    catch(SAXException ex)
+    {
+      this.iContext.getLogger().error(Constants.error_message + " SAX-Parser nicht gefunden " + ex.getLocalizedMessage());
     }
 
     /** Hole Parser-Handler */
-    this.xmlHandler = (XMLParserHandler)this.iContext.getObject(mod_properties + ".xmlhandler", ContextType.NEW,null);
+    this.xmlHandler = (XMLParserHandler)this.iContext.getObject(mod_properties + ".xmlhandler", ContextType.NEW, null);
 
     /** setze Context */
     this.xmlHandler.setContext(iContext);

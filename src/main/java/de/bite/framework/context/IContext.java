@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2012.03.08
+ * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_01-b08
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -43,7 +43,10 @@ public interface IContext
 
   //~--- methods --------------------------------------------------------------
 
-
+  /**
+   *
+   * @return ILogger
+   */
   public ILogger getLogger();
 
   /**
@@ -59,11 +62,17 @@ public interface IContext
    */
   public void load(Properties[] configs);
 
-  
+  /**
+   * 
+   * @param filename String
+   *
+   * @return boolean
+   */
   public boolean updateContextConfiguration(String filename);
+
   /**
    *
-   * 
+   *
    * @param objectName String
    * @param contextType ContextType
    * @param contextStatusFlowName String
@@ -71,10 +80,10 @@ public interface IContext
    * @return Object
    */
   public Object getObject(String objectName, ContextType contextType, String contextStatusFlowName);
-  
-   /**
+
+  /**
    *
-   * 
+   *
    * @param objectName String
    * @return Object
    */
@@ -82,7 +91,7 @@ public interface IContext
 
   /**
    *
-   * 
+   *
    * @param contextStatus ContextStatus
    * @param member Object
    * @param objectName String
@@ -93,7 +102,7 @@ public interface IContext
   public String setObject(ContextStatus contextStatus, Object member, String objectName, String contextStatusFlowName);
 
   /**
-   * 
+   *
    * @param propertyName String
    * @return object-history of the given object
    */
@@ -106,7 +115,7 @@ public interface IContext
   public Object[] getObjectHistory();
 
   /**
-   * 
+   *
    * @param propertiesKey String
    * @return String-Value related to property
    */

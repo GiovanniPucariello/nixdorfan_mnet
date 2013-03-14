@@ -1,25 +1,61 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * Copyright (c) 2013.03.13
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
+
 package de.verbindungsraum.cms.backend.user.ui.db.navigation;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import de.bite.framework.context.IContext;
+
+//~--- interfaces -------------------------------------------------------------
 
 /**
  *
  * @author nixdorfan
  */
-public interface INavigator {
+public interface INavigator
+{
+  //~--- methods --------------------------------------------------------------
 
-    String getActualNavigationPoint();
-    
-    String getBackwardNavigationPoint();
-    
-    String getForwardNavigationPoint();
+  /**
+   *
+   * @return String
+   */
+  String getActualNavigationPoint();
 
-    void setActualNavigationPoint(String actualSQL);
+  /**
+   *
+   * @return String
+   */
+  String getBackwardNavigationPoint();
 
-    void setContext(IContext context);
-    
+  /**
+   *
+   * @return String
+   */
+  String getForwardNavigationPoint();
+
+  /**
+   * 
+   * @param actualSQL String
+   */
+  void setActualNavigationPoint(String actualSQL);
+
+  /**
+   * 
+   * @param context IContext
+   */
+  void setContext(IContext context);
 }
+
+
+/* ||\
+ * ---------------------------------------------------------
+ */
