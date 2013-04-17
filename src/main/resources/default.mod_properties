@@ -34,6 +34,12 @@ default.xmlparser=org.apache.xerces.parsers.SAXParser
 # A n d e r e  W e r t e  f u e r  E i n l e s e n
 
 default.db.table.info=de.bite.framework.utilities.db.impl.DBTable
+default.file1=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties
+default.file2=log4j.properties
 default.file.write.encoding=UTF-8
 default.file.read.encoding=UTF-8
+
+
+
+
 

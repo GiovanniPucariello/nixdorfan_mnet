@@ -1,7 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16ef53bb-dae6-46fe-9a61-93830a69dbb9" name="Default" comment="" />
+    <list default="true" id="16ef53bb-dae6-46fe-9a61-93830a69dbb9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/base.mod_properties" afterPath="$PROJECT_DIR$/src/main/resources/base.mod_properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/cms.mod_properties" afterPath="$PROJECT_DIR$/src/main/resources/cms.mod_properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db" afterPath="$PROJECT_DIR$/src/main/resources/db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/IPropertyLoader.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/IPropertyLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/Bootstrap.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/ConsoleValuesPreparator.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/ConsoleValuesPreparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoader.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoaderDB.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoaderDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/constants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/constants/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/IContext.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/IContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/definitions/IContextStatus.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/definitions/IContextStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/definitions/IContextType.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/definitions/IContextType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/IContextExtension.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/IContextExtension.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextExtension.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextExtension.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextStatus.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextType.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/extension/impl/ContextType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/AbstractContext.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/AbstractContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/ContextPropertyHolder.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/ContextPropertyHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/DefaultContext.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/DefaultContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/AbstractController.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/AbstractController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/DefaultController.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/DefaultController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/exceptions/ContextExtensionException.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/exceptions/ContextExtensionException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/Factory.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/Factory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/AbstractFactory.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/AbstractFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/DefaultFactory.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/DefaultFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/logging/ILogger.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/logging/ILogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/logging/impl/DefaultLogger.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/logging/impl/DefaultLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/impl/AbstractModel.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/impl/AbstractModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/impl/DefaultModel.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/model/impl/DefaultModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/server/BiteServer.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/server/BiteServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/exporter/PropertiesExporter.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/exporter/PropertiesExporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/exporter/controller/ModulServiceImporter.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/exporter/controller/ModulServiceImporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/importer/ImporterStarter.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/importer/ImporterStarter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/importer/PropertiesImporter.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/batch/importer/PropertiesImporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/db/dao/ExporterDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/db/dao/ExporterDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/db/dao/ImporterDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/service/db/dao/ImporterDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/Source.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/Source.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/impl/AbstractSource.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/impl/AbstractSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/impl/DefaultSource.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/source/impl/DefaultSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/start/StarterExample.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/start/StarterExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/clone/CloneUtil.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/clone/CloneUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/crypto/hash/CryptoProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/crypto/hash/CryptoProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/Datenbank.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/Datenbank.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/IDBTable.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/IDBTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/impl/DBTable.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/impl/DBTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/impl/DatenbankObj.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/db/impl/DatenbankObj.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/BuildFileStructure.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/BuildFileStructure.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/ExtractPaths.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/ExtractPaths.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileCopy.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileCopy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileUtilsAN.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/FileUtilsAN.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/ftp/BiteFTP.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/ftp/BiteFTP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/image/ImageProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/image/ImageProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/Be.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/Be.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/JClock.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/JClock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/JStatusLeiste.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/status/JStatusLeiste.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/IconTextListCellRenderer.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/IconTextListCellRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/IconTextListModel.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/IconTextListModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/MenuCheck.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/MenuCheck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/NodeGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/NodeGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/PopUpper.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/PopUpper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/TreeUserContext.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/TreeUserContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/TreeUserObject.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/swing/TreeUserObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/system/SystemInformation.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/system/SystemInformation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/IndividualXMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/IndividualXMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/XMLParser.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/XMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/handler/XMLParserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/handler/XMLParserHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/handler/impl/AbstractXMLParserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/handler/impl/AbstractXMLParserHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/impl/DefaultParser.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/impl/DefaultParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/impl/IndividualParser.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/xml/parser/impl/IndividualParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/View.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/View.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/impl/AbstractView.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/impl/AbstractView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/impl/DefaultView.java" afterPath="$PROJECT_DIR$/src/main/java/de/bite/framework/view/impl/DefaultView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/CMSDBKonfigurator.form" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/CMSDBKonfigurator.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/CMSDBKonfigurator.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/CMSDBKonfigurator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/controller/DBInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/controller/DBInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/info/DBInfoTreeBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/info/DBInfoTreeBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/navigation/INavigator.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/navigation/INavigator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/navigation/impl/Navigator.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/navigation/impl/Navigator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/querybuilder/IQueryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/querybuilder/IQueryBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/querybuilder/impl/QueryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/cms/backend/user/ui/db/querybuilder/impl/QueryBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/IGSALCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/IGSALCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/ExternalLoggingCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/ExternalLoggingCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/GSALCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/GSALCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/GeneratingTreeCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/GeneratingTreeCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/LoggingCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/LoggingCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/ProgrammStarterCommand.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/command/impl/ProgrammStarterCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/exception/GSALCommandException.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/exception/GSALCommandException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/exception/GSALException.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/exception/GSALException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/listener/GSALActionListener.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/listener/GSALActionListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/listener/GSALMouseListener.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/listener/GSALMouseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/models/GSALTreeModel.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/models/GSALTreeModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/models/TreeNodeGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/models/TreeNodeGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/starter/GSAL.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/starter/GSAL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/threads/DefaultGSALThread.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/threads/DefaultGSALThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/threads/WatchDogStarter.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/threads/WatchDogStarter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/BootpathLoader.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/BootpathLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/GSALPropertyWatchdog.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/GSALPropertyWatchdog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/ModulAnalyzer.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/utilities/ModulAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALEditorView.form" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALEditorView.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALEditorView.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALEditorView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALFileHandler.form" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALFileHandler.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALFileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALFileHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALSplashScreen.form" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALSplashScreen.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALSplashScreen.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALSplashScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALView.form" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALView.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALView.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/GSALView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/SwingShell.java" afterPath="$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/view/SwingShell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/default.mod_properties" afterPath="$PROJECT_DIR$/src/main/resources/default.mod_properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/servicelayer-db.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/servicelayer-db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/servicelayer-templates.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/servicelayer-templates.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/bite/framework/utilities/crypto/hash/CryptoProcessorTest.java" afterPath="$PROJECT_DIR$/src/test/java/de/bite/framework/utilities/crypto/hash/CryptoProcessorTest.java" />
+    </list>
     <ignored path="nixdorfan_mnet.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,7 +175,53 @@
     <favorites_list name="nixdorfan_mnet" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="DefaultContextTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="14" selection-start="3801" selection-end="3801" vertical-scroll-proportion="0.7077827">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/AbstractContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="155" column="6" selection-start="4371" selection-end="4371" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultPathVerificationCheckModul.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/DefaultPathVerificationCheckModul.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="55" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.mod_properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/default.mod_properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="14" selection-start="1072" selection-end="1150" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.mod_properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/base.mod_properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -68,6 +232,16 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
     <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/AbstractContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/DefaultPathVerificationCheckModul.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/default.mod_properties" />
+        <option value="$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -105,10 +279,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1374" />
+    <option name="x" value="-8" />
     <option name="y" value="22" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -139,6 +313,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,9 +322,330 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="context" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="context" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nixdorfan_mnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,29 +825,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1374" y="22" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="22" width="1936" height="1066" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.77753305" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22246696" sideWeight="0.5005342" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22315437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22246696" sideWeight="0.4957265" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6705757" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30349013" sideWeight="0.67114097" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25106838" sideWeight="0.77753305" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.77753305" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -447,38 +944,94 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/consolevalues.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/ConsoleValuesPreparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="18" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/verbindungsraum/gsal/listener/GSALActionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="410" selection-end="410" vertical-scroll-proportion="0.33774835" />
+        <state line="42" column="13" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/PropertyLoaderDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="1214" selection-end="1221" vertical-scroll-proportion="0.32968238" />
+        <state line="32" column="13" selection-start="792" selection-end="792" vertical-scroll-proportion="-1.1718062" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/bite/framework/utilities/crypto/hash/CryptoProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/constants/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.018619934">
-          <folding />
-        </state>
+        <state line="32" column="13" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.39941263" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/bootstrap/impl/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/DefaultController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="927" selection-end="927" vertical-scroll-proportion="0.018888889">
-          <folding />
-        </state>
+        <state line="31" column="13" selection-start="727" selection-end="727" vertical-scroll-proportion="-0.6490455" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/controller/impl/AbstractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="22" selection-start="801" selection-end="801" vertical-scroll-proportion="-0.22320117" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/exceptions/ContextExtensionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="334" selection-end="334" vertical-scroll-proportion="0.2496329" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/DefaultFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="542" selection-end="542" vertical-scroll-proportion="0.32452276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/factories/impl/AbstractFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="22" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-2.5697503" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/logging/impl/DefaultLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="69" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.4581498" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="67" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.77483445">
+        <state line="146" column="67" selection-start="4396" selection-end="4396" vertical-scroll-proportion="3.5712187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/context/impl/AbstractContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="6" selection-start="4371" selection-end="4371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/bite/framework/utilities/file/DefaultPathVerificationCheckModul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="55" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/base.mod_properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/default.mod_properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="14" selection-start="1072" selection-end="1150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/bite/framework/context/impl/DefaultContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="14" selection-start="3801" selection-end="3801" vertical-scroll-proportion="0.7077827">
           <folding />
         </state>
       </provider>

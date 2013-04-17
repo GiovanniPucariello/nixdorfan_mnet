@@ -26,6 +26,7 @@ package de.bite.framework.bootstrap.impl;
 
 import de.bite.framework.bootstrap.IPropertyLoader;
 import de.bite.framework.context.IContext;
+import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.impl.DefaultContext;
 import de.bite.framework.factories.impl.DefaultFactory;
 
@@ -112,8 +113,14 @@ public class Bootstrap
         throw new RuntimeException("kein Propertyloader [propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader || propertyloader=de.bite.framework.bootstrap.impl.PropertyLoaderDB] angegeben");
       }
 
+      
       iContext.load(loader.loadProperties(startValues));
 
+      // setze basepath in Context
+      // basepath enthaelt alle configfiles
+      String basepath = consoleHashValues.get("path");
+      iContext.setObject(ContextStatus.AKTIV, basepath, "basepath", null);
+      
       // Lade Properties
       // return Context
       return iContext;

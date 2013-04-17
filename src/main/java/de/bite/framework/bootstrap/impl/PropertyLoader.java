@@ -79,7 +79,7 @@ public class PropertyLoader implements IPropertyLoader
 
       configs[0] = properties;
 
-      System.out.println(Constants.info_message + "Einzelnes Property-File geladen :: " + pathOrFile);
+      logger.info(Constants.info_message + "Einzelnes Property-File geladen :: " + pathOrFile);
     }
     else
     {
@@ -98,7 +98,7 @@ public class PropertyLoader implements IPropertyLoader
 
         load++;
 
-        System.out.println(Constants.info_message + "Property-File geladen :: " + pathToProperty);
+        logger.info(Constants.info_message + "Property-File geladen :: " + pathToProperty);
       }
     }
 
@@ -167,7 +167,7 @@ public class PropertyLoader implements IPropertyLoader
       }
       else
       {
-        System.out.println(Constants.info_message + "File zum Einlesen nicht geeignet :: " + pathToProperty);
+        logger.info(Constants.info_message + "File zum Einlesen nicht geeignet :: " + pathToProperty);
       }
     }
 

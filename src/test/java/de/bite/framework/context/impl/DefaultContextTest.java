@@ -42,10 +42,14 @@ public class DefaultContextTest extends TestCase
 
     // ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
     // ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-    // ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-    // ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-    ary[0]       = "path=C:/Project/gsal/conf";
-    ary[1]       = "dbkonfig=C:/Project/gsal/conf/db";
+     //ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+     //ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+      ary[0] = "path=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+      ary[1] = "dbkonfig=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+	//ary[0]= "path=C:/Project/bite.framework.mnet/src/main/resources";
+	//ary[1]= "dbkonfig=C:/Project/bite.framework.mnet/src/main/resources/db";
+//    ary[0]       = "path=C:/Project/gsal/conf";
+//    ary[1]       = "dbkonfig=C:/Project/gsal/conf/db";
     ary[2]       = "useGUI=false";
     ary[3]       = "propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader";
     ary[4]       = "resource=path";
@@ -79,6 +83,21 @@ public class DefaultContextTest extends TestCase
 
     // System.out.println(" TEST2 == "  + resultString2);
     assertEquals("String1", resultString2);
+  }
+  
+  /**
+   */
+  public void testContextFileDetektion()
+  {
+    String file = (String)this.context.getStringValueFromProperties("default.db.table.info");
+    String file1 = (String)this.context.getStringValueFromProperties("default.file1");
+    String file2 = (String)this.context.getStringValueFromProperties("default.file2");
+    System.out.println("File 2 ==  " + file2);
+    assertEquals("de.bite.framework.utilities.db.impl.DBTable",file );
+    //assertEquals("C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file1 );
+    //assertEquals("C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file2 );
+ ;
+
   }
 }
 

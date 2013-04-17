@@ -10,9 +10,10 @@
 name=base
 
 # F a c t o r y
-default=de.bite.framework.factories.impl.DefaultFactory
+base.default=de.bite.framework.factories.impl.DefaultFactory
 
 # L o g g i n g
 
 logging=C:/Project/gsal/conf/log4j.properties
+logging2=C:/Project/gsal/conf/log4j.properties33
 logging_delay=1000
