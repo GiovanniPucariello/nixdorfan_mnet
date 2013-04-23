@@ -113,13 +113,13 @@ public class Bootstrap
         throw new RuntimeException("kein Propertyloader [propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader || propertyloader=de.bite.framework.bootstrap.impl.PropertyLoaderDB] angegeben");
       }
 
-      
-      iContext.load(loader.loadProperties(startValues));
-
       // setze basepath in Context
       // basepath enthaelt alle configfiles
       String basepath = consoleHashValues.get("path");
       iContext.setObject(ContextStatus.AKTIV, basepath, "basepath", null);
+      
+      iContext.load(loader.loadProperties(startValues));
+
       
       // Lade Properties
       // return Context

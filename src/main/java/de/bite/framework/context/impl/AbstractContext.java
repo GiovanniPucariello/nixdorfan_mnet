@@ -142,18 +142,16 @@ public abstract class AbstractContext implements IContext
         propertyHolder.add(holder);
       }
 
-        // Initialisiere FileChecking modul und lade es in context;
-        DefaultPathVerificationCheckModul checkingModul = new DefaultPathVerificationCheckModul();
-        checkingModul.setContext(this);
-        this.setObject(ContextStatus.AKTIV, checkingModul, "filechecking", null);
-
-
+      // Initialisiere FileChecking modul und lade es in context;
+      DefaultPathVerificationCheckModul checkingModul = new DefaultPathVerificationCheckModul();
+      checkingModul.setContext(this);
+      this.setObject(ContextStatus.AKTIV, checkingModul, "filechecking", null);
+      
       String logging      = this.getStringValueFromProperties("logging");
-      String loggingDelay = this.getStringValueFromProperties("logging_delay");
 
-      PropertyConfigurator.configureAndWatch(logging, Integer.parseInt(loggingDelay));
+      PropertyConfigurator.configureAndWatch(logging, 1000);
       this.setObject(ContextStatus.AKTIV, propertyHolder, "configuration", null);
-
+      
     }
 
   }
@@ -574,6 +572,7 @@ public abstract class AbstractContext implements IContext
     	  // Bestimme ob Properties-Abfrage auf File zeigt oder eine andere Konfiguration ist
     	  String valOfProperty = holder.getProperties(propertiesKey);
     	  DefaultPathVerificationCheckModul checkingModul = (DefaultPathVerificationCheckModul)this.getObject("filechecking", ContextType.USED, null);
+    	  System.out.println("Property-Value == " + valOfProperty);
     	  String verified = checkingModul.getVerifcatedPath(valOfProperty);
     	  if(verified == null){
     		  return valOfProperty;
