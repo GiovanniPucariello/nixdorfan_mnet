@@ -32,8 +32,21 @@ public class TreeUserObject
   private String    name;
   private String    path;
   private String    type;
+  private String    category;
   private ImageIcon image;
   private int       nodeIndex = 0;
+
+  
+   //~--- methods --------------------------------------------------------------
+
+  
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
   //~--- methods --------------------------------------------------------------
 

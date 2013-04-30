@@ -5,8 +5,8 @@
   <artifactId>framework</artifactId>
   <packaging>jar</packaging>
   <name>bite.framework</name>
-  <version>3.6.0</version>
-  <!-- Framework propertiesReader und AbstractContext auf absolute und Relative Pfade eingestellt-->
+  <version>3.6.1</version>
+  <!-- TreeuserObject auf Category erweitert -->
   <url>http://maven.apache.org</url>
 <distributionManagement>
    <!-- <repository>
@@ -34,7 +34,12 @@
      <snapshots>
         <enabled>true</enabled>
      </snapshots> -->
-  </repository>   
+  </repository>
+    <repository>
+      <id>unknown-jars-temp-repo</id>
+      <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+      <url>file:${project.basedir}/lib</url>
+    </repository>
   </repositories>
   <dependencies>
     <dependency>
@@ -109,6 +114,16 @@
 	<artifactId>ganymed-ssh2</artifactId>
 	<version>build251beta1</version>
 </dependency>
+    <dependency>
+      <groupId>unknown.binary</groupId>
+      <artifactId>jgoodies-forms</artifactId>
+      <version>SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>unknown.binary</groupId>
+      <artifactId>jgoodies-common</artifactId>
+      <version>SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
   	<plugins>  
