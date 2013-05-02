@@ -114,16 +114,6 @@
 	<artifactId>ganymed-ssh2</artifactId>
 	<version>build251beta1</version>
 </dependency>
-    <dependency>
-      <groupId>unknown.binary</groupId>
-      <artifactId>jgoodies-forms</artifactId>
-      <version>SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>unknown.binary</groupId>
-      <artifactId>jgoodies-common</artifactId>
-      <version>SNAPSHOT</version>
-    </dependency>
   </dependencies>
   <build>
   	<plugins>  
