@@ -21,7 +21,11 @@ initdatabase=Postgres
 #initialpwd=
 
 #
-urlPostgres=jdbc:postgresql://main-nixdorfan:5432/bite_ajax_webapp
+#urlPostgres=jdbc:postgresql://main-nixdorfan:5432/bite_ajax_webapp
+#initialuser=nixdorfan
+#initialpwd=476wcpmmvwx0240juk
+
+urlPostgres=jdbc:postgresql://nixdorfan-mobile-old:5432/bite_ajax_webapp
 initialuser=nixdorfan
 initialpwd=476wcpmmvwx0240juk
 

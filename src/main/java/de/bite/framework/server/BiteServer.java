@@ -88,8 +88,8 @@ public class BiteServer implements Runnable {
               this.context.getLogger().error("--- Ende BiteServer:ServerSocket close");
               server.close();
             }
-          } catch ( IOException e ) { }
-          catch ( InterruptedException ei ) { }
+          } catch ( IOException ex ) { }
+          catch ( InterruptedException ex ) { }
         }
       }
 }

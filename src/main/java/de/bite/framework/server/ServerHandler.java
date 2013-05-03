@@ -53,52 +53,57 @@ public class ServerHandler implements IServerHandler {
     @Override
     public void run() {
         
-        try{
+      try{
         List< String > modulesToLoad   = ModulAnalyzer.getActualItemsForConsole(this.basepath);
 
-        // read and service request on client
-      context.getLogger().info("ServerHandler startet service, " + Thread.currentThread() );
-      PrintWriter out = new PrintWriter( cs.getOutputStream(), true );
-      BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(cs.getInputStream()));
-      
-      char[] buffer = new char[250];
-      int anzahlZeichen = bufferedReader.read(buffer, 0, 250); // blockiert bis Nachricht empfangen
-      
-      String nachricht = new String(buffer, 0, anzahlZeichen);
-      String[] werte = nachricht.split("\\s"); 
-      
-      for(int i=0;i<werte.length;i++){
-          this.context.getLogger().info("URL-Wert : " + werte[i] + "\n");
-      }
-      
-      this.context.getLogger().info("eingegebener Befehl : " + werte + "\n"); 
+          // read and service request on client
+        context.getLogger().info("ServerHandler startet service, " + Thread.currentThread() );
+        PrintWriter out = new PrintWriter( cs.getOutputStream(), true );
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(cs.getInputStream()));
+
+        char[] buffer = new char[1024];
+        int anzahlZeichen = bufferedReader.read(buffer, 0, 1024); // blockiert bis Nachricht empfangen
+
+        String nachricht = new String(buffer, 0, anzahlZeichen);
+        String[] werte = nachricht.split("\\n"); 
+
+        for(int i=0;i<werte.length;i++){
+            this.context.getLogger().info("URL-Wert : " + werte[i]);
+        }
+
+        // Extrahiere Befehl aus HTTP-Header
+        String[] befehlszeile = werte[0].split("\\s");
+        String befehl = befehlszeile[1].substring(1);
         
+        // Protokolliere eingegebenen Befehl
+        this.context.getLogger().info("eingegebener Befehl : " + befehl + "\n"); 
         
+        out.println("eingegebener Befehl : " + befehl + " wird ausgefuehrt. ");
+
+
         for(String command : modulesToLoad)
         {
-            this.context.getLogger().info("vorhandene Befehle : " + command + "\n");
+          this.context.getLogger().info("vorhandene Befehle : " + command + "\n");
 
-            if(command.equalsIgnoreCase(werte[0]))
+          if(command.equalsIgnoreCase(befehl))
+          {
+            if(command.equalsIgnoreCase("base") || command.equalsIgnoreCase("default"))
             {
-              if(command.equalsIgnoreCase("base") || command.equalsIgnoreCase("default"))
-              {
-                this.context.getLogger().info("Befehl base oder default hat keinen Controller hinterlegt. Befehl war : " + command + " \n");
-              }
-              else
-              {
-                Controller controll = (Controller)context.getObject(werte[0] + ".controller", ContextType.NEW, null);
-
-                //controll.dispatch();
-              }
+              this.context.getLogger().info("Befehl base oder default hat keinen Controller hinterlegt. Befehl war : " + command + " \n");
             }
-            else if(command.equalsIgnoreCase("quit"))
+            else
             {
-              System.exit(0);
+              Controller controll = (Controller)context.getObject(befehl+ ".controller", ContextType.NEW, null);
+
+              controll.dispatch();
             }
           }
+          else if(command.equalsIgnoreCase("quit"))
+          {
+            System.exit(0);
+          }
         }
-      
-      catch(Exception ex)
+      } catch (Exception ex)
       {
         ex.printStackTrace();
         throw new RuntimeException();
