@@ -5,8 +5,8 @@
   <artifactId>framework</artifactId>
   <packaging>jar</packaging>
   <name>bite.framework</name>
-  <version>3.6.1</version>
-  <!-- TreeuserObject auf Category erweitert -->
+  <version>3.7.0</version>
+  <!-- Server implementiert -->
   <url>http://maven.apache.org</url>
 <distributionManagement>
    <!-- <repository>
