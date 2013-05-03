@@ -19,6 +19,8 @@ public interface IServerHandler extends Runnable {
     void setContext(IContext context);
 
     void setServerSocket(ServerSocket server);
+    
+    void setBasePath(String basepath);
 
     void setSocket(Socket cs);
     

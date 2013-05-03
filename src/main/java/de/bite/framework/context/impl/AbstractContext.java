@@ -34,6 +34,7 @@ import de.bite.framework.factories.Factory;
 import de.bite.framework.factories.impl.DefaultFactory;
 import de.bite.framework.logging.ILogger;
 import de.bite.framework.logging.impl.DefaultLogger;
+import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
 //import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
 
 import org.apache.log4j.Logger;
@@ -143,9 +144,9 @@ public abstract class AbstractContext implements IContext
       }
 
         // Initialisiere FileChecking modul und lade es in context;
-//        DefaultPathVerificationCheckModul checkingModul = new DefaultPathVerificationCheckModul();
-//        checkingModul.setContext(this);
-//        this.setObject(ContextStatus.AKTIV, checkingModul, "filechecking", null);
+      DefaultPathVerificationCheckModul checkingModul = new DefaultPathVerificationCheckModul();
+      checkingModul.setContext(this);
+      this.setObject(ContextStatus.AKTIV, checkingModul, "filechecking", null);
 
 
       String logging      = this.getStringValueFromProperties("logging");
@@ -573,8 +574,8 @@ public abstract class AbstractContext implements IContext
       {
     	  // Bestimme ob Properties-Abfrage auf File zeigt oder eine andere Konfiguration ist
    	  String valOfProperty = holder.getProperties(propertiesKey);
-//    	  DefaultPathVerificationCheckModul checkingModul = (DefaultPathVerificationCheckModul)this.getObject("filechecking", ContextType.USED, null);
-    	  String verified = null;//checkingModul.getVerifcatedPath(valOfProperty);
+   	  DefaultPathVerificationCheckModul checkingModul = (DefaultPathVerificationCheckModul)this.getObject("filechecking", ContextType.USED, null);
+    	  String verified = checkingModul.getVerifcatedPath(valOfProperty);
     	  if(verified == null){
     		  return valOfProperty;
     	  } else {

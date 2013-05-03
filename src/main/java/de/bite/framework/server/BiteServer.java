@@ -13,6 +13,7 @@ package de.bite.framework.server;
 //~--- classes ----------------------------------------------------------------
 
 import de.bite.framework.context.IContext;
+import de.bite.framework.context.extension.impl.ContextType;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -67,6 +68,7 @@ public class BiteServer implements Runnable {
             */
             Socket cs = this.server.accept();  //warten auf Client-Anforderung
             ServerHandler newServerHandler = (ServerHandler)context.getUnboundObject("default.server.handler");
+            newServerHandler.setBasePath((String)this.context.getObject("basepath", ContextType.USED, null));
             newServerHandler.setSocket(cs);
             newServerHandler.setServerSocket(server);
             
