@@ -1,0 +1,41 @@
+2013-04-30 22:41:33,650 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: Directory__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql
+2013-04-30 22:41:33,651 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql/servicelayer-db.sql
+2013-04-30 22:41:33,651 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql/servicelayer-templates.sql
+2013-04-30 22:41:33,651 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db
+2013-04-30 22:41:33,651 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties
+2013-04-30 22:41:33,652 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/default.mod_properties
+2013-04-30 22:41:33,652 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/base.mod_properties
+2013-04-30 22:41:33,653 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/service.mod_properties
+2013-04-30 22:41:33,653 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/cms.mod_properties
+2013-04-30 22:41:33,655 INFO  [main] root: C:/Project/gsal/conf/log4j.properties
+2013-04-30 22:41:33,655 INFO  [main] root: 1000
+2013-04-30 22:41:33,658 INFO  [main] root: [bite.framework] Warnung. Fehler moeglich innerhalb:  getObject -- Extension  N I C H T  gefunden fuer configuration
+2013-04-30 22:41:33,660 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer configuration
+2013-04-30 22:41:33,661 INFO  [main] root: [bite.framework] Warnung. Fehler moeglich innerhalb:  getObject -- Extension  N I C H T  gefunden fuer basepath
+2013-04-30 22:41:33,661 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer basepath
+2013-04-30 22:41:33,662 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: Directory__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql
+2013-04-30 22:41:33,662 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql/servicelayer-db.sql
+2013-04-30 22:41:33,662 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/sql/servicelayer-templates.sql
+2013-04-30 22:41:33,663 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db
+2013-04-30 22:41:33,663 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: File zum Einlesen nicht geeignet :: File__/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties
+2013-04-30 22:41:33,663 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/default.mod_properties
+2013-04-30 22:41:33,664 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/base.mod_properties
+2013-04-30 22:41:33,664 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/service.mod_properties
+2013-04-30 22:41:33,665 INFO  [main] de.bite.framework.bootstrap.impl.PropertyLoader: [bite.framework] Info: Property-File geladen :: /home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/cms.mod_properties
+2013-04-30 22:41:33,665 INFO  [main] root: C:/Project/gsal/conf/log4j.properties
+2013-04-30 22:41:33,665 INFO  [main] root: 1000
+2013-04-30 22:41:33,666 INFO  [main] root: [bite.framework] Warnung. Fehler moeglich innerhalb:  getObject -- Extension  N I C H T  gefunden fuer configuration
+2013-04-30 22:41:33,666 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer configuration
+2013-04-30 22:41:33,666 INFO  [main] root: [bite.framework] Warnung. Fehler moeglich innerhalb:  getObject -- Extension  N I C H T  gefunden fuer basepath
+2013-04-30 22:41:33,666 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer basepath
+2013-04-30 22:41:33,679 INFO  [main] root: [bite.framework] Info:  set(Object object) :: Conversation-Status wird mit verarbeitet fuer string
+2013-04-30 22:41:33,679 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer string
+2013-04-30 22:41:33,692 INFO  [main] root: [bite.framework] Info:  set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == no2 fuer string
+2013-04-30 22:41:33,693 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer string
+2013-04-30 22:41:33,693 INFO  [main] root: [bite.framework] Info:  set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == no3 fuer string
+2013-04-30 22:41:33,693 INFO  [main] root: [bite.framework] Info:  set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer string
+2013-04-30 22:41:33,694 INFO  [main] root: [bite.framework] Info:  get( String conversationFlow ) aktives Object fuer Conversation-Flow :: no2 ERFOLGREICH == String2_11 fuer string
+2013-04-30 22:41:33,694 INFO  [main] root: [bite.framework] Info:  get( String conversationFlow ) aktives Object fuer Conversation-Flow :: no1 ERFOLGREICH == String1_01 fuer string
+2013-04-30 22:41:33,698 INFO  [main] root: de.bite.framework.utilities.db.impl.DBTable
+2013-04-30 22:41:33,698 INFO  [main] root: C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties
+2013-04-30 22:41:33,699 INFO  [main] root: log4j.properties

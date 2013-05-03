@@ -12,21 +12,24 @@ import java.net.Socket;
  *
  * @author nixdorfan
  */
-public class ServerHandler implements Runnable {
+public class ServerHandler implements IServerHandler {
 
     private IContext context;
     private Socket cs;
     private ServerSocket server;
     
     
+    @Override
     public void setContext(IContext context){
         this.context = context;
     }
     
+    @Override
     public void setSocket(Socket cs){
         this.cs = cs;
     }
     
+    @Override
     public void setServerSocket(ServerSocket server){
         this.server = server;
     }

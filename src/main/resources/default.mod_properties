@@ -39,6 +39,11 @@ default.file2=log4j.properties
 default.file.write.encoding=UTF-8
 default.file.read.encoding=UTF-8
 
+# S e r v e r E i n s t e l l u n g e n
+default.server.port=9000
+default.server.handler=de.bite.framework.server.ServerHandler
+
+
 
 
 
