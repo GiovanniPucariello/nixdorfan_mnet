@@ -49,7 +49,7 @@ public class NodeGenerator
   private IContext               iContext    = null;
   private DefaultMutableTreeNode rooter      = new DefaultMutableTreeNode();
   private Logger                 logger      = Logger.getLogger(NodeGenerator.class);
-  private TreeUserContext        treecontext = null;
+  private TreeUserContext        treecontext = new TreeUserContext();
 
   //~--- constructors ---------------------------------------------------------
 
@@ -60,7 +60,6 @@ public class NodeGenerator
   public NodeGenerator(IContext iContext)
   {
     this.iContext    = iContext;
-    this.treecontext = (TreeUserContext)this.iContext.getObject("treecontext", ContextType.NEW, null);
   }
 
 
@@ -165,7 +164,7 @@ public class NodeGenerator
         }
       }
 
-      this.iContext.setObject(ContextStatus.AKTIV, this.treecontext, "tree_context", null);
+      this.iContext.setObject(ContextStatus.AKTIV, this.treecontext, "treecontext", null);
     }
     catch(Exception ex)
     {

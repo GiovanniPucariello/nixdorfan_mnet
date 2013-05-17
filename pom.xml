@@ -5,8 +5,10 @@
   <artifactId>framework</artifactId>
   <packaging>jar</packaging>
   <name>bite.framework</name>
-  <version>3.7.0</version>
-  <!-- Server implementiert -->
+  <version>3.8.0</version>
+  <!-- Simple Usage Context. Keine ContextTypes oder ContextStatus Types mehr 
+       bzw. es muss nicht mehr direkt geschrieben werden
+    -->
   <url>http://maven.apache.org</url>
 <distributionManagement>
    <!-- <repository>

@@ -28,6 +28,7 @@ import de.bite.framework.bootstrap.IPropertyLoader;
 import de.bite.framework.context.IContext;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.impl.DefaultContext;
+import de.bite.framework.factories.Factory;
 import de.bite.framework.factories.impl.DefaultFactory;
 
 //~--- JDK imports ------------------------------------------------------------
@@ -124,6 +125,87 @@ public class Bootstrap
       // Lade Properties
       // return Context
       return iContext;
+    }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+      throw new RuntimeException("Context konnte nicht geladen werden. Start Applikation wird gestoppt \n", ex);
+    }
+
+  }
+  
+  /**
+   * Define another context instead of DefaultContext. IMplement Interface IContext.
+   */
+  public static IContext startContext(String consoleValues, Factory factory, IContext context)
+  {
+
+    try
+    {
+
+      // System.out.println("Konsolenwerte : " + consoleValues);
+      //
+      String[]                  values            = consoleValues.split("@@@");
+      HashMap< String, String > consoleHashValues = new HashMap< String, String >();
+
+      for(int i = 0; i < values.length; i++)
+      {
+        if(values[i].indexOf("=") != -1)
+        {
+          String[] singleVals = values[i].split("=");
+
+          consoleHashValues.put(singleVals[0], singleVals[1]);
+        }
+      }
+
+      // Factory wenn vorhanden, ansonsten waehle Default
+      context.initializeContext(null);
+
+      IPropertyLoader loader      = null;
+      String          startValues = "";
+
+      if(consoleHashValues.containsKey("propertyloader"))
+      {
+        loader = (IPropertyLoader)factory.getObject(consoleHashValues.get("propertyloader"));
+
+        String resource = consoleHashValues.get("resource");
+
+        if(resource == null)
+        {
+          throw new RuntimeException("keine resource [resource=db || resource=path] angegeben");
+        }
+        else
+        {
+          if(resource.equalsIgnoreCase("path"))
+          {
+            startValues = consoleHashValues.get("path");
+          }
+          else if(resource.equalsIgnoreCase("db"))
+          {
+            startValues = consoleHashValues.get("dbkonfig") + "@@@" + consoleHashValues.get("dbreflection");
+          }
+          else
+          {
+            throw new RuntimeException("Konsolenkonfiguration unvollstaendig");
+          }
+        }
+      }
+      else
+      {
+        throw new RuntimeException("kein Propertyloader [propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader || propertyloader=de.bite.framework.bootstrap.impl.PropertyLoaderDB] angegeben");
+      }
+
+      
+      context.load(loader.loadProperties(startValues));
+
+      // setze basepath in Context
+      // basepath enthaelt alle configfiles
+      String basepath = consoleHashValues.get("path");
+      context.setObject(ContextStatus.AKTIV, basepath, "basepath", null);
+      
+      // Lade Properties
+      // return Context
+      return context;
     }
     catch(Exception ex)
     {

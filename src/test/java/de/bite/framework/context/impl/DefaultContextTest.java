@@ -40,12 +40,12 @@ public class DefaultContextTest extends TestCase
   public DefaultContextTest()
   {
 
-    ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-    ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+    //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+    //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
      //ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
      //ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-      //ary[0] = "path=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-      //ary[1] = "dbkonfig=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+      ary[0] = "path=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+      ary[1] = "dbkonfig=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
 	//ary[0]= "path=C:/Project/bite.framework.mnet/src/main/resources";
 	//ary[1]= "dbkonfig=C:/Project/bite.framework.mnet/src/main/resources/db";
 //    ary[0]       = "path=C:/Project/gsal/conf";
