@@ -2,11 +2,13 @@
  *
  * Copyright (c) 2013.03.13
  * M-net Telekommunikations GmbH
- * 
+ *
  * @author nixdorfan
  * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+ *
  */
+
+
 
 /*
 * @(#)Context.java   11/12/16
@@ -32,97 +34,101 @@ import de.bite.framework.logging.ILogger;
 
 import java.util.Properties;
 
-//~--- interfaces -------------------------------------------------------------
-
 /**
  *
  * @author nixdorfan
  */
-public interface IContext
-{
+public interface IContext {
 
-  //~--- methods --------------------------------------------------------------
+    /**
+     *
+     * @return ILogger
+     */
+    public ILogger getLogger();
 
-  /**
-   *
-   * @return ILogger
-   */
-  public ILogger getLogger();
+    /**
+     * @param factoryClazzName String
+     *
+     * @throws Exception
+     */
+    public void initializeContext(String factoryClazzName) throws Exception;
 
-  /**
-   * @param factoryClazzName String
-   *
-   * @throws Exception
-   */
-  public void initializeContext(String factoryClazzName) throws Exception;
+    /**
+     *
+     * @param configs Properties[]
+     */
+    public void load(Properties[] configs);
 
-  /**
-   *
-   * @param configs Properties[]
-   */
-  public void load(Properties[] configs);
+    /**
+     *
+     * @param filename String
+     *
+     * @return boolean
+     */
+    public boolean updateContextConfiguration(String filename);
 
-  /**
-   * 
-   * @param filename String
-   *
-   * @return boolean
-   */
-  public boolean updateContextConfiguration(String filename);
+    /**
+     *
+     *
+     * @param objectName String
+     * @param contextType ContextType
+     * @param contextStatusFlowName String
+     *
+     * @return Object
+     */
+    public Object getObject(String objectName, ContextType contextType, String contextStatusFlowName);
 
-  /**
-   *
-   *
-   * @param objectName String
-   * @param contextType ContextType
-   * @param contextStatusFlowName String
-   *
-   * @return Object
-   */
-  public Object getObject(String objectName, ContextType contextType, String contextStatusFlowName);
+    /**
+     *
+     *
+     * @param objectName String
+     * @return Object
+     */
+    public Object getUnboundObject(String objectName);
 
-  /**
-   *
-   *
-   * @param objectName String
-   * @return Object
-   */
-  public Object getUnboundObject(String objectName);
+    /**
+     *
+     *
+     * @param contextStatus ContextStatus
+     * @param member Object
+     * @param objectName String
+     * @param contextStatusFlowName String
+     *
+     * @return String
+     */
+    public String setObject(ContextStatus contextStatus, Object member, String objectName,
+                            String contextStatusFlowName);
 
-  /**
-   *
-   *
-   * @param contextStatus ContextStatus
-   * @param member Object
-   * @param objectName String
-   * @param contextStatusFlowName String
-   *
-   * @return String
-   */
-  public String setObject(ContextStatus contextStatus, Object member, String objectName, String contextStatusFlowName);
+    /**
+     *
+     * @param propertyName String
+     * @return object-history of the given object
+     */
+    public Object[] getObjectHistory(String propertyName);
 
-  /**
-   *
-   * @param propertyName String
-   * @return object-history of the given object
-   */
-  public Object[] getObjectHistory(String propertyName);
+    /**
+     *
+     * @return all object-histories within this context
+     */
+    public Object[] getObjectHistory();
 
-  /**
-   *
-   * @return all object-histories within this context
-   */
-  public Object[] getObjectHistory();
+    /**
+     *
+     * @param propertiesKey String
+     * @return String-Value related to property
+     */
+    public String getStringValueFromProperties(String propertiesKey);
 
-  /**
-   *
-   * @param propertiesKey String
-   * @return String-Value related to property
-   */
-  public String getStringValueFromProperties(String propertiesKey);
+    public Object getObject(String clazzname);
+
+    public void setObject(String objectname, Object object);
+
+    public Object getConversationObject(String clazzname, String conversationFlowState);
+
+    public void setConversationObject(String objectname, String conversationFlowState, Object object);
 }
-
 
 /* ||\
  * ---------------------------------------------------------
  */
+

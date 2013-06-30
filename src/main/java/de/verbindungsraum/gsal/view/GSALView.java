@@ -53,6 +53,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreePath;
 import javax.swing.UIManager;
+import org.hsqldb.Server;
 
 //~--- classes ----------------------------------------------------------------
 
@@ -71,31 +72,33 @@ public class GSALView extends javax.swing.JFrame
   private ProgrammStarterCommand           dbStarter;
   private ProgrammStarterCommand           puttyStarter;
   private ProgrammStarterCommand           winscpStarter;
+  private Server server;
 
-  // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JMenu                jMenu1;
-  private javax.swing.JMenu                jMenu2;
-  private javax.swing.JMenu                jMenu3;
-  private javax.swing.JMenuBar             jMenuBar1;
-  private javax.swing.JMenuItem            jMenuItem1;
-  private javax.swing.JMenuItem            jMenuItem2;
-  private javax.swing.JMenuItem            jMenuItem3;
-  private javax.swing.JMenuItem            jMenuItem4;
-  private javax.swing.JMenuItem            jMenuItem7;
-  private javax.swing.JMenuItem            jMenuItem8;
-  private javax.swing.JScrollPane          jScrollPane1;
-  private javax.swing.JPopupMenu.Separator jSeparator1;
-  private javax.swing.JPopupMenu.Separator jSeparator2;
-  private javax.swing.JPopupMenu.Separator jSeparator3;
-  private javax.swing.JPopupMenu.Separator jSeparator4;
-  private javax.swing.JPopupMenu.Separator jSeparator5;
-  private javax.swing.JPopupMenu.Separator jSeparator6;
-  private javax.swing.JPopupMenu.Separator jSeparator7;
-  private javax.swing.JPopupMenu.Separator jSeparator8;
-  private javax.swing.JTabbedPane          jTabbedPane1;
-  private javax.swing.JTextArea            jTextArea1;
-
-//End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JPopupMenu.Separator jSeparator7;
+    private javax.swing.JPopupMenu.Separator jSeparator8;
+    private javax.swing.JPopupMenu.Separator jSeparator9;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
+    // End of variables declaration//GEN-END:variables
 
   //~--- constructors ---------------------------------------------------------
 
@@ -201,136 +204,155 @@ public class GSALView extends javax.swing.JFrame
    */
   @SuppressWarnings("unchecked")
 
-  // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-  private void initComponents()
-  {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-    jTabbedPane1 = new javax.swing.JTabbedPane();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    jTextArea1   = new javax.swing.JTextArea();
-    jMenuBar1    = new javax.swing.JMenuBar();
-    jMenu1       = new javax.swing.JMenu();
-    jMenu2       = new javax.swing.JMenu();
-    jSeparator4  = new javax.swing.JPopupMenu.Separator();
-    jMenuItem2   = new javax.swing.JMenuItem();
-    jSeparator5  = new javax.swing.JPopupMenu.Separator();
-    jMenuItem3   = new javax.swing.JMenuItem();
-    jSeparator6  = new javax.swing.JPopupMenu.Separator();
-    jMenuItem8   = new javax.swing.JMenuItem();
-    jSeparator7  = new javax.swing.JPopupMenu.Separator();
-    jMenu3       = new javax.swing.JMenu();
-    jSeparator1  = new javax.swing.JPopupMenu.Separator();
-    jMenuItem4   = new javax.swing.JMenuItem();
-    jMenuItem7   = new javax.swing.JMenuItem();
-    jSeparator2  = new javax.swing.JPopupMenu.Separator();
-    jSeparator8  = new javax.swing.JPopupMenu.Separator();
-    jMenuItem1   = new javax.swing.JMenuItem();
-    jSeparator3  = new javax.swing.JPopupMenu.Separator();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator9 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
+        jMenu3 = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jSeparator8 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-    setTitle("GSAL - [Global System and Application Launcher] Version 1.0");
-    setFont(new java.awt.Font("Arial", 0, 10));                 // NOI18N
-    jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
-    jTabbedPane1.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jTabbedPane1.setName("");
-    jScrollPane1.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jTextArea1.setColumns(20);
-    jTextArea1.setFont(new java.awt.Font("Arial", 0, 10));      // NOI18N
-    jTextArea1.setRows(5);
-    jScrollPane1.setViewportView(jTextArea1);
-    jTabbedPane1.addTab("LogFiles", jScrollPane1);
-    getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
-    jTabbedPane1.getAccessibleContext().setAccessibleName("Logging");
-    jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
-    jMenu1.setText("geladene Module");
-    jMenu1.setToolTipText("");
-    jMenu1.setFont(new java.awt.Font("Arial", 0, 10));          // NOI18N
-    jMenuBar1.add(jMenu1);
-    jMenu2.setText("externe Programme");
-    jMenu2.setFont(new java.awt.Font("Arial", 0, 10));          // NOI18N
-    jMenu2.add(jSeparator4);
-    jMenuItem2.setFont(new java.awt.Font("Arial", 0, 10));      // NOI18N
-    jMenuItem2.setText("Starte DB-Server");
-    jMenuItem2.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem2ActionPerformed(evt);
-      }
-    });
-    jMenu2.add(jMenuItem2);
-    jMenu2.add(jSeparator5);
-    jMenuItem3.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenuItem3.setText("PuTTY");
-    jMenuItem3.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem3ActionPerformed(evt);
-      }
-    });
-    jMenu2.add(jMenuItem3);
-    jMenu2.add(jSeparator6);
-    jMenuItem8.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenuItem8.setText("WinSCP");
-    jMenuItem8.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem8ActionPerformed(evt);
-      }
-    });
-    jMenu2.add(jMenuItem8);
-    jMenu2.add(jSeparator7);
-    jMenuBar1.add(jMenu2);
-    jMenu3.setText("Tools");
-    jMenu3.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenu3.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenu3ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jSeparator1);
-    jMenuItem4.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenuItem4.setText(" Logging - External-Logging (Tab LogFIles)");
-    jMenuItem4.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem4ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem4);
-    jMenuItem7.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenuItem7.setText("RELOAD Logging - External-Logging (Tab LogFIles)");
-    jMenuItem7.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem7ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem7);
-    jMenu3.add(jSeparator2);
-    jMenu3.add(jSeparator8);
-    jMenuItem1.setFont(new java.awt.Font("Arial", 0, 10));    // NOI18N
-    jMenuItem1.setText("Shell starten");
-    jMenuItem1.addActionListener(new java.awt.event.ActionListener()
-    {
-      public void actionPerformed(java.awt.event.ActionEvent evt)
-      {
-        jMenuItem1ActionPerformed(evt);
-      }
-    });
-    jMenu3.add(jMenuItem1);
-    jMenu3.add(jSeparator3);
-    jMenuBar1.add(jMenu3);
-    setJMenuBar(jMenuBar1);
-    pack();
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("GSAL - [Global System and Application Launcher] Version 1.0");
+        setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-  }    // </editor-fold>//GEN-END:initComponents
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
+        jTabbedPane1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jTabbedPane1.setName(""); // NOI18N
+
+        jScrollPane1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jTabbedPane1.addTab("LogFiles", jScrollPane1);
+
+        getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Logging");
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
+
+        jMenu1.setText("geladene Module");
+        jMenu1.setToolTipText("");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("externe Programme");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenu2.add(jSeparator4);
+
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem2.setText("Start embedded DB-Server");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+        jMenu2.add(jSeparator5);
+
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem5.setText("Stop embedded DB-Server");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+        jMenu2.add(jSeparator9);
+
+        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem3.setText("PuTTY");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+        jMenu2.add(jSeparator6);
+
+        jMenuItem8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem8.setText("WinSCP");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem8);
+        jMenu2.add(jSeparator7);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Tools");
+        jMenu3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jSeparator1);
+
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem4.setText(" Logging - External-Logging (Tab LogFIles)");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem7.setText("RELOAD Logging - External-Logging (Tab LogFIles)");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem7);
+        jMenu3.add(jSeparator2);
+        jMenu3.add(jSeparator8);
+
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem1.setText("Shell starten");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+        jMenu3.add(jSeparator3);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        this.server.stop();
+        this.context.getLogger().info("Server stopped ... ");
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
   /**
    *
@@ -349,30 +371,34 @@ public class GSALView extends javax.swing.JFrame
   private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt)
   {
 
-//  if(this.server == null)
-//  {
-//    try
-//    {
-//      server = new Server();
-//
-//      server.setAddress("127.0.0.1");
-//      server.setPort(9001);
-//      server.setDatabaseName(0, "localhost");
-//      server.setDatabasePath(0, "jdbc:hsqldb:hsql://localhost/");
-//      server.start();
-//      this.context.getLogger().info(" Starte DB-Server ... ");
-//    }
-//    catch(Exception ex)
-//    {
-//      this.context.getLogger().error(Constants.error_message + " Command executing external programm dbserver " + ex.getLocalizedMessage());
-//    }
-//  }
-//  else
-//  {
-//    PopUpper implementedException = (PopUpper)this.context.getObject("popupper", ContextType.USED, null);
-//
-//    implementedException.showPopUp(" Server ist bereits gestartet ... ");
-//  }
+  if(this.server == null)
+  {
+    try
+    {
+      this.context.getLogger().info(" Starte DB-Server ... ");
+      server = new Server();
+      server.setTrace(Boolean.getBoolean((String)this.context.getStringValueFromProperties("default.db.trace")));
+      server.setAddress((String)this.context.getStringValueFromProperties("default.db.address"));
+      server.setPort(Integer.parseInt((String)this.context.getStringValueFromProperties("default.db.port")));
+
+      server.setDatabasePath(0, (String)this.context.getStringValueFromProperties("default.db.file")); 
+      server.setDatabaseName(0, (String)this.context.getStringValueFromProperties("default.db.name"));
+
+      server.start();
+
+    }
+    catch(Exception ex)
+    {
+        ex.printStackTrace();
+        this.context.getLogger().error(Constants.error_message + " Command executing external programm dbserver " + ex.getLocalizedMessage());
+    }
+  }
+  else
+  {
+    PopUpper implementedException = (PopUpper)this.context.getObject("popupper", ContextType.USED, null);
+
+    implementedException.showPopUp(" Server ist bereits gestartet ... ");
+  }
     PopUpper implementedException = (PopUpper)this.context.getObject("popupper", ContextType.USED, null);
 
     implementedException.showPopUp(" DB-StartFeature noch nicht integriert. Bitte unter GSAL-Verszeichnis gsal/hsqldb/bin/runServer.bat starten ... ");

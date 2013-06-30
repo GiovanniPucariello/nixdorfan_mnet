@@ -41,6 +41,7 @@ import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -409,6 +410,51 @@ public class DatenbankObj implements Datenbank
     return tableObj;
 
   }
+
+    @Override
+    public Connection getConnection() {
+        return this.con;
+    }
+
+    
+    @Override
+    public int getFetchSize() {
+        try{
+            return this.stmt.getFetchSize();
+        } catch (Exception ex){
+            ex.printStackTrace();
+            return 10;
+        }
+    }
+
+    
+    @Override
+    public void setFetchSize(int fetchSize) {
+        try{
+            this.stmt.setFetchSize(fetchSize);
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    @Override
+    public PreparedStatement getPreparedStatement(String sql) {
+         try{
+            return this.con.prepareStatement(sql);
+         } catch (Exception ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public void setAutoCommit(boolean autoCommitState) {
+        try{
+            this.con.setAutoCommit(autoCommitState);
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
 }
 
 

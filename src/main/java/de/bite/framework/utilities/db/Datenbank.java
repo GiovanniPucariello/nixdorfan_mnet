@@ -20,6 +20,8 @@ package de.bite.framework.utilities.db;
 //~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.context.IContext;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -123,6 +125,16 @@ public interface Datenbank
    * @return ArrayList<IDBTable>
    */
   public ArrayList< IDBTable > getAggregatedTableInformation(IContext context);
+  
+  public Connection getConnection();
+  
+  public int getFetchSize();
+  
+  public void setFetchSize(int fetchSize);
+  
+  public PreparedStatement getPreparedStatement(String sql);
+  
+  public void setAutoCommit(boolean autoCommitState);
 }
 
 

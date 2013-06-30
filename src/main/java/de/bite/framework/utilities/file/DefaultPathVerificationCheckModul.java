@@ -46,7 +46,7 @@ public class DefaultPathVerificationCheckModul extends PathValidationCheckModul 
 			if(isFile(path)){
 				return path;
 			} else {
-				this.context.getLogger().error("DefaultPathVerificationCheckModul ::: getVerifcatedPath(" + path + ") ist KEIN GUELTIGES File ");
+				//this.context.getLogger().error("DefaultPathVerificationCheckModul ::: getVerifcatedPath(" + path + ") ist KEIN GUELTIGES File ");
 				return null;
 			}
 		} else {
@@ -56,7 +56,7 @@ public class DefaultPathVerificationCheckModul extends PathValidationCheckModul 
 			if(isFile(completeRelativePath)){
 				return completeRelativePath;
 			} else {
-				this.context.getLogger().error("DefaultPathVerificationCheckModul ::: getVerifcatedPath(" + completeRelativePath + ") ist KEIN GUELTIGES File ");
+				//this.context.getLogger().error("DefaultPathVerificationCheckModul ::: getVerifcatedPath(" + completeRelativePath + ") ist KEIN GUELTIGES File ");
 				return null;
 			}
 		}

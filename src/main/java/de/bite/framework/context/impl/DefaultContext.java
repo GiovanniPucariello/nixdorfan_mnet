@@ -114,6 +114,26 @@ public class DefaultContext extends AbstractContext implements Serializable
     return cextHistory;
 
   }
+
+    @Override
+    public Object getObject(String clazzname) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void setObject(String objectname, Object object) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Object getConversationObject(String clazzname, String conversationFlowState) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void setConversationObject(String objectname, String conversationFlowState, Object object) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
 
 
