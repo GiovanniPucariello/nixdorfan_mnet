@@ -55,15 +55,15 @@ public class BiteServer implements Runnable {
           //Endlos-Schleife: warte auf Client-Anforderungen
           //Abbruch durch Strg+C oder Client-Anforderung 'Exit',
           //dadurch wird der ServerSocket beendet, was hier zu einer IOException
-          //führt und damit zum Ende der run-Methode mit vorheriger Abarbeitung der
+          //fuehrt und damit zum Ende der run-Methode mit vorheriger Abarbeitung der
           //finally-Klausel.
           while ( true ) {
             
               /*
-             Zunächst wird eine Client-Anforderung entgegengenommen(accept-Methode).
+             Zunaechst wird eine Client-Anforderung entgegengenommen(accept-Methode).
              Der ExecutorService pool liefert einen Thread, dessen run-Methode
              durch die run-Methode der Handler-Instanz realisiert wird.
-             Dem Handler werden als Parameter übergeben:
+             Dem Handler werden als Parameter uebergeben:
              der ServerSocket und der Socket des anfordernden Clients.
             */
             Socket cs = this.server.accept();  //warten auf Client-Anforderung

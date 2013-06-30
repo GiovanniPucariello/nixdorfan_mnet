@@ -259,8 +259,7 @@ public abstract class AbstractContext implements IContext
 
         if(extension == null)
         {
-          this.getLogger().debug(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
-
+          //this.getLogger().debug(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
           return null;
         }
 
@@ -276,7 +275,7 @@ public abstract class AbstractContext implements IContext
           {
             obj = null;
 
-            this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
+            //this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
           }
         }
         else
@@ -286,7 +285,7 @@ public abstract class AbstractContext implements IContext
 
         if(obj == null)
         {
-          this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
+        	//this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
 
           return null;
         }
@@ -297,7 +296,7 @@ public abstract class AbstractContext implements IContext
       {
         Object obj = this.factory.getObject(this.getClazzNameFromPropertyHolder(objectName));
 
-        this.getLogger().info(Constants.info_message + " [getObject] -- Object wird generiert fuer " + objectName);
+        //this.getLogger().info(Constants.info_message + " [getObject] -- Object wird generiert fuer " + objectName);
 
         try
         {
@@ -314,7 +313,7 @@ public abstract class AbstractContext implements IContext
         }
         catch(Exception ex)
         {
-          this.getLogger().info(Constants.warning_message + " Reflection DI nicht erfolgreich fuer  " + objectName + " ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
+        	////this.getLogger().info(Constants.warning_message + " Reflection DI nicht erfolgreich fuer  " + objectName + " ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
 
           // ex.printStackTrace();
         }
@@ -332,7 +331,7 @@ public abstract class AbstractContext implements IContext
 
       if(extension == null)
       {
-        this.getLogger().info(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
+    	  //this.getLogger().info(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
 
         return null;
       }
@@ -349,7 +348,7 @@ public abstract class AbstractContext implements IContext
         {
           obj = null;
 
-          this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
+          ////this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
         }
       }
       else
@@ -359,7 +358,7 @@ public abstract class AbstractContext implements IContext
 
       if(obj == null)
       {
-        this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
+    	  ////this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
 
         return null;
       }
@@ -368,7 +367,7 @@ public abstract class AbstractContext implements IContext
     }
     else
     {
-      this.getLogger().info(Constants.warning_message + " getObject -- Fehlerhafter Context-Type fuer " + objectName);
+    	////this.getLogger().info(Constants.warning_message + " getObject -- Fehlerhafter Context-Type fuer " + objectName);
 
       return null;
     }
@@ -401,7 +400,7 @@ public abstract class AbstractContext implements IContext
     }
     catch(Exception ex)
     {
-      this.getLogger().info(Constants.warning_message + "[getUnboundObject] Reflection DI nicht erfolgreich fuer  " + objectName + "  ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
+    	//this.getLogger().info(Constants.warning_message + "[getUnboundObject] Reflection DI nicht erfolgreich fuer  " + objectName + "  ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
       ex.printStackTrace();
     }
 
@@ -584,7 +583,7 @@ public abstract class AbstractContext implements IContext
       }
     }
 
-    this.getLogger().info(Constants.warning_message + " Properties-Key fuer Laden der Klasse nicht gefunden == " + propertiesKey);
+    //this.getLogger().info(Constants.warning_message + " Properties-Key fuer Laden der Klasse nicht gefunden == " + propertiesKey);
 
     return null;
 
@@ -602,7 +601,7 @@ public abstract class AbstractContext implements IContext
     String delegateReturn = getClazzNameFromPropertyHolder(propertiesKey);
 
     
-    this.getLogger().info(delegateReturn);
+    //this.getLogger().info(delegateReturn);
 
     return delegateReturn;
   }

@@ -5,3 +5,11 @@ path=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/r
 
 
 path=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources dbkonfig=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_mnet/src/main/resources/db useGUI=true propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader resource=path dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj
+
+
+
+/NetBeansProjects/nixdorfan_contentmanagement/nixdorfan_cms/resources
+
+
+path=/home/nixdorfan/NetBeansProjects/nixdorfan_contentmanagement/nixdorfan_cms/resources dbkonfig=/home/nixdorfan/NetbeansProjects/nixdorfan_mnet/src/main/resources/db useGUI=true propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader resource=path dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj
+

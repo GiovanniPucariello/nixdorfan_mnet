@@ -28,6 +28,7 @@ import de.bite.framework.bootstrap.IPropertyLoader;
 import de.bite.framework.context.IContext;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.impl.DefaultContext;
+import de.bite.framework.context.impl.SimpleUsageContext;
 import de.bite.framework.factories.Factory;
 import de.bite.framework.factories.impl.DefaultFactory;
 
@@ -74,7 +75,7 @@ public class Bootstrap
       }
 
       /** B o o t s t r a p Context */
-      IContext       iContext = new DefaultContext();
+      IContext       iContext = new SimpleUsageContext();
       DefaultFactory dfactory = new DefaultFactory();
 
       // Factory wenn vorhanden, ansonsten waehle Default

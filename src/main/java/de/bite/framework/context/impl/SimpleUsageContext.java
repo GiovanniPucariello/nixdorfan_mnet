@@ -4,6 +4,11 @@
  */
 package de.bite.framework.context.impl;
 
+import java.util.Iterator;
+import java.util.Set;
+
+import de.bite.framework.constants.Constants;
+import de.bite.framework.context.extension.impl.ContextExtension;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 
@@ -33,14 +38,72 @@ public class SimpleUsageContext extends AbstractContext {
         super.setObject(ContextStatus.AKTIV, object, objectname, conversationFlowState);
     }
     
-    @Override
-    public Object[] getObjectHistory(String propertyName) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    /**
+    *
+    * @param propertyName String
+    *
+    * @return Object[]
+    */
+   @Override
+   public Object[] getObjectHistory(String propertyName)
+   {
+     this.getLogger().info(Constants.impl_message + " getObjectHistory(String propertyName)");
 
-    @Override
-    public Object[] getObjectHistory() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+     return null;
+   }
+
+   /**
+    *
+    * @return Object[]
+    */
+   @Override
+   public Object[] getObjectHistory()
+   {
+
+     Set      allObjectKeys = this.contextcontainer.keySet();
+     Object[] cextHistory   = null;
+
+     this.getLogger().info("                               ");
+     this.getLogger().info("                               ");
+     this.getLogger().info("                               ");
+     this.getLogger().info("                               ");
+     this.getLogger().info("                               ");
+     this.getLogger().info("S T A T U S  AKTIVER CONTEXT :: [Anzahl enthaltener Objekte] :: " + allObjectKeys.size());
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               | ");
+
+     Iterator iter = allObjectKeys.iterator();
+
+     while(iter.hasNext())
+     {
+       String           key  = (String)iter.next();
+       ContextExtension cext = (ContextExtension)this.contextcontainer.get(key);
+
+       this.getLogger().info("Object :: [NAME] :: " + key + " ---- " + cext);
+       this.getLogger().info("                               | ");
+
+       cextHistory = cext.getObjectHistory();
+
+       for(int i = 0; i < cextHistory.length; i++)
+       {
+         this.getLogger().info("                               | ");
+         this.getLogger().info("                               |----- " + cextHistory[i]);
+         this.getLogger().info("                               | ");
+         this.getLogger().info("                               | ");
+         this.getLogger().info("                               | ");
+       }
+     }
+
+     this.getLogger().info("                               | ");
+     this.getLogger().info("                               |----------- EOF CONTEXT ");
+
+     // logger.info( Constants.impl_message + " getObjectHistory()"  );
+     return cextHistory;
+
+   }
     
 }

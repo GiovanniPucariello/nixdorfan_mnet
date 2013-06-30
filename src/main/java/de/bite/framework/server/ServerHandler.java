@@ -83,7 +83,7 @@ public class ServerHandler implements IServerHandler {
 
         for(String command : modulesToLoad)
         {
-          this.context.getLogger().info("vorhandene Befehle : " + command + "\n");
+          this.context.getLogger().info("Modified vorhandene Befehle : " + command + "\n");
 
           if(command.equalsIgnoreCase(befehl))
           {
@@ -98,8 +98,9 @@ public class ServerHandler implements IServerHandler {
               controll.dispatch();
             }
           }
-          else if(command.equalsIgnoreCase("quit"))
+          else if(befehl.equalsIgnoreCase("quit"))
           {
+        	this.context.getLogger().info("quit benutzt \n System exited ... ");
             System.exit(0);
           }
         }
