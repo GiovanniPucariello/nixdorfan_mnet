@@ -41,10 +41,17 @@ public class DefaultContextTest extends TestCase
   public DefaultContextTest()
   {
 
+<<<<<<< HEAD
      //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
      //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
     ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
     ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+=======
+     ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+     ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+    // ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+    // ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+>>>>>>> branch 'master' of https://github.com/nixdorfan/nixdorfan_mnet.git
 //	ary[0]= "path=C:/Project/bite.framework.mnet/src/main/resources";
 //	ary[1]= "dbkonfig=C:/Project/bite.framework.mnet/src/main/resources/db";
 //    ary[0]       = "path=C:/Project/gsal/conf";
