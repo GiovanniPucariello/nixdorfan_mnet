@@ -21,6 +21,9 @@ import de.bite.framework.controller.Controller;
 
 import de.verbindungsraum.gsal.threads.WatchDogStarter;
 import de.verbindungsraum.gsal.utilities.BootpathLoader;
+import java.util.HashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -166,54 +169,19 @@ public class GSALSplashScreen extends javax.swing.JFrame
         }
       }
     }
+	
+    HashMap<String, Thread> threads = new HashMap<String, Thread>();
 
-    SwingWorker worker = new SwingWorker< String, String >()
-    {
-      public String doInBackground()
-      {
-        WatchDogStarter watch = new WatchDogStarter();
+    WatchDogStarter watch = new WatchDogStarter();
+    watch.setContext(context);
 
-        watch.setContext(context);
+    Thread t = new Thread(watch);
+    t.start();
+    threads.put("watchdog", t);
 
-        Thread myThread = new Thread(watch);
-
-        myThread.run();
-
-        return "";
-      }
-      @Override
-      public void done()
-      {
-
-        try
-        {
-          String modulDone = get();
-        }
-        catch(InterruptedException ignore) {}
-        catch(java.util.concurrent.ExecutionException e)
-        {
-          String    why   = null;
-          Throwable cause = e.getCause();
-
-          if(cause != null)
-          {
-            why = cause.getMessage();
-
-            cause.printStackTrace();
-          }
-          else
-          {
-            cause.printStackTrace();
-
-            why = e.getMessage();
-          }
-        }
-
-      }
-    };
-
-    worker.execute();
-
+    this.context.setObject("executorthreads", threads);
+    
+    
     /** Starte Application */
     GSALView view = new GSALView(context, BootpathLoader.getBootPath(preparedConsoleValues));
 

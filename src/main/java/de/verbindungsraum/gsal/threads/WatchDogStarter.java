@@ -60,7 +60,7 @@ public class WatchDogStarter extends DefaultGSALThread
     }
     catch(Exception ex)
     {
-      this.context.getLogger().error(" WatchserviceThread " + ex);
+      this.context.getLogger().info(" unterbreche WatchDogService. Unterbrochen durch " + ex.getLocalizedMessage());
     }
 
   }

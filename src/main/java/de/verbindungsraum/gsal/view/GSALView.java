@@ -41,8 +41,10 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.HashMap;
 
 import java.util.List;
+import java.util.concurrent.ExecutorService;
 import java.util.logging.Level;
 
 import javax.swing.JEditorPane;
@@ -84,6 +86,7 @@ public class GSALView extends javax.swing.JFrame
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JScrollPane jScrollPane1;
@@ -222,6 +225,7 @@ public class GSALView extends javax.swing.JFrame
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuItem8 = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -301,6 +305,15 @@ public class GSALView extends javax.swing.JFrame
         jMenu2.add(jMenuItem8);
         jMenu2.add(jSeparator7);
 
+        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem6.setText("Stop Threads");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem6);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Tools");
@@ -353,6 +366,22 @@ public class GSALView extends javax.swing.JFrame
         this.server.stop();
         this.context.getLogger().info("Server stopped ... ");
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        //GSALThreadViewer threadsV = new GSALThreadViewer();
+        
+        try{
+        HashMap<String, Thread> threads = (HashMap<String, Thread>)this.context.getObject("executorthreads"); 
+   
+        for (String run : threads.keySet()){
+            this.context.getLogger().info("Stopping thread " + run);
+            Thread t = threads.get(run);
+            t.interrupt();
+        }
+        } catch(Exception ex){
+            this.context.getLogger().info("Stopping threads catching their exceptions " + ex.getLocalizedMessage());
+        }
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
   /**
    *

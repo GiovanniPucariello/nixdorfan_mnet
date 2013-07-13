@@ -33,6 +33,7 @@ cms.xmlparser=org.apache.xerces.parsers.SAXParser
 # DB
 #cms.db.conf=C:/Temp/gsal/conf/dbtEST
 cms.db.conf=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/resources/db
+
 # DB - Queries
 cms.db.sql.categories=select * from
 

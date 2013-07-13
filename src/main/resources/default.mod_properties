@@ -45,15 +45,13 @@ default.file.read.encoding=UTF-8
 default.server.port=9000
 default.server.handler=de.bite.framework.server.ServerHandler
 
-<<<<<<< HEAD
 # D a t e n b a n k - S e r v e r E m b e d d e d
 default.db.port=9001
 default.db.file=file:/C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/db
 default.db.name=Test
 default.db.trace=true
 default.db.address=127.0.0.1
-=======
->>>>>>> branch 'master' of https://github.com/nixdorfan/nixdorfan_mnet.git
 
 
+# weitere Einstellungen auf Default-Basis 
 
