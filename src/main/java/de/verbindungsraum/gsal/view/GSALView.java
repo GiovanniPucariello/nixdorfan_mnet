@@ -221,11 +221,11 @@ public class GSALView extends javax.swing.JFrame
         jSeparator5 = new javax.swing.JPopupMenu.Separator();
         jMenuItem5 = new javax.swing.JMenuItem();
         jSeparator9 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
         jMenuItem3 = new javax.swing.JMenuItem();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jSeparator7 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -285,6 +285,16 @@ public class GSALView extends javax.swing.JFrame
         jMenu2.add(jMenuItem5);
         jMenu2.add(jSeparator9);
 
+        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jMenuItem6.setText("Threads");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem6);
+        jMenu2.add(jSeparator7);
+
         jMenuItem3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jMenuItem3.setText("PuTTY");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -303,16 +313,6 @@ public class GSALView extends javax.swing.JFrame
             }
         });
         jMenu2.add(jMenuItem8);
-        jMenu2.add(jSeparator7);
-
-        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        jMenuItem6.setText("Stop Threads");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem6);
 
         jMenuBar1.add(jMenu2);
 
@@ -368,19 +368,9 @@ public class GSALView extends javax.swing.JFrame
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        //GSALThreadViewer threadsV = new GSALThreadViewer();
-        
-        try{
-        HashMap<String, Thread> threads = (HashMap<String, Thread>)this.context.getObject("executorthreads"); 
-   
-        for (String run : threads.keySet()){
-            this.context.getLogger().info("Stopping thread " + run);
-            Thread t = threads.get(run);
-            t.interrupt();
-        }
-        } catch(Exception ex){
-            this.context.getLogger().info("Stopping threads catching their exceptions " + ex.getLocalizedMessage());
-        }
+        GSALThreadViewer threadsV = new GSALThreadViewer();
+        threadsV.setContext(context);
+        threadsV.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
   /**
