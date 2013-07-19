@@ -1,14 +1,12 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
- *
+ * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- *
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
+ * 
  */
-
-
 
 /*
 * @(#)Context.java   11/12/16
@@ -34,101 +32,129 @@ import de.bite.framework.logging.ILogger;
 
 import java.util.Properties;
 
+//~--- interfaces -------------------------------------------------------------
+
 /**
  *
  * @author nixdorfan
  */
-public interface IContext {
+public interface IContext
+{
 
-    /**
-     *
-     * @return ILogger
-     */
-    public ILogger getLogger();
+  //~--- methods --------------------------------------------------------------
 
-    /**
-     * @param factoryClazzName String
-     *
-     * @throws Exception
-     */
-    public void initializeContext(String factoryClazzName) throws Exception;
+  /**
+   *
+   * @return ILogger
+   */
+  public ILogger getLogger();
 
-    /**
-     *
-     * @param configs Properties[]
-     */
-    public void load(Properties[] configs);
+  /**
+   * @param factoryClazzName String
+   *
+   * @throws Exception
+   */
+  public void initializeContext(String factoryClazzName) throws Exception;
 
-    /**
-     *
-     * @param filename String
-     *
-     * @return boolean
-     */
-    public boolean updateContextConfiguration(String filename);
+  /**
+   *
+   * @param configs Properties[]
+   */
+  public void load(Properties[] configs);
 
-    /**
-     *
-     *
-     * @param objectName String
-     * @param contextType ContextType
-     * @param contextStatusFlowName String
-     *
-     * @return Object
-     */
-    public Object getObject(String objectName, ContextType contextType, String contextStatusFlowName);
+  /**
+   *
+   * @param filename String
+   *
+   * @return boolean
+   */
+  public boolean updateContextConfiguration(String filename);
 
-    /**
-     *
-     *
-     * @param objectName String
-     * @return Object
-     */
-    public Object getUnboundObject(String objectName);
+  /**
+   *
+   *
+   * @param objectName String
+   * @param contextType ContextType
+   * @param contextStatusFlowName String
+   *
+   * @return Object
+   */
+  public Object getObject(String objectName, ContextType contextType, String contextStatusFlowName);
 
-    /**
-     *
-     *
-     * @param contextStatus ContextStatus
-     * @param member Object
-     * @param objectName String
-     * @param contextStatusFlowName String
-     *
-     * @return String
-     */
-    public String setObject(ContextStatus contextStatus, Object member, String objectName,
-                            String contextStatusFlowName);
+  /**
+   *
+   *
+   * @param objectName String
+   * @return Object
+   */
+  public Object getUnboundObject(String objectName);
 
-    /**
-     *
-     * @param propertyName String
-     * @return object-history of the given object
-     */
-    public Object[] getObjectHistory(String propertyName);
+  /**
+   *
+   *
+   * @param contextStatus ContextStatus
+   * @param member Object
+   * @param objectName String
+   * @param contextStatusFlowName String
+   *
+   * @return String
+   */
+  public String setObject(ContextStatus contextStatus, Object member, String objectName, String contextStatusFlowName);
 
-    /**
-     *
-     * @return all object-histories within this context
-     */
-    public Object[] getObjectHistory();
+  /**
+   *
+   * @param propertyName String
+   * @return object-history of the given object
+   */
+  public Object[] getObjectHistory(String propertyName);
 
-    /**
-     *
-     * @param propertiesKey String
-     * @return String-Value related to property
-     */
-    public String getStringValueFromProperties(String propertiesKey);
+  /**
+   *
+   * @return all object-histories within this context
+   */
+  public Object[] getObjectHistory();
 
-    public Object getObject(String clazzname);
+  /**
+   *
+   * @param propertiesKey String
+   * @return String-Value related to property
+   */
+  public String getStringValueFromProperties(String propertiesKey);
 
-    public void setObject(String objectname, Object object);
+  /**
+   * 
+   * @param clazzname String
+   *
+   * @return Object
+   */
+  public Object getObject(String clazzname);
 
-    public Object getConversationObject(String clazzname, String conversationFlowState);
+  /**
+   * 
+   * @param objectname String
+   * @param object Object
+   */
+  public void setObject(String objectname, Object object);
 
-    public void setConversationObject(String objectname, String conversationFlowState, Object object);
+  /**
+   * 
+   * @param clazzname String
+   * @param conversationFlowState String
+   *
+   * @return Object
+   */
+  public Object getConversationObject(String clazzname, String conversationFlowState);
+
+  /**
+   * 
+   * @param objectname String
+   * @param conversationFlowState String
+   * @param object Object
+   */
+  public void setConversationObject(String objectname, String conversationFlowState, Object object);
 }
+
 
 /* ||\
  * ---------------------------------------------------------
  */
-

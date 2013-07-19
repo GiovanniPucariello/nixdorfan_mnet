@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -36,19 +36,25 @@ public class TreeUserObject
   private ImageIcon image;
   private int       nodeIndex = 0;
 
-  
-   //~--- methods --------------------------------------------------------------
-
-  
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
   //~--- methods --------------------------------------------------------------
+
+  /**
+   *
+   * @return String
+   */
+  public String getCategory()
+  {
+    return category;
+  }
+
+  /**
+   * 
+   * @param category String
+   */
+  public void setCategory(String category)
+  {
+    this.category = category;
+  }
 
   /**
    *
@@ -60,7 +66,7 @@ public class TreeUserObject
   }
 
   /**
-   * 
+   *
    * @param nodeIndex int
    */
   public void setNodeIndex(int nodeIndex)
@@ -78,7 +84,7 @@ public class TreeUserObject
   }
 
   /**
-   * 
+   *
    * @param image ImageIcon
    */
   public void setImage(ImageIcon image)

@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -39,7 +39,7 @@ public class PropertiesImporter
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param directoryPath String
    *
    * @throws Exception
@@ -64,7 +64,7 @@ public class PropertiesImporter
   }
 
   /**
-   * 
+   *
    * @param dbprops Properties
    * @param context IContext
    *
@@ -99,7 +99,7 @@ public class PropertiesImporter
   }
 
   /**
-   * 
+   *
    * @param dbprops Properties
    * @param context IContext
    */

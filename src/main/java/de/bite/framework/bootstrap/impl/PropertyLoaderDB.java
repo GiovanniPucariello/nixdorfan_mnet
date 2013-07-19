@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -36,7 +36,7 @@ public class PropertyLoaderDB implements IPropertyLoader
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @return Properties[]
@@ -63,7 +63,7 @@ public class PropertyLoaderDB implements IPropertyLoader
   // werden in dieser Klasse nicht gebraucht
 
   /**
-   * 
+   *
    * @param pathOrFile String
    */
   @Override
@@ -73,7 +73,7 @@ public class PropertyLoaderDB implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @return boolean
@@ -85,7 +85,7 @@ public class PropertyLoaderDB implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param pathToProperty String
    */
   @Override
@@ -95,7 +95,7 @@ public class PropertyLoaderDB implements IPropertyLoader
   }
 
   /**
-   * 
+   *
    * @param filesToLoad ArrayList<?>
    *
    * @return ArrayList<String>

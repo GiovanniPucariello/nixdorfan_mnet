@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -32,7 +32,7 @@ public interface IPropertyLoader
   public abstract Properties[] loadProperties(String pathOrFile) throws Exception;
 
   /**
-   * 
+   *
    * @param pathOrFile String
    *
    * @throws Exception

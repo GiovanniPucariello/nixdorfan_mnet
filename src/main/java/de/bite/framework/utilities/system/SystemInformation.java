@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.07.19
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -18,6 +18,8 @@
 package de.bite.framework.utilities.system;
 
 //~--- JDK imports ------------------------------------------------------------
+
+import java.io.IOException;
 
 import java.util.Properties;
 
@@ -119,6 +121,58 @@ public class SystemInformation
     }
 
     return returnString;
+  }
+
+  /**
+   *
+   * @return Long
+   */
+  public static Long getUsedMemoryInMB()
+  {
+    Long free = Runtime.getRuntime().freeMemory();
+    Long max  = Runtime.getRuntime().maxMemory();
+
+    return((max - free) / 1000000);
+  }
+
+  /**
+   *
+   * @return Long
+   */
+  public static Long getFreeMemoryInMB()
+  {
+    Long free = Runtime.getRuntime().freeMemory();
+
+    return((free) / 1000000);
+  }
+
+  /**
+   *
+   * @return Long
+   */
+  public static Long getMaxMemoryInMB()
+  {
+    Long free = Runtime.getRuntime().maxMemory();
+
+    return((free) / 1000000);
+  }
+
+  /**
+   */
+  public static void useGC()
+  {
+    Runtime.getRuntime().gc();
+  }
+
+  /**
+   * 
+   * @param pathToApp String
+   *
+   * @throws IOException
+   */
+  public static void executeApp(String pathToApp) throws IOException
+  {
+    Runtime.getRuntime().exec(pathToApp);
   }
 }
 

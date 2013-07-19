@@ -1,27 +1,64 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * Copyright (c) 2013.06.14
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
+ * 
  */
+
 package de.bite.framework.server;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import de.bite.framework.context.IContext;
+
+//~--- JDK imports ------------------------------------------------------------
+
 import java.net.ServerSocket;
 import java.net.Socket;
+
+//~--- interfaces -------------------------------------------------------------
 
 /**
  *
  * @author nixdorfan
  */
-public interface IServerHandler extends Runnable {
+public interface IServerHandler extends Runnable
+{
+  //~--- methods --------------------------------------------------------------
 
-    void run();
+  /**
+   */
+  void run();
 
-    void setContext(IContext context);
+  /**
+   * 
+   * @param context IContext
+   */
+  void setContext(IContext context);
 
-    void setServerSocket(ServerSocket server);
-    
-    void setBasePath(String basepath);
+  /**
+   * 
+   * @param server ServerSocket
+   */
+  void setServerSocket(ServerSocket server);
 
-    void setSocket(Socket cs);
-    
+  /**
+   * 
+   * @param basepath String
+   */
+  void setBasePath(String basepath);
+
+  /**
+   * 
+   * @param cs Socket
+   */
+  void setSocket(Socket cs);
 }
+
+
+/* ||\
+ * ---------------------------------------------------------
+ */

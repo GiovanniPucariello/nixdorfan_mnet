@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -115,25 +115,53 @@ public class DefaultContext extends AbstractContext implements Serializable
 
   }
 
-    @Override
-    public Object getObject(String clazzname) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   * 
+   * @param clazzname String
+   *
+   * @return Object
+   */
+  @Override
+  public Object getObject(String clazzname)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 
-    @Override
-    public void setObject(String objectname, Object object) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   * 
+   * @param objectname String
+   * @param object Object
+   */
+  @Override
+  public void setObject(String objectname, Object object)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 
-    @Override
-    public Object getConversationObject(String clazzname, String conversationFlowState) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   * 
+   * @param clazzname String
+   * @param conversationFlowState String
+   *
+   * @return Object
+   */
+  @Override
+  public Object getConversationObject(String clazzname, String conversationFlowState)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 
-    @Override
-    public void setConversationObject(String objectname, String conversationFlowState, Object object) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   * 
+   * @param objectname String
+   * @param conversationFlowState String
+   * @param object Object
+   */
+  @Override
+  public void setConversationObject(String objectname, String conversationFlowState, Object object)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 }
 
 

@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -45,20 +45,20 @@ public interface IDBTable
   String getTablename();
 
   /**
-   * 
+   *
    * @param cols String
    * @param types String
    */
   void setCols_and_types(String cols, String types);
 
   /**
-   * 
+   *
    * @param columns String
    */
   void setColumns(String columns);
 
   /**
-   * 
+   *
    * @param tablename String
    */
   void setTablename(String tablename);

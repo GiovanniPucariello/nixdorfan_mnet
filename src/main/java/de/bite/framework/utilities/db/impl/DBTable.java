@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -48,7 +48,7 @@ public class DBTable implements IDBTable, Comparable
   }
 
   /**
-   * 
+   *
    * @param tablename String
    */
   @Override
@@ -68,7 +68,7 @@ public class DBTable implements IDBTable, Comparable
   }
 
   /**
-   * 
+   *
    * @param columns String
    */
   @Override
@@ -88,7 +88,7 @@ public class DBTable implements IDBTable, Comparable
   }
 
   /**
-   * 
+   *
    * @param cols String
    * @param types String
    */
@@ -99,7 +99,7 @@ public class DBTable implements IDBTable, Comparable
   }
 
   /**
-   * 
+   *
    * @param o Object
    *
    * @return int

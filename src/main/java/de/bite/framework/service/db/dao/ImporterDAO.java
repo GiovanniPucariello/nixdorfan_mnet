@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -61,7 +61,7 @@ public class ImporterDAO
   // welche AppliKationen gibt es
 
   /**
-   * 
+   *
    * @param name String
    *
    * @return boolean
@@ -89,7 +89,7 @@ public class ImporterDAO
   // welche Werte haben diese Applikationen?
 
   /**
-   * 
+   *
    * @param key String
    * @param value String
    * @param name String
@@ -119,7 +119,7 @@ public class ImporterDAO
   // Bereinige Datenbanken
 
   /**
-   * 
+   *
    * @param cleanSQL String
    *
    * @return boolean

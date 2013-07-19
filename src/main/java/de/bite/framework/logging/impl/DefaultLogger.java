@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -39,7 +39,7 @@ public class DefaultLogger implements ILogger
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param message String
    */
   @Override
@@ -54,7 +54,7 @@ public class DefaultLogger implements ILogger
   }
 
   /**
-   * 
+   *
    * @param message String
    */
   @Override
@@ -69,7 +69,7 @@ public class DefaultLogger implements ILogger
   }
 
   /**
-   * 
+   *
    * @param message String
    */
   @Override
@@ -84,7 +84,7 @@ public class DefaultLogger implements ILogger
   }
 
   /**
-   * 
+   *
    * @param guiObject Object
    */
   @Override

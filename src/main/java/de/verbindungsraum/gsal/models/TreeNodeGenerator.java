@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -58,7 +58,7 @@ public class TreeNodeGenerator
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param treePath TreePath
    *
    * @return String
@@ -69,7 +69,7 @@ public class TreeNodeGenerator
   }
 
   /**
-   * 
+   *
    * @param treePath TreePath
    *
    * @return String
@@ -80,7 +80,7 @@ public class TreeNodeGenerator
   }
 
   /**
-   * 
+   *
    * @param path String
    *
    * @return MutableTreeNode
@@ -93,7 +93,7 @@ public class TreeNodeGenerator
   }
 
   /**
-   * 
+   *
    * @param node DefaultMutableTreeNode
    * @param path String
    */

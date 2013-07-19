@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.06.14
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
  * 
  */
 
@@ -46,7 +46,7 @@ public class DBInfoTreeBuilder
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param context IContext
    */
   public void setContext(IContext context)
@@ -55,7 +55,7 @@ public class DBInfoTreeBuilder
   }
 
   /**
-   * 
+   *
    * @param datenbank Datenbank
    */
   public void setDatenbank(Datenbank datenbank)
@@ -77,7 +77,7 @@ public class DBInfoTreeBuilder
   }
 
   /**
-   * 
+   *
    * @param node DefaultMutableTreeNode
    * @param allTables ArrayList<IDBTable>
    */
