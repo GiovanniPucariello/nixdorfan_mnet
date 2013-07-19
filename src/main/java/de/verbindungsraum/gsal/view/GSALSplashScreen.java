@@ -18,6 +18,7 @@ import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
 import de.bite.framework.controller.Controller;
+import de.verbindungsraum.gsal.threads.RAMInformationThread;
 
 import de.verbindungsraum.gsal.threads.WatchDogStarter;
 import de.verbindungsraum.gsal.utilities.BootpathLoader;
@@ -173,11 +174,19 @@ public class GSALSplashScreen extends javax.swing.JFrame
     HashMap<String, Thread> threads = new HashMap<String, Thread>();
 
     WatchDogStarter watch = new WatchDogStarter();
+    RAMInformationThread ram = new RAMInformationThread();
     watch.setContext(context);
+    ram.setContext(context);
 
     Thread t = new Thread(watch);
     t.start();
     threads.put("watchdog", t);
+    this.context.getLogger().info("starting thread watchdog ... ");
+    
+    Thread t2 = new Thread(ram);
+    t2.start();
+    threads.put("ram", t2);
+    this.context.getLogger().info("starting thread ram ... ");
 
     this.context.setObject("executorthreads", threads);
     

@@ -1,5 +1,4 @@
-/**//GEN-FIRST:event_jMenuItem6ActionPerformed
- *//GEN-LAST:event_jMenuItem6ActionPerformed
+/**
  * Copyright (c) 2013.07.19
  * M-net Telekommunikations GmbH
  * 
@@ -372,6 +371,8 @@ public class GSALView extends javax.swing.JFrame
   {
     this.server.stop();
     this.context.getLogger().info("Server stopped ... ");
+    this.server = null;
+    SystemInformation.useGC();
   }
 
   /**
@@ -381,9 +382,9 @@ public class GSALView extends javax.swing.JFrame
   private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt)
   {
 
-//  GSALThreadViewer threadsV = new GSALThreadViewer();
-//  threadsV.setContext(context);
-//  threadsV.setVisible(true);
+  GSALThreadViewer threadsV = new GSALThreadViewer();
+  threadsV.setContext(context);
+  threadsV.setVisible(true);
   }
 
   /**
@@ -407,7 +408,7 @@ public class GSALView extends javax.swing.JFrame
     {
       try
       {
-        this.context.getLogger().info(" Starte DB-Server ... ");
+        this.context.getLogger().info("Starte DB-Server ... ");
 
         server = new Server();
 
@@ -430,11 +431,6 @@ public class GSALView extends javax.swing.JFrame
 
       implementedException.showPopUp(" Server ist bereits gestartet ... ");
     }
-
-    PopUpper implementedException = (PopUpper)this.context.getObject("popupper", ContextType.USED, null);
-
-    implementedException.showPopUp(" DB-StartFeature noch nicht integriert. Bitte unter GSAL-Verszeichnis gsal/hsqldb/bin/runServer.bat starten ... ");
-
   }
 
   /**
