@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.03.13
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.utilities.db.Datenbank.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 /*
@@ -20,11 +17,11 @@ package de.bite.framework.utilities.db;
 //~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.context.IContext;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 
 //~--- JDK imports ------------------------------------------------------------
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -35,6 +32,11 @@ import java.util.TreeSet;
 
 //~--- interfaces -------------------------------------------------------------
 
+/**
+ *
+ * @version        1.0, 2013.08.09
+ * @author         bas
+ */
 public interface Datenbank
 {
 
@@ -105,7 +107,7 @@ public interface Datenbank
   public abstract HashMap< String, String > getDBMetaData();
 
   /**
-   * 
+   *
    * @param tablename String
    *
    * @return HashMap<String,String>
@@ -119,21 +121,43 @@ public interface Datenbank
   public HashMap< String, String > getTables();
 
   /**
-   * 
+   *
    * @param context IContext
    *
    * @return ArrayList<IDBTable>
    */
   public ArrayList< IDBTable > getAggregatedTableInformation(IContext context);
-  
+
+  /**
+   *
+   * @return Connection
+   */
   public Connection getConnection();
-  
+
+  /**
+   *
+   * @return int
+   */
   public int getFetchSize();
-  
+
+  /**
+   *
+   * @param fetchSize int
+   */
   public void setFetchSize(int fetchSize);
-  
+
+  /**
+   *
+   * @param sql String
+   *
+   * @return PreparedStatement
+   */
   public PreparedStatement getPreparedStatement(String sql);
-  
+
+  /**
+   *
+   * @param autoCommitState boolean
+   */
   public void setAutoCommit(boolean autoCommitState);
 }
 

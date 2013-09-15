@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.server.ServerStarter.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.server;
@@ -38,7 +35,7 @@ public class ServerStarter
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param args String[]
    *
    * @throws Exception
@@ -69,7 +66,6 @@ public class ServerStarter
     // int poolSize = 10;
     // Liefert einen Thread-Pool für maximal poolSize Threads
     // pool = Executors.newFixedThreadPool(poolSize);
-
     final BiteServer server = new BiteServer(port, pool);
 
     server.setContext(context);

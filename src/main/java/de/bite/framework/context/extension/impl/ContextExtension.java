@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.03.13
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.extension.impl.ContextExtension.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.context.extension.impl;
@@ -74,7 +71,8 @@ public class ContextExtension implements IContextExtension, Serializable
   {
     if(!this.name.equals("not set"))
     {
-      //this.context.getLogger().error(Constants.error_message + name + " BEREITS GESETZT ");
+
+      // this.context.getLogger().error(Constants.error_message + name + " BEREITS GESETZT ");
       throw new ContextExtensionException(Constants.warning_message + " ContextExtension-Name ist bereits gesetzt");
     }
 
@@ -98,7 +96,8 @@ public class ContextExtension implements IContextExtension, Serializable
     }
     catch(Exception ex)
     {
-      //this.context.getLogger().error(Constants.error_message + " set(Object object) :: " + object.toString() + "  " + ex.getLocalizedMessage());
+
+      // this.context.getLogger().error(Constants.error_message + " set(Object object) :: " + object.toString() + "  " + ex.getLocalizedMessage());
     }
   }
 
@@ -113,9 +112,9 @@ public class ContextExtension implements IContextExtension, Serializable
     {
       if((this.objectNameStatus.get(objectToReturn) == ContextStatus.CONVERSATION_AKTIV) || (this.objectNameStatus.get(objectToReturn) == ContextStatus.AKTIV))
       {
-        //this.context.getLogger().info(Constants.info_message + " Object == " + objectToReturn + " ::::: Status == " + this.objectNameStatus.get(objectToReturn) + " ::::: Timestamp == " +
-                                      //this.objectNameTime.get(objectToReturn));
 
+        // this.context.getLogger().info(Constants.info_message + " Object == " + objectToReturn + " ::::: Status == " + this.objectNameStatus.get(objectToReturn) + " ::::: Timestamp == " +
+        // this.objectNameTime.get(objectToReturn));
         return this.objectNameObject.get(objectToReturn);
       }
     }
@@ -140,9 +139,9 @@ public class ContextExtension implements IContextExtension, Serializable
 
     if(!this.objectNameConversation.containsValue(conversationFlow))
     {
-      //this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " +
-        //                            this.getName());
 
+      // this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " +
+      // this.getName());
       return null;
     }
 
@@ -150,9 +149,9 @@ public class ContextExtension implements IContextExtension, Serializable
     {
       if((this.objectNameConversation.get(objectToReturn).equals(conversationFlow)))
       {
-        //this.context.getLogger().info(Constants.info_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " ERFOLGREICH == " + objectToReturn +
-       //                               " fuer " + this.getName());
 
+        // this.context.getLogger().info(Constants.info_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " ERFOLGREICH == " + objectToReturn +
+        // " fuer " + this.getName());
         return this.objectNameObject.get(objectToReturn);
       }
     }
@@ -208,11 +207,11 @@ public class ContextExtension implements IContextExtension, Serializable
       if(status.equals(ContextStatus.CONVERSATION_AKTIV))
       {
         this.objectNameConversation.put(objektName, contextFlow);
-        //this.context.getLogger().info(Constants.info_message + " set(Object object) :: Conversation-Status wird mit verarbeitet fuer " + this.getName());
+
+        // this.context.getLogger().info(Constants.info_message + " set(Object object) :: Conversation-Status wird mit verarbeitet fuer " + this.getName());
       }
 
-      //this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer " + this.getName());
-
+      // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer " + this.getName());
       return true;
     }
     else if(status.equals(ContextStatus.CONVERSATION_AKTIV))
@@ -247,12 +246,12 @@ public class ContextExtension implements IContextExtension, Serializable
              *
              */
             this.objectNameConversation.put(objektName, contextFlow);
-            //this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " +
-              //                            this.getName());
+
+            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " +
+            // this.getName());
 
             /**  */
-            //this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
-
+            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
             return true;
           }
           catch(Exception ex)
@@ -262,8 +261,7 @@ public class ContextExtension implements IContextExtension, Serializable
         }
       }
 
-      //this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
-
+      // this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
       return false;
     }
     else
@@ -289,8 +287,8 @@ public class ContextExtension implements IContextExtension, Serializable
             this.objectNameObject.put(objektName, object);
             this.objectNameTime.put(objektName, new GregorianCalendar().getTimeInMillis());
             this.objectNameStatus.put(objektName, ContextStatus.AKTIV);
-            //this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
 
+            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
             return true;
           }
           catch(Exception ex)
@@ -300,15 +298,14 @@ public class ContextExtension implements IContextExtension, Serializable
         }
       }
 
-      //this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
-
+      // this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
       return false;
     }
 
   }
 
   /**
-   * 
+   *
    * @param context IContext
    */
   @Override

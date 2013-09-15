@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.07.19
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framwork.swing.frame.DefaultFrameTest.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framwork.swing.frame;
@@ -44,22 +41,22 @@ public class DefaultFrameTest extends TestCase
   public DefaultFrameTest()
   {
 
-//    // ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-//    // ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-//    // ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-//    // ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-//    ary[0]       = "path=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-//    ary[1]       = "dbkonfig=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+//  // ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+//  // ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+//  // ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+//  // ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+//  ary[0]       = "path=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+//  ary[1]       = "dbkonfig=C:/Project/nixdorfan_dyndns/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
 //
-//    // ary[0]= "path=C:/Project/bite.framework.mnet/src/main/resources";
-//    // ary[1]= "dbkonfig=C:/Project/bite.framework.mnet/src/main/resources/db";
-////  ary[0]       = "path=C:/Project/gsal/conf";
-////  ary[1]       = "dbkonfig=C:/Project/gsal/conf/db";
-//    ary[2]       = "useGUI=false";
-//    ary[3]       = "propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader";
-//    ary[4]       = "resource=path";
-//    ary[5]       = "dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj";
-//    this.context = Bootstrap.startContext(ConsoleValuesPreparator.prepare(ary));
+//  // ary[0]= "path=C:/Project/bite.framework.mnet/src/main/resources";
+//  // ary[1]= "dbkonfig=C:/Project/bite.framework.mnet/src/main/resources/db";
+////ary[0]       = "path=C:/Project/gsal/conf";
+////ary[1]       = "dbkonfig=C:/Project/gsal/conf/db";
+//  ary[2]       = "useGUI=false";
+//  ary[3]       = "propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader";
+//  ary[4]       = "resource=path";
+//  ary[5]       = "dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj";
+//  this.context = Bootstrap.startContext(ConsoleValuesPreparator.prepare(ary));
   }
 
 

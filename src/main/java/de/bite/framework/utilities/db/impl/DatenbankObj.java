@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.03.13
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.utilities.db.impl.DatenbankObj.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 /*
@@ -307,7 +304,7 @@ public class DatenbankObj implements Datenbank
   }
 
   /**
-   * 
+   *
    * @param tablename String
    *
    * @return HashMap<String,String>
@@ -377,7 +374,7 @@ public class DatenbankObj implements Datenbank
   }
 
   /**
-   * 
+   *
    * @param context IContext
    *
    * @return ArrayList<IDBTable>
@@ -411,50 +408,89 @@ public class DatenbankObj implements Datenbank
 
   }
 
-    @Override
-    public Connection getConnection() {
-        return this.con;
-    }
+  /**
+   *
+   * @return Connection
+   */
+  @Override
+  public Connection getConnection()
+  {
+    return this.con;
+  }
 
-    
-    @Override
-    public int getFetchSize() {
-        try{
-            return this.stmt.getFetchSize();
-        } catch (Exception ex){
-            ex.printStackTrace();
-            return 10;
-        }
+  /**
+   *
+   * @return int
+   */
+  @Override
+  public int getFetchSize()
+  {
+    try
+    {
+      return this.stmt.getFetchSize();
     }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
 
-    
-    @Override
-    public void setFetchSize(int fetchSize) {
-        try{
-            this.stmt.setFetchSize(fetchSize);
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
+      return 10;
     }
+  }
 
-    @Override
-    public PreparedStatement getPreparedStatement(String sql) {
-         try{
-            return this.con.prepareStatement(sql);
-         } catch (Exception ex){
-            ex.printStackTrace();
-            return null;
-        }
+  /**
+   *
+   * @param fetchSize int
+   */
+  @Override
+  public void setFetchSize(int fetchSize)
+  {
+    try
+    {
+      this.stmt.setFetchSize(fetchSize);
     }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+    }
+  }
 
-    @Override
-    public void setAutoCommit(boolean autoCommitState) {
-        try{
-            this.con.setAutoCommit(autoCommitState);
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
+  /**
+   *
+   * @param sql String
+   *
+   * @return PreparedStatement
+   */
+  @Override
+  public PreparedStatement getPreparedStatement(String sql)
+  {
+    try
+    {
+      return this.con.prepareStatement(sql);
     }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+
+      return null;
+    }
+  }
+
+  /**
+   *
+   * @param autoCommitState boolean
+   */
+  @Override
+  public void setAutoCommit(boolean autoCommitState)
+  {
+    try
+    {
+      this.con.setAutoCommit(autoCommitState);
+    }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+    }
+  }
 }
 
 

@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.utilities.file.PathValidationCheckModul.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.utilities.file;
@@ -18,7 +15,7 @@ import de.bite.framework.context.IContext;
 
 /**
  *
- * @author         nixdorfan    
+ * @author         nixdorfan
  */
 public abstract class PathValidationCheckModul
 {
@@ -29,7 +26,7 @@ public abstract class PathValidationCheckModul
   //~--- methods --------------------------------------------------------------
 
   /**
-   * 
+   *
    * @param context IContext
    */
   public void setContext(IContext context)
@@ -38,7 +35,7 @@ public abstract class PathValidationCheckModul
   }
 
   /**
-   * 
+   *
    * @param path String
    *
    * @return boolean
@@ -46,7 +43,7 @@ public abstract class PathValidationCheckModul
   public abstract boolean isValidPath(String path);
 
   /**
-   * 
+   *
    * @param path String
    *
    * @return String
@@ -54,7 +51,7 @@ public abstract class PathValidationCheckModul
   public abstract String getVerifcatedPath(String path);
 
   /**
-   * 
+   *
    * @param path String
    *
    * @return boolean
@@ -62,7 +59,7 @@ public abstract class PathValidationCheckModul
   public abstract boolean isFile(String path);
 
   /**
-   * 
+   *
    * @param key String
    *
    * @return boolean

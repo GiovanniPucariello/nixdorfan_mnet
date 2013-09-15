@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.IContext.java 1.0 | 2013.09.15 bas | UTF8 | tab 2
  */
 
 /*
@@ -122,7 +119,7 @@ public interface IContext
   public String getStringValueFromProperties(String propertiesKey);
 
   /**
-   * 
+   *
    * @param clazzname String
    *
    * @return Object
@@ -130,14 +127,14 @@ public interface IContext
   public Object getObject(String clazzname);
 
   /**
-   * 
+   *
    * @param objectname String
    * @param object Object
    */
   public void setObject(String objectname, Object object);
 
   /**
-   * 
+   *
    * @param clazzname String
    * @param conversationFlowState String
    *
@@ -146,12 +143,22 @@ public interface IContext
   public Object getConversationObject(String clazzname, String conversationFlowState);
 
   /**
-   * 
+   *
    * @param objectname String
    * @param conversationFlowState String
    * @param object Object
    */
   public void setConversationObject(String objectname, String conversationFlowState, Object object);
+
+  /**
+   *
+   * @param objectname String
+   */
+  public void deleteObject(String objectname);
+
+  /**
+   */
+  public void clearContext();
 }
 
 

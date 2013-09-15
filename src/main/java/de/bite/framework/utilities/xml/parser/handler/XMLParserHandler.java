@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.utilities.xml.parser.handler.XMLParserHandler.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 /*
@@ -29,6 +26,11 @@ import java.util.HashMap;
 
 //~--- interfaces -------------------------------------------------------------
 
+/**
+ *
+ * @version        1.0, 2013.08.09
+ * @author         bas
+ */
 public interface XMLParserHandler extends org.xml.sax.ContentHandler
 {
   //~--- methods --------------------------------------------------------------

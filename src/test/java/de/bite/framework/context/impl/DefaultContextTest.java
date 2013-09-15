@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.03.13
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.impl.DefaultContextTest.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.context.impl;
@@ -17,9 +14,10 @@ import de.bite.framework.bootstrap.impl.ConsoleValuesPreparator;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
-import static junit.framework.Assert.assertEquals;
 
 import junit.framework.TestCase;
+
+import static junit.framework.Assert.assertEquals;
 
 //~--- classes ----------------------------------------------------------------
 
@@ -29,6 +27,7 @@ import junit.framework.TestCase;
  */
 public class DefaultContextTest extends TestCase
 {
+
   //~--- fields ---------------------------------------------------------------
 
   String[] ary = new String[6];
@@ -40,21 +39,18 @@ public class DefaultContextTest extends TestCase
    */
   public DefaultContextTest()
   {
+    ary[0]       = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+    ary[1]       = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
 
-
-     //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-     //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-    ary[0] = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-    ary[1] = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
-
-     //ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
-     //ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+    // ary[0]       = "path=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+    // ary[1]       = "dbkonfig=C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
+    // ary[0] = "path=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources";
+    // ary[1] = "dbkonfig=/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/db";
     ary[2]       = "useGUI=false";
     ary[3]       = "propertyloader=de.bite.framework.bootstrap.impl.PropertyLoader";
     ary[4]       = "resource=path";
     ary[5]       = "dbreflection=de.bite.framework.utilities.db.impl.DatenbankObj";
     this.context = Bootstrap.startContext(ConsoleValuesPreparator.prepare(ary));
-    
   }
 
 
@@ -84,21 +80,21 @@ public class DefaultContextTest extends TestCase
     // System.out.println(" TEST2 == "  + resultString2);
     assertEquals("String1", resultString2);
   }
-  
+
   /**
    */
   public void testContextFileDetektion()
   {
-//    String file = (String)this.context.getStringValueFromProperties("default.db.table.info");
-//    String file2 = (String)this.context.getStringValueFromProperties("default.file1");
-//    String file3 = (String)this.context.getStringValueFromProperties("default.file2");
-//
-//    assertEquals("de.bite.framework.utilities.db.impl.DBTable",file );
-//    //assertEquals("C:/Project/gsal/conf/log4j.properties",file2 );
-//    //assertEquals("C:/Project/bite.framework.mnet/src/main/resources/log4j.properties",file3 );
-//    assertEquals("/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file2 );
-//    assertEquals("/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file3 );
 
+//  String file = (String)this.context.getStringValueFromProperties("default.db.table.info");
+//  String file2 = (String)this.context.getStringValueFromProperties("default.file1");
+//  String file3 = (String)this.context.getStringValueFromProperties("default.file2");
+//
+//  assertEquals("de.bite.framework.utilities.db.impl.DBTable",file );
+//  //assertEquals("C:/Project/gsal/conf/log4j.properties",file2 );
+//  //assertEquals("C:/Project/bite.framework.mnet/src/main/resources/log4j.properties",file3 );
+//  assertEquals("/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file2 );
+//  assertEquals("/home/nixdorfan/NetBeansProjects/nixdorfan_mnet/src/main/resources/log4j.properties",file3 );
   }
 }
 

@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.03.13
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.impl.AbstractContext.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 /*
@@ -35,8 +32,8 @@ import de.bite.framework.factories.impl.DefaultFactory;
 import de.bite.framework.logging.ILogger;
 import de.bite.framework.logging.impl.DefaultLogger;
 import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
-//import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
 
+//import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -143,18 +140,17 @@ public abstract class AbstractContext implements IContext
         propertyHolder.add(holder);
       }
 
-        // Initialisiere FileChecking modul und lade es in context;
+      // Initialisiere FileChecking modul und lade es in context;
       DefaultPathVerificationCheckModul checkingModul = new DefaultPathVerificationCheckModul();
+
       checkingModul.setContext(this);
       this.setObject(ContextStatus.AKTIV, checkingModul, "filechecking", null);
-
 
       String logging      = this.getStringValueFromProperties("logging");
       String loggingDelay = this.getStringValueFromProperties("logging_delay");
 
       PropertyConfigurator.configureAndWatch(logging, Integer.parseInt(loggingDelay));
       this.setObject(ContextStatus.AKTIV, propertyHolder, "configuration", null);
-
     }
 
   }
@@ -259,7 +255,8 @@ public abstract class AbstractContext implements IContext
 
         if(extension == null)
         {
-          //this.getLogger().debug(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
+
+          // this.getLogger().debug(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
           return null;
         }
 
@@ -275,7 +272,7 @@ public abstract class AbstractContext implements IContext
           {
             obj = null;
 
-            //this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
+            // this.getLogger().error(Constants.error_message + " kein Object fuer ContextFlow == " + contextStatusFlowName);
           }
         }
         else
@@ -285,8 +282,8 @@ public abstract class AbstractContext implements IContext
 
         if(obj == null)
         {
-        	//this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
 
+          // this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
           return null;
         }
 
@@ -296,8 +293,7 @@ public abstract class AbstractContext implements IContext
       {
         Object obj = this.factory.getObject(this.getClazzNameFromPropertyHolder(objectName));
 
-        //this.getLogger().info(Constants.info_message + " [getObject] -- Object wird generiert fuer " + objectName);
-
+        // this.getLogger().info(Constants.info_message + " [getObject] -- Object wird generiert fuer " + objectName);
         try
         {
           Method method = obj.getClass().getMethod("setContext", IContext.class);
@@ -313,8 +309,8 @@ public abstract class AbstractContext implements IContext
         }
         catch(Exception ex)
         {
-        	////this.getLogger().info(Constants.warning_message + " Reflection DI nicht erfolgreich fuer  " + objectName + " ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
 
+          ////this.getLogger().info(Constants.warning_message + " Reflection DI nicht erfolgreich fuer  " + objectName + " ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
           // ex.printStackTrace();
         }
 
@@ -331,8 +327,8 @@ public abstract class AbstractContext implements IContext
 
       if(extension == null)
       {
-    	  //this.getLogger().info(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
 
+        // this.getLogger().info(Constants.warning_message + " getObject -- Extension  N I C H T  gefunden fuer " + objectName);
         return null;
       }
 
@@ -358,8 +354,8 @@ public abstract class AbstractContext implements IContext
 
       if(obj == null)
       {
-    	  ////this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
 
+        ////this.getLogger().info(Constants.warning_message + " getObject -- Object in Extension  N I C H T  gefunden fuer " + objectName);
         return null;
       }
 
@@ -367,8 +363,8 @@ public abstract class AbstractContext implements IContext
     }
     else
     {
-    	////this.getLogger().info(Constants.warning_message + " getObject -- Fehlerhafter Context-Type fuer " + objectName);
 
+      ////this.getLogger().info(Constants.warning_message + " getObject -- Fehlerhafter Context-Type fuer " + objectName);
       return null;
     }
 
@@ -400,7 +396,8 @@ public abstract class AbstractContext implements IContext
     }
     catch(Exception ex)
     {
-    	//this.getLogger().info(Constants.warning_message + "[getUnboundObject] Reflection DI nicht erfolgreich fuer  " + objectName + "  ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
+
+      // this.getLogger().info(Constants.warning_message + "[getUnboundObject] Reflection DI nicht erfolgreich fuer  " + objectName + "  ... allgemeiner Fehler. Fortfahren ohne DI des Contextes ");
       ex.printStackTrace();
     }
 
@@ -571,20 +568,24 @@ public abstract class AbstractContext implements IContext
 
       if(holder.containsKey(propertiesKey))
       {
-    	  // Bestimme ob Properties-Abfrage auf File zeigt oder eine andere Konfiguration ist
-   	  String valOfProperty = holder.getProperties(propertiesKey);
-   	  DefaultPathVerificationCheckModul checkingModul = (DefaultPathVerificationCheckModul)this.getObject("filechecking", ContextType.USED, null);
-    	  String verified = checkingModul.getVerifcatedPath(valOfProperty);
-    	  if(verified == null){
-    		  return valOfProperty;
-    	  } else {
-    		  return verified;
-    	  }
+
+        // Bestimme ob Properties-Abfrage auf File zeigt oder eine andere Konfiguration ist
+        String                            valOfProperty = holder.getProperties(propertiesKey);
+        DefaultPathVerificationCheckModul checkingModul = (DefaultPathVerificationCheckModul)this.getObject("filechecking", ContextType.USED, null);
+        String                            verified      = checkingModul.getVerifcatedPath(valOfProperty);
+
+        if(verified == null)
+        {
+          return valOfProperty;
+        }
+        else
+        {
+          return verified;
+        }
       }
     }
 
-    //this.getLogger().info(Constants.warning_message + " Properties-Key fuer Laden der Klasse nicht gefunden == " + propertiesKey);
-
+    // this.getLogger().info(Constants.warning_message + " Properties-Key fuer Laden der Klasse nicht gefunden == " + propertiesKey);
     return null;
 
   }
@@ -600,31 +601,57 @@ public abstract class AbstractContext implements IContext
   {
     String delegateReturn = getClazzNameFromPropertyHolder(propertiesKey);
 
-    
-    //this.getLogger().info(delegateReturn);
-
+    // this.getLogger().info(delegateReturn);
     return delegateReturn;
   }
-  
-      @Override
-    public Object getObject(String clazzname) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 
-    @Override
-    public void setObject(String objectname, Object object) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   *
+   * @param clazzname String
+   *
+   * @return Object
+   */
+  @Override
+  public Object getObject(String clazzname)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 
-    @Override
-    public Object getConversationObject(String clazzname, String conversationFlowState) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   *
+   * @param objectname String
+   * @param object Object
+   */
+  @Override
+  public void setObject(String objectname, Object object)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 
-    @Override
-    public void setConversationObject(String objectname, String conversationFlowState, Object object) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+  /**
+   *
+   * @param clazzname String
+   * @param conversationFlowState String
+   *
+   * @return Object
+   */
+  @Override
+  public Object getConversationObject(String clazzname, String conversationFlowState)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  /**
+   *
+   * @param objectname String
+   * @param conversationFlowState String
+   * @param object Object
+   */
+  @Override
+  public void setConversationObject(String objectname, String conversationFlowState, Object object)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 }
 
 

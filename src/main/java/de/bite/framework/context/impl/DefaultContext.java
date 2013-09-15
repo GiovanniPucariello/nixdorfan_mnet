@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.impl.DefaultContext.java 1.0 | 2013.09.15 bas | UTF8 | tab 2
  */
 
 /*
@@ -116,7 +113,7 @@ public class DefaultContext extends AbstractContext implements Serializable
   }
 
   /**
-   * 
+   *
    * @param clazzname String
    *
    * @return Object
@@ -128,7 +125,7 @@ public class DefaultContext extends AbstractContext implements Serializable
   }
 
   /**
-   * 
+   *
    * @param objectname String
    * @param object Object
    */
@@ -139,7 +136,7 @@ public class DefaultContext extends AbstractContext implements Serializable
   }
 
   /**
-   * 
+   *
    * @param clazzname String
    * @param conversationFlowState String
    *
@@ -152,7 +149,7 @@ public class DefaultContext extends AbstractContext implements Serializable
   }
 
   /**
-   * 
+   *
    * @param objectname String
    * @param conversationFlowState String
    * @param object Object
@@ -161,6 +158,24 @@ public class DefaultContext extends AbstractContext implements Serializable
   public void setConversationObject(String objectname, String conversationFlowState, Object object)
   {
     throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  /**
+   *
+   * @param objectname String
+   */
+  @Override
+  public void deleteObject(String objectname)
+  {
+    throw new UnsupportedOperationException("Not supported yet.");    // To change body of generated methods, choose Tools | Templates.
+  }
+
+  /**
+   */
+  @Override
+  public void clearContext()
+  {
+    throw new UnsupportedOperationException("Not supported yet.");    // To change body of generated methods, choose Tools | Templates.
   }
 }
 

@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.06.14
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.service.db.dao.ImporterDAO.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.service.db.dao;
@@ -69,7 +66,7 @@ public class ImporterDAO
   public boolean insertPropertyName(String name)
   {
     String sql    = "insert into applications (aid,name,app_id) values (" + this.context.getStringValueFromProperties("service.db.sequence.nameid") + ",'" + name + "'," +
-                 this.context.getStringValueFromProperties("service.db.sequence.nameappid") + ")";
+                    this.context.getStringValueFromProperties("service.db.sequence.nameappid") + ")";
     int    result = this.datenbank.execDMLStmt(sql);
 
     if(result == 0)
@@ -99,7 +96,7 @@ public class ImporterDAO
   public boolean insertPropertyKeyValue(String key, String value, String name)
   {
     String sql    = "insert into applications_key_value (akvid,app_key,app_value,name,fk_app_id) values (" + this.context.getStringValueFromProperties("service.db.sequence.keyvalue") + ",'" + key +
-                 "'," + "'" + value + "'," + "'" + name + "',(select app_id from applications where name ='" + name + "'" + ") )";
+                    "'," + "'" + value + "'," + "'" + name + "',(select app_id from applications where name ='" + name + "'" + ") )";
     int    result = this.datenbank.execDMLStmt(sql);
 
     if(result == 0)
