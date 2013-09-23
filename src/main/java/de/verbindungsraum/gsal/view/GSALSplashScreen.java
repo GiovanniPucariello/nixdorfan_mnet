@@ -192,8 +192,10 @@ public class GSALSplashScreen extends javax.swing.JFrame
     
     
     /** Starte Application */
-    GSALView view = new GSALView(context, BootpathLoader.getBootPath(preparedConsoleValues));
-
+    //GSALView view = new GSALView(context, BootpathLoader.getBootPath(preparedConsoleValues));
+    GSALView2nd view = new GSALView2nd();
+    view.setContext(context);
+    view.setPaths(BootpathLoader.getBootPath(preparedConsoleValues));
     view.setVisible(true);
 
   }
