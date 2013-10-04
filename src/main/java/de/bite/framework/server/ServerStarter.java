@@ -1,8 +1,11 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.bite.framework.server.ServerStarter.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 package de.bite.framework.server;
@@ -62,6 +65,8 @@ public class ServerStarter
     // Liefert einen Thread-Pool, dem bei Bedarf neue Threads hinzugefügt
     // werden. Vorrangig werden jedoch vorhandene freie Threads benutzt.
     pool = Executors.newCachedThreadPool();
+
+    context.setObject("serverthreadpool", pool);
 
     // int poolSize = 10;
     // Liefert einen Thread-Pool für maximal poolSize Threads
