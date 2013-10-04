@@ -43,11 +43,11 @@ default.file.read.encoding=UTF-8
 
 # S e r v e r E i n s t e l l u n g e n
 default.server.port=9000
-default.server.handler=de.bite.framework.server.ServerHandler
+default.server.handler=de.bite.framework.server.impl.ServerHandler
 
 # D a t e n b a n k - S e r v e r E m b e d d e d
 default.db.port=9001
-default.db.file=file:/C:/Users/AN/Documents/NetBeansProjects/nixdorfan_mnet/db
+default.db.file=file:/C:/Project/nixdorfan_dyndns/workspace/bite.framework.mnet/src/main/resources/db
 default.db.name=Test
 default.db.trace=true
 default.db.address=127.0.0.1

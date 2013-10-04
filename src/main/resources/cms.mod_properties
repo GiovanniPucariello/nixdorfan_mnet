@@ -32,7 +32,7 @@ cms.xmlparser=org.apache.xerces.parsers.SAXParser
 # C M S INDIVIDUELLE KLASSEN
 # DB
 #cms.db.conf=C:/Temp/gsal/conf/dbtEST
-cms.db.conf=C:/Project/nixdorfan_dyndns/NetbeansProjects/nixdorfan_framework/src/main/resources/db
+cms.db.conf=db
 
 # DB - Queries
 cms.db.sql.categories=select * from
