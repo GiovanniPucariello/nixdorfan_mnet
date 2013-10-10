@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.06.14
+ * Copyright (c) 2013.10.04
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -12,7 +12,6 @@ package de.verbindungsraum.gsal.view;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
 import de.bite.framework.utilities.file.FileHandler;
@@ -23,8 +22,6 @@ import de.verbindungsraum.gsal.command.impl.GeneratingTreeCommand;
 import de.verbindungsraum.gsal.exception.GSALException;
 
 //~--- JDK imports ------------------------------------------------------------
-
-import java.awt.Window;
 
 import java.io.File;
 

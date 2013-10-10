@@ -1,81 +1,122 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
+
 package de.verbindungsraum.gsal.view;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import de.bite.framework.constants.Constants;
-import de.bite.framework.context.IContext;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
+import de.bite.framework.context.IContext;
 import de.bite.framework.utilities.status.JStatusLeiste;
 import de.bite.framework.utilities.swing.PopUpper;
 import de.bite.framework.utilities.system.SystemInformation;
+
 import de.verbindungsraum.gsal.command.impl.GSALCommand;
 import de.verbindungsraum.gsal.exception.GSALException;
 import de.verbindungsraum.gsal.listener.GSALActionListener;
 import de.verbindungsraum.gsal.utilities.ModulAnalyzer;
-import java.util.List;
-import javax.swing.JMenuItem;
+
 import org.hsqldb.Server;
+
+//~--- JDK imports ------------------------------------------------------------
+
+import java.util.List;
+
+import javax.swing.JMenuItem;
+
+//~--- classes ----------------------------------------------------------------
 
 /**
  *
  * @author nixdorfan
  */
-public class GSALView2nd extends javax.swing.JFrame {
+public class GSALView2nd extends javax.swing.JFrame
+{
 
-    private IContext context;
-    private String pathToFileOrDirectory;
-    private Server                           server;
-    
-    
-    /**
-     * Creates new form GSALView2nd
-     */
-    public GSALView2nd() {
-        initComponents();
-    }
-    
-    /**
-     *  Setzen des bite.framework contexts
-     */
-    public void setContext(IContext context){
-        this.context = context;
-        initFooter();
-    }
-    
-    /**
-     * setzen des Paths fuer Laden der Module
-     */
-    public void setPaths(String pathToFileOrDirectory){
-        this.pathToFileOrDirectory = pathToFileOrDirectory;
-        loadJMenuModulItems();
-        
-        PopUpper pop = new PopUpper();
+  //~--- fields ---------------------------------------------------------------
 
-        pop.setVars(this);
-        this.context.setObject(ContextStatus.AKTIV, pop, "popupper", null);
+  private IContext              context;
+  private String                pathToFileOrDirectory;
+  private Server                server;
 
-        GSALFileHandler filehandler = new GSALFileHandler(this.context);
+  // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JMenuBar  jMenuBar1;
+  private javax.swing.JPanel    mainPanel;
+  private javax.swing.JMenuItem menuItemServerStart;
+  private javax.swing.JMenuItem menuItemServerStop;
+  private javax.swing.JMenu     menuModuls;
+  private javax.swing.JMenu     menuTools;
 
-        this.context.setObject(ContextStatus.AKTIV, filehandler, "filehandler", null);
-    }
-    
-    /***
-     *  Setzen des Informationsfooters
-     */
-    public void initFooter(){
-    
-        JStatusLeiste jsl = new JStatusLeiste();
-        this.context.setObject("footer", jsl);
-        getContentPane().add(jsl, java.awt.BorderLayout.SOUTH);
-        
-        pack();
+  //~--- constructors ---------------------------------------------------------
 
-    }
-    
-    /**
+  /**
+   * Creates new form GSALView2nd
+   */
+  public GSALView2nd()
+  {
+    initComponents();
+  }
+
+
+
+
+  //~--- methods --------------------------------------------------------------
+
+  /**
+   *  Setzen des bite.framework contexts
+   * 
+   * @param context IContext
+   */
+  public void setContext(IContext context)
+  {
+    this.context = context;
+
+    initFooter();
+  }
+
+  /**
+   * setzen des Paths fuer Laden der Module
+   * 
+   * @param pathToFileOrDirectory String
+   */
+  public void setPaths(String pathToFileOrDirectory)
+  {
+    this.pathToFileOrDirectory = pathToFileOrDirectory;
+
+    loadJMenuModulItems();
+
+    PopUpper pop = new PopUpper();
+
+    pop.setVars(this);
+    this.context.setObject(ContextStatus.AKTIV, pop, "popupper", null);
+
+    GSALFileHandler filehandler = new GSALFileHandler(this.context);
+
+    this.context.setObject(ContextStatus.AKTIV, filehandler, "filehandler", null);
+  }
+
+  /**
+   *  Setzen des Informationsfooters
+   */
+  public void initFooter()
+  {
+    JStatusLeiste jsl = new JStatusLeiste();
+
+    this.context.setObject("footer", jsl);
+    getContentPane().add(jsl, java.awt.BorderLayout.SOUTH);
+    pack();
+  }
+
+  /**
    */
   private void loadJMenuModulItems()
   {
@@ -91,7 +132,6 @@ public class GSALView2nd extends javax.swing.JFrame {
         command.setCommandString(item.getText());
         item.addActionListener(new GSALActionListener(command));
         menuModuls.add(item);
-        
       }
     }
     catch(GSALException gsalex)
@@ -101,73 +141,71 @@ public class GSALView2nd extends javax.swing.JFrame {
     }
   }
 
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+  /**
+   * This method is called from within the constructor to initialize the form.
+   * WARNING: Do NOT modify this code. The content of this method is always
+   * regenerated by the Form Editor.
+   */
+  @SuppressWarnings("unchecked")
 
-        mainPanel = new javax.swing.JPanel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        menuModuls = new javax.swing.JMenu();
-        menuTools = new javax.swing.JMenu();
-        menuItemServerStart = new javax.swing.JMenuItem();
-        menuItemServerStop = new javax.swing.JMenuItem();
+  // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+  private void initComponents()
+  {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+    mainPanel           = new javax.swing.JPanel();
+    jMenuBar1           = new javax.swing.JMenuBar();
+    menuModuls          = new javax.swing.JMenu();
+    menuTools           = new javax.swing.JMenu();
+    menuItemServerStart = new javax.swing.JMenuItem();
+    menuItemServerStop  = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 283, Short.MAX_VALUE)
-        );
+    setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
+    javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
 
-        jMenuBar1.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12)); // NOI18N
+    mainPanel.setLayout(mainPanelLayout);
+    mainPanelLayout.setHorizontalGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 400, Short.MAX_VALUE));
+    mainPanelLayout.setVerticalGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 283, Short.MAX_VALUE));
+    getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
+    jMenuBar1.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12));              // NOI18N
+    menuModuls.setText("Module");
+    menuModuls.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12));             // NOI18N
+    jMenuBar1.add(menuModuls);
+    menuTools.setText("Tools");
+    menuTools.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12));              // NOI18N
+    menuItemServerStart.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12));    // NOI18N
+    menuItemServerStart.setText("Start DB-Server");
+    menuItemServerStart.addActionListener(new java.awt.event.ActionListener()
+    {
+      public void actionPerformed(java.awt.event.ActionEvent evt)
+      {
+        menuItemServerStartActionPerformed(evt);
+      }
+    });
+    menuTools.add(menuItemServerStart);
+    menuItemServerStop.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12));    // NOI18N
+    menuItemServerStop.setText("Stop DB-Server");
+    menuItemServerStop.addActionListener(new java.awt.event.ActionListener()
+    {
+      public void actionPerformed(java.awt.event.ActionEvent evt)
+      {
+        menuItemServerStopActionPerformed(evt);
+      }
+    });
+    menuTools.add(menuItemServerStop);
+    jMenuBar1.add(menuTools);
+    setJMenuBar(jMenuBar1);
+    pack();
 
-        menuModuls.setText("Module");
-        menuModuls.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12)); // NOI18N
-        jMenuBar1.add(menuModuls);
+  }    // </editor-fold>//GEN-END:initComponents
 
-        menuTools.setText("Tools");
-        menuTools.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12)); // NOI18N
+  /**
+   * 
+   * @param evt java.awt.event.ActionEvent
+   */
+  private void menuItemServerStartActionPerformed(java.awt.event.ActionEvent evt)
+  {    // GEN-FIRST:event_menuItemServerStartActionPerformed
 
-        menuItemServerStart.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12)); // NOI18N
-        menuItemServerStart.setText("Start DB-Server");
-        menuItemServerStart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItemServerStartActionPerformed(evt);
-            }
-        });
-        menuTools.add(menuItemServerStart);
-
-        menuItemServerStop.setFont(new java.awt.Font("Courier 10 Pitch", 0, 12)); // NOI18N
-        menuItemServerStop.setText("Stop DB-Server");
-        menuItemServerStop.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItemServerStopActionPerformed(evt);
-            }
-        });
-        menuTools.add(menuItemServerStop);
-
-        jMenuBar1.add(menuTools);
-
-        setJMenuBar(jMenuBar1);
-
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-    private void menuItemServerStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemServerStartActionPerformed
-    
     if(this.server == null)
     {
       try
@@ -195,55 +233,81 @@ public class GSALView2nd extends javax.swing.JFrame {
 
       implementedException.showPopUp(" Server ist bereits gestartet ... ");
     }
-    }//GEN-LAST:event_menuItemServerStartActionPerformed
 
-    private void menuItemServerStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemServerStopActionPerformed
-        this.server.stop();
-        this.context.getLogger().info("DB-Server wurde gestoppt ... ");
-        this.server = null;
-        SystemInformation.useGC();
-    }//GEN-LAST:event_menuItemServerStopActionPerformed
+  }    // GEN-LAST:event_menuItemServerStartActionPerformed
 
-    /**
-     * @param args the command line arguments
+  /**
+   * 
+   * @param evt java.awt.event.ActionEvent
+   */
+  private void menuItemServerStopActionPerformed(java.awt.event.ActionEvent evt)
+  {    // GEN-FIRST:event_menuItemServerStopActionPerformed
+    this.server.stop();
+    this.context.getLogger().info("DB-Server wurde gestoppt ... ");
+
+    this.server = null;
+
+    SystemInformation.useGC();
+  }    // GEN-LAST:event_menuItemServerStopActionPerformed
+
+  /**
+   * @param args the command line arguments
+   */
+  public static void main(String args[])
+  {
+
+    /* Set the Nimbus look and feel */
+
+    // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+
+    /*
+     *  If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    try
+    {
+      for(javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+      {
+        if("Nimbus".equals(info.getName()))
+        {
+          javax.swing.UIManager.setLookAndFeel(info.getClassName());
+          break;
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GSALView2nd().setVisible(true);
-            }
-        });
+      }
     }
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel mainPanel;
-    private javax.swing.JMenuItem menuItemServerStart;
-    private javax.swing.JMenuItem menuItemServerStop;
-    private javax.swing.JMenu menuModuls;
-    private javax.swing.JMenu menuTools;
-    // End of variables declaration//GEN-END:variables
+    catch(ClassNotFoundException ex)
+    {
+      java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+    catch(InstantiationException ex)
+    {
+      java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+    catch(IllegalAccessException ex)
+    {
+      java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+    catch(javax.swing.UnsupportedLookAndFeelException ex)
+    {
+      java.util.logging.Logger.getLogger(GSALView2nd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+
+    // </editor-fold>
+
+    /* Create and display the form */
+    java.awt.EventQueue.invokeLater(new Runnable()
+    {
+      public void run()
+      {
+        new GSALView2nd().setVisible(true);
+      }
+    });
+  }
+
+  // End of variables declaration//GEN-END:variables
 }
+
+
+/* ||\
+ * ---------------------------------------------------------
+ */

@@ -1,9 +1,10 @@
 /**
- * Copyright (c) 2013.07.19
+ *
+ * Copyright (c) 2013.10.04
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 
@@ -11,24 +12,20 @@ package de.verbindungsraum.gsal.view;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import de.bite.framework.bootstrap.impl.PropertyLoader;
 import de.bite.framework.constants.Constants;
 import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
-import de.bite.framework.controller.Controller;
-import de.bite.framework.utilities.file.FileHandler;
-import de.bite.framework.utilities.file.FileUtilsAN;
 import de.bite.framework.utilities.swing.PopUpper;
 import de.bite.framework.utilities.system.SystemInformation;
 
 import de.verbindungsraum.gsal.command.IGSALCommand;
-import de.verbindungsraum.gsal.command.impl.*;
+import de.verbindungsraum.gsal.command.impl.ExternalLoggingCommand;
+import de.verbindungsraum.gsal.command.impl.GSALCommand;
+import de.verbindungsraum.gsal.command.impl.ProgrammStarterCommand;
 import de.verbindungsraum.gsal.exception.GSALCommandException;
 import de.verbindungsraum.gsal.exception.GSALException;
 import de.verbindungsraum.gsal.listener.GSALActionListener;
-import de.verbindungsraum.gsal.models.GSALTreeModel;
-import de.verbindungsraum.gsal.models.TreeNodeGenerator;
 import de.verbindungsraum.gsal.utilities.ModulAnalyzer;
 
 import org.apache.log4j.Logger;
@@ -37,23 +34,10 @@ import org.hsqldb.Server;
 
 //~--- JDK imports ------------------------------------------------------------
 
-import java.io.*;
-
-import java.nio.file.Files;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
-
-import java.util.concurrent.ExecutorService;
-import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Level;
 
-import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
 import javax.swing.JMenuItem;
-import javax.swing.JTree;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreePath;
 import javax.swing.UIManager;
 
@@ -102,9 +86,9 @@ public class GSALView extends javax.swing.JFrame
   private javax.swing.JTabbedPane          jTabbedPane1;
   private javax.swing.JTextArea            jTextArea1;
 
-  // End of variables declaration
-
   //~--- constructors ---------------------------------------------------------
+
+  // End of variables declaration
 
   /**
    * Creates new form GSALView
@@ -364,27 +348,29 @@ public class GSALView extends javax.swing.JFrame
   }    // </editor-fold>
 
   /**
-   * 
+   *
    * @param evt java.awt.event.ActionEvent
    */
   private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt)
   {
     this.server.stop();
     this.context.getLogger().info("Server stopped ... ");
+
     this.server = null;
+
     SystemInformation.useGC();
   }
 
   /**
-   * 
+   *
    * @param evt java.awt.event.ActionEvent
    */
   private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt)
   {
+    GSALThreadViewer threadsV = new GSALThreadViewer();
 
-  GSALThreadViewer threadsV = new GSALThreadViewer();
-  threadsV.setContext(context);
-  threadsV.setVisible(true);
+    threadsV.setContext(context);
+    threadsV.setVisible(true);
   }
 
   /**
@@ -431,6 +417,7 @@ public class GSALView extends javax.swing.JFrame
 
       implementedException.showPopUp(" Server ist bereits gestartet ... ");
     }
+
   }
 
   /**

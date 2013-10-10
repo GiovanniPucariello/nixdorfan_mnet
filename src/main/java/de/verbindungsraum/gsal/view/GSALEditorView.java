@@ -1,10 +1,10 @@
 /**
  *
- * Copyright (c) 2013.06.14
+ * Copyright (c) 2013.10.04
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0-b147
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
  * 
  */
 

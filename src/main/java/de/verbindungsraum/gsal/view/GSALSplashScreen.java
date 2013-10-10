@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2013.03.13
+ * Copyright (c) 2013.10.04
  * M-net Telekommunikations GmbH
  * 
  * @author nixdorfan
@@ -13,22 +13,16 @@ package de.verbindungsraum.gsal.view;
 //~--- non-JDK imports --------------------------------------------------------
 
 import de.bite.framework.bootstrap.impl.Bootstrap;
-import de.bite.framework.constants.Constants;
 import de.bite.framework.context.extension.impl.ContextStatus;
-import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
-import de.bite.framework.controller.Controller;
-import de.verbindungsraum.gsal.threads.RAMInformationThread;
 
+import de.verbindungsraum.gsal.threads.RAMInformationThread;
 import de.verbindungsraum.gsal.threads.WatchDogStarter;
 import de.verbindungsraum.gsal.utilities.BootpathLoader;
-import java.util.HashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 //~--- JDK imports ------------------------------------------------------------
 
-import javax.swing.SwingWorker;
+import java.util.HashMap;
 
 //~--- classes ----------------------------------------------------------------
 
@@ -170,30 +164,32 @@ public class GSALSplashScreen extends javax.swing.JFrame
         }
       }
     }
-	
-    HashMap<String, Thread> threads = new HashMap<String, Thread>();
 
-    WatchDogStarter watch = new WatchDogStarter();
-    RAMInformationThread ram = new RAMInformationThread();
+    HashMap< String, Thread > threads = new HashMap< String, Thread >();
+    WatchDogStarter           watch   = new WatchDogStarter();
+    RAMInformationThread      ram     = new RAMInformationThread();
+
     watch.setContext(context);
     ram.setContext(context);
 
     Thread t = new Thread(watch);
+
     t.start();
     threads.put("watchdog", t);
     this.context.getLogger().info("starting thread watchdog ... ");
-    
+
     Thread t2 = new Thread(ram);
+
     t2.start();
     threads.put("ram", t2);
     this.context.getLogger().info("starting thread ram ... ");
-
     this.context.setObject("executorthreads", threads);
-    
-    
+
     /** Starte Application */
-    //GSALView view = new GSALView(context, BootpathLoader.getBootPath(preparedConsoleValues));
+
+    // GSALView view = new GSALView(context, BootpathLoader.getBootPath(preparedConsoleValues));
     GSALView2nd view = new GSALView2nd();
+
     view.setContext(context);
     view.setPaths(BootpathLoader.getBootPath(preparedConsoleValues));
     view.setVisible(true);
