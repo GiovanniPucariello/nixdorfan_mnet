@@ -1,27 +1,25 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.verbindungsraum.cms.backend.user.ui.db.info.DBInfoTreeBuilder.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 package de.verbindungsraum.cms.backend.user.ui.db.info;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import de.bite.framework.constants.Constants;
 import de.bite.framework.context.IContext;
 import de.bite.framework.utilities.db.Datenbank;
 import de.bite.framework.utilities.db.IDBTable;
-import de.bite.framework.utilities.system.SystemInformation;
 
 //~--- JDK imports ------------------------------------------------------------
 
-import java.io.File;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.TreeSet;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
