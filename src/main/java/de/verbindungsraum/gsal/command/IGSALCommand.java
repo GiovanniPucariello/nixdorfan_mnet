@@ -1,8 +1,11 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.verbindungsraum.gsal.command.IGSALCommand.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 package de.verbindungsraum.gsal.command;
@@ -12,10 +15,6 @@ package de.verbindungsraum.gsal.command;
 import de.bite.framework.context.IContext;
 
 import de.verbindungsraum.gsal.exception.GSALCommandException;
-
-//~--- JDK imports ------------------------------------------------------------
-
-import javax.swing.JFrame;
 
 //~--- interfaces -------------------------------------------------------------
 
