@@ -1,8 +1,11 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.bite.framework.start.StarterExample.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 package de.bite.framework.start;
@@ -11,11 +14,9 @@ package de.bite.framework.start;
 
 import de.bite.framework.bootstrap.impl.Bootstrap;
 import de.bite.framework.bootstrap.impl.ConsoleValuesPreparator;
-import de.bite.framework.context.extension.impl.ContextStatus;
 import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.context.IContext;
 import de.bite.framework.controller.Controller;
-import de.bite.framework.utilities.db.Datenbank;
 
 //~--- classes ----------------------------------------------------------------
 
