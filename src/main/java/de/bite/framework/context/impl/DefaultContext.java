@@ -1,8 +1,11 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.bite.framework.context.impl.DefaultContext.java 1.0 | 2013.09.15 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 /*
@@ -15,9 +18,6 @@ package de.bite.framework.context.impl;
 
 import de.bite.framework.constants.Constants;
 import de.bite.framework.context.extension.impl.ContextExtension;
-import de.bite.framework.context.extension.impl.ContextStatus;
-import de.bite.framework.context.extension.impl.ContextType;
-import de.bite.framework.logging.ILogger;
 
 import org.apache.log4j.Logger;
 

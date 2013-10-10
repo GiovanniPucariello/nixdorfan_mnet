@@ -1,8 +1,11 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.bite.framework.context.impl.AbstractContext.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 /*
@@ -34,18 +37,20 @@ import de.bite.framework.logging.impl.DefaultLogger;
 import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
 
 //import de.bite.framework.utilities.file.DefaultPathVerificationCheckModul;
-import org.apache.log4j.Logger;
+
 import org.apache.log4j.PropertyConfigurator;
 
 //~--- JDK imports ------------------------------------------------------------
 
 import java.io.FileInputStream;
-import java.io.Serializable;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Properties;
+import java.util.Set;
 
 //~--- classes ----------------------------------------------------------------
 
