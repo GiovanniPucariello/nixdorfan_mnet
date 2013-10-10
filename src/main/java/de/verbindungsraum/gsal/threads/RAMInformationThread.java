@@ -1,25 +1,20 @@
-/*
- * ||
- * netbeans 201306052037 | 1.23
- * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
- * de.verbindungsraum.gsal.threads.RAMInformationThread.java 1.0 | 2013.09.14 bas | UTF8 | tab 2
+/**
+ *
+ * Copyright (c) 2013.10.04
+ * M-net Telekommunikations GmbH
+ * 
+ * @author nixdorfan
+ * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
+ * 
  */
 
 package de.verbindungsraum.gsal.threads;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import de.bite.framework.context.extension.impl.ContextType;
 import de.bite.framework.utilities.system.SystemInformation;
 
 //~--- JDK imports ------------------------------------------------------------
-
-import java.nio.file.FileSystems;
-import java.nio.file.Paths;
-import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchEvent;
-import java.nio.file.WatchKey;
-import java.nio.file.WatchService;
 
 import java.util.concurrent.TimeUnit;
 import java.util.HashMap;
