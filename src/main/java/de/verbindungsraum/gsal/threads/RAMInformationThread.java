@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.10.04
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.verbindungsraum.gsal.threads.RAMInformationThread.java 1.0 | 2013.12.13 bas | UTF8 | tab 2
  */
 
 package de.verbindungsraum.gsal.threads;
@@ -15,6 +12,9 @@ package de.verbindungsraum.gsal.threads;
 import de.bite.framework.utilities.system.SystemInformation;
 
 //~--- JDK imports ------------------------------------------------------------
+
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
 
 import java.util.concurrent.TimeUnit;
 import java.util.HashMap;
@@ -35,9 +35,14 @@ public class RAMInformationThread extends DefaultGSALThread
   public void run()
   {
 
-    HashMap< Long, Long > sysValues = new HashMap< Long, Long >();
+    HashMap< Long, Long > freeMemory = new HashMap< Long, Long >();
+    HashMap< Long, Long > usedMemory = new HashMap< Long, Long >();
+    HashMap< Long, Long > maxMemory  = new HashMap< Long, Long >();
+    MemoryMXBean          mBean      = ManagementFactory.getMemoryMXBean();
 
-    this.context.setObject("sysvals", sysValues);
+    this.context.setObject("freeMemory", freeMemory);
+    this.context.setObject("usedMemory", usedMemory);
+    this.context.setObject("maxMemory", maxMemory);
 
     try
     {
@@ -45,10 +50,19 @@ public class RAMInformationThread extends DefaultGSALThread
       {
         TimeUnit.SECONDS.sleep(5);
 
-        HashMap< Long, Long > sysVals = (HashMap< Long, Long >)this.context.getObject("sysvals");
+        freeMemory = (HashMap< Long, Long >)this.context.getObject("freeMemory");
+        usedMemory = (HashMap< Long, Long >)this.context.getObject("usedMemory");
+        maxMemory  = (HashMap< Long, Long >)this.context.getObject("maxMemory");
 
-        sysVals.put(System.currentTimeMillis(), SystemInformation.getFreeMemoryInMB());
-        this.context.getLogger().info("RAM: " + SystemInformation.getFreeMemoryInMB());
+        Long actual  = System.currentTimeMillis();
+        Long free    = ((((mBean.getHeapMemoryUsage().getMax()) / 1024 / 1024) - (mBean.getHeapMemoryUsage().getUsed()) / 1024 / 1024));
+        Long maximal = (((mBean.getHeapMemoryUsage().getMax()) / 1024 / 1024));
+        Long used    = (mBean.getHeapMemoryUsage().getUsed() / 1024 / 1024);
+
+        freeMemory.put(actual, free);
+        usedMemory.put(actual, used);
+        maxMemory.put(actual, maximal);
+        this.context.getLogger().info("RAM [benutzt]: " + used + " MB    ||   RAM [verfuegbar]: " + maximal + " MB");
       }
     }
     catch(Exception ex)
