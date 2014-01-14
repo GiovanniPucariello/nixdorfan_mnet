@@ -1,160 +1,141 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.bite</groupId>
-  <artifactId>framework</artifactId>
-  <packaging>jar</packaging>
-  <name>bite.framework</name>
-  <version>3.8.0</version>
-  <!-- Simple Usage Context. Keine ContextTypes oder ContextStatus Types mehr 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.bite</groupId>
+    <artifactId>framework</artifactId>
+    <packaging>jar</packaging>
+    <name>bite.framework</name>
+    <version>4.0.0</version>
+    <!-- Simple Usage Context. Keine ContextTypes oder ContextStatus Types mehr 
        bzw. es muss nicht mehr direkt geschrieben werden
     -->
-  <url>http://maven.apache.org</url>
-<distributionManagement>
-   <!-- <repository>
-        <id>main-nixdorfan-releases</id>
-        <name>main-nixdorfan-releases</name>
-        <url>http://192.168.2.107:8080/artifactory-2.1.0/libs-releases-local</url>
-    </repository> -->
-</distributionManagement>
-  <repositories>
-  <!-- 
- 	<repository>
-    	<id>central</id>
-    	<name>Maven Repository Switchboard</name>
-    	<url>http://repo1.maven.org/maven2</url>
-	</repository>-->
-    <!-- <repository>
-        <id>main-nixdorfan-releases</id>
-        <name>main-nixdorfan-releases</name>
-        <url>http://192.168.2.107:8080/artifactory-2.1.0/libs-releases-local</url>
-    </repository> -->
-      <repository>
-     <id>EclipseLink Repo</id>
-     <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
-     <!-- use this for javax.persistence
-     <snapshots>
-        <enabled>true</enabled>
-     </snapshots> -->
-  </repository>
-    <repository>
-      <id>unknown-jars-temp-repo</id>
-      <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
-      <url>file:${project.basedir}/lib</url>
-    </repository>
-  </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.16</version>
-      <scope>compile</scope>
-    </dependency>
-    <!-- 
-    <dependency> 
-  	  <groupId>org-jdesktop-layout.jar</groupId>
-  	  <artifactId>org-jdesktop-layout.jar</artifactId>
-  	  <version>1.0</version>
-      <scope>compile</scope>
-    </dependency>   
-    <dependency> 
-  		<groupId>swing-layout</groupId>
-  		<artifactId>swing-layout</artifactId>
-  		<version>1.0.3</version>
-      <scope>compile</scope>
-    </dependency>  
-    --> 
-    <dependency> 	
-  		<groupId>jsr181-api.jar</groupId>
-  		<artifactId>jsr181-api.jar</artifactId>
-  		<version>1.0</version>
-      <scope>compile</scope>
-    </dependency>   
-    <dependency> 	
-  		<groupId>xerces.jar</groupId>
-  		<artifactId>xerces.jar</artifactId>
-  		<version>1.0</version>
-        <scope>compile</scope>
-    </dependency>  
-    <dependency> 	
-		<groupId>mysql-connector-java</groupId>
-  		<artifactId>mysql-connector-java</artifactId>
-  		<version>5.1.6</version>
-        <scope>compile</scope>
-    </dependency> 
-    <dependency>    
-      	<groupId>org.postgres</groupId>
-  		<artifactId>postgresql-8-4.jar</artifactId>
-  		<version>8-4</version>
-        <scope>compile</scope>
-    </dependency>     
-	<dependency>
-		<groupId>com.sun.jdmk</groupId>
-		<artifactId>jmxtools</artifactId>
-		<version>1.2.1</version>      
-		<scope>compile</scope>
-	</dependency>
-  <dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>eclipselink</artifactId>
-    <version>2.0.0</version>
-    <scope>compile</scope>
-  </dependency>
-     <dependency>
-      <groupId>commons-net</groupId>
-      <artifactId>commons-net</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-<dependency>
-	<groupId>ch.ethz.ganymed</groupId>
-	<artifactId>ganymed-ssh2</artifactId>
-	<version>build251beta1</version>
-</dependency>
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>1</version>
-    </dependency>
-  </dependencies>
-  <build>
-  	<plugins>  
-    	<plugin>
-        	<artifactId>maven-compiler-plugin</artifactId>
-        	<configuration>
-          		<source>1.7</source>
-          		<target>1.7</target>
-        	</configuration>
-      	</plugin>
-		<plugin>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<version>2.2-beta-4</version>
-			<configuration>
-				<descriptorRefs>
-					<descriptorRef>jar-with-dependencies</descriptorRef>
-				</descriptorRefs>
-				<!--<archive>
-					<manifest>
-						<mainClass>de.bite.main.Starter</mainClass>
-					</manifest>
-				</archive>
-				-->
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>attached</goal>
-						</goals>
-					</execution>
-				</executions>
-			</configuration>
-		</plugin>
-    </plugins>
-  </build>
+    <url>http://maven.apache.org</url>
+    <distributionManagement>
+        <!-- <repository>
+            <id>main-nixdorfan-releases</id>
+            <name>main-nixdorfan-releases</name>
+            <url>http://192.168.2.107:8080/artifactory-2.1.0/libs-releases-local</url>
+        </repository> -->
+    </distributionManagement>
+    <repositories>
+        <!-- 
+        <repository>
+        <id>central</id>
+        <name>Maven Repository Switchboard</name>
+        <url>http://repo1.maven.org/maven2</url>
+        </repository>-->
+        <!-- <repository>
+            <id>main-nixdorfan-releases</id>
+            <name>main-nixdorfan-releases</name>
+            <url>http://192.168.2.107:8080/artifactory-2.1.0/libs-releases-local</url>
+        </repository> -->
+        <repository>
+            <id>EclipseLink Repo</id>
+            <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
+            <!-- use this for javax.persistence
+            <snapshots>
+               <enabled>true</enabled>
+            </snapshots> -->
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency> 	
+            <groupId>xerces.jar</groupId>
+            <artifactId>xerces.jar</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency> 
+        <!-- neue mysql-JDBC Dependency auf Version 5.1.28 --> 
+        <dependency> 	
+            <groupId>com.mysql.jdbc</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.28</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- neue Postgres JDBC Dependency auf Version 9.3 --> 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.3-1100-jdbc41</version>
+        </dependency>
+        <!-- Oracle 10 JDBC -->
+        <dependency> 
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>10.2.0.3.0</version>
+        </dependency>        
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.ethz.ganymed</groupId>
+            <artifactId>ganymed-ssh2</artifactId>
+            <version>build251beta1</version>
+        </dependency>
+        <!-- neueste Version H2SQL Datenbank Version 1.3.174-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.3.174</version>
+        </dependency>
+        <!-- neueste Version HSQL Datenbank Version 2.3.1-->
+        <dependency>
+            <groupId>hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.1</version>
+        </dependency>  
+        <dependency>
+            <groupId>hsqldb.tool</groupId>
+            <artifactId>sqltool</artifactId>
+            <version>2.3.1</version>
+        </dependency>  
+    </dependencies>
+    <build>
+        <plugins>  
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-4</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <!--<archive>
+                            <manifest>
+                                    <mainClass>de.bite.main.Starter</mainClass>
+                            </manifest>
+                    </archive>
+                    -->
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>attached</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

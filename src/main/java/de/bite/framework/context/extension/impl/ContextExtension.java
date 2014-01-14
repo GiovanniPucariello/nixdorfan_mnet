@@ -74,8 +74,6 @@ public class ContextExtension implements IContextExtension, Serializable
   {
     if(!this.name.equals("not set"))
     {
-
-      // this.context.getLogger().error(Constants.error_message + name + " BEREITS GESETZT ");
       throw new ContextExtensionException(Constants.warning_message + " ContextExtension-Name ist bereits gesetzt");
     }
 
@@ -99,8 +97,7 @@ public class ContextExtension implements IContextExtension, Serializable
     }
     catch(Exception ex)
     {
-
-      // this.context.getLogger().error(Constants.error_message + " set(Object object) :: " + object.toString() + "  " + ex.getLocalizedMessage());
+      this.context.getLogger().error(Constants.error_message + " set(Object object) :: " + object.toString() + "  " + ex.getLocalizedMessage());
     }
   }
 
@@ -115,15 +112,11 @@ public class ContextExtension implements IContextExtension, Serializable
     {
       if((this.objectNameStatus.get(objectToReturn) == ContextStatus.CONVERSATION_AKTIV) || (this.objectNameStatus.get(objectToReturn) == ContextStatus.AKTIV))
       {
-
-        // this.context.getLogger().info(Constants.info_message + " Object == " + objectToReturn + " ::::: Status == " + this.objectNameStatus.get(objectToReturn) + " ::::: Timestamp == " +
-        // this.objectNameTime.get(objectToReturn));
         return this.objectNameObject.get(objectToReturn);
       }
     }
 
     this.context.getLogger().info(Constants.warning_message + " get aktives Object :: NICHT ERFOLGREICH fuer ConstextExtension " + this.getName());
-
     return null;
   }
 
@@ -142,27 +135,18 @@ public class ContextExtension implements IContextExtension, Serializable
 
     if(!this.objectNameConversation.containsValue(conversationFlow))
     {
-
-      // this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " +
-      // this.getName());
-      return null;
+      throw new ContextExtensionException(Constants.warning_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " NICHT vorhanden fuer " + this.getName());
     }
 
     for(Object objectToReturn : this.objectNameConversation.keySet())
     {
       if((this.objectNameConversation.get(objectToReturn).equals(conversationFlow)))
       {
-
-        // this.context.getLogger().info(Constants.info_message + " get( String conversationFlow ) aktives Object fuer Conversation-Flow :: " + conversationFlow + " ERFOLGREICH == " + objectToReturn +
-        // " fuer " + this.getName());
         return this.objectNameObject.get(objectToReturn);
       }
     }
 
-    this.context.getLogger().info(Constants.warning_message + " get( String conversationFlow ) aktives Object :: NICHT definierbar fuer " + this.getName());
-
-    return null;
-
+    throw new ContextExtensionException(Constants.warning_message + " get( String conversationFlow ) aktives Object :: NICHT definierbar fuer " + this.getName());
   }
 
   /**
@@ -210,11 +194,10 @@ public class ContextExtension implements IContextExtension, Serializable
       if(status.equals(ContextStatus.CONVERSATION_AKTIV))
       {
         this.objectNameConversation.put(objektName, contextFlow);
-
-        // this.context.getLogger().info(Constants.info_message + " set(Object object) :: Conversation-Status wird mit verarbeitet fuer " + this.getName());
+        this.context.getLogger().info(Constants.info_message + " set(Object object) :: Conversation-Status wird mit verarbeitet fuer " + this.getName());
       }
 
-      // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer " + this.getName());
+      this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer ERSTEN Eintrag fuer " + this.getName());
       return true;
     }
     else if(status.equals(ContextStatus.CONVERSATION_AKTIV))
@@ -250,12 +233,9 @@ public class ContextExtension implements IContextExtension, Serializable
              */
             this.objectNameConversation.put(objektName, contextFlow);
 
-            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " +
-            // this.getName());
-
-            /**  */
-            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
+            this.context.getLogger().info(Constants.info_message + " set(Object object) :: aktuelles Objekt unter diesem context-Flow wird ueberschrieben context-Flow == " + contextFlow + " fuer " + this.getName());
             return true;
+            
           }
           catch(Exception ex)
           {
@@ -264,7 +244,7 @@ public class ContextExtension implements IContextExtension, Serializable
         }
       }
 
-      // this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
+      this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
       return false;
     }
     else
@@ -291,7 +271,7 @@ public class ContextExtension implements IContextExtension, Serializable
             this.objectNameTime.put(objektName, new GregorianCalendar().getTimeInMillis());
             this.objectNameStatus.put(objektName, ContextStatus.AKTIV);
 
-            // this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
+            this.context.getLogger().info(Constants.info_message + " set(Object object) :: ERFOLGREICH fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
             return true;
           }
           catch(Exception ex)
@@ -301,7 +281,7 @@ public class ContextExtension implements IContextExtension, Serializable
         }
       }
 
-      // this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
+      this.context.getLogger().info(Constants.warning_message + " set(Object object) :: UNKLAR fuer Erweiterung Objektliste und Aktivitaets-Zustand Objekt fuer " + this.getName());
       return false;
     }
 

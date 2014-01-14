@@ -55,17 +55,6 @@ import java.util.Set;
 //~--- classes ----------------------------------------------------------------
 
 /**
- *                      AbstractContext
- *                      enthaelt Configuratoren fuer Teilbereiche oder Methoden fuer einzelne Objekte
- *                      Implementiert ueber Reflection
- *
- * @version 1.0.10
- * @author      nixdorfan ( Dr. Andreas Maximilian Kurt Wilhelm Nixdorf - Tannenberg )
- *                      bi/te - biologisch-technischer verbindungsraum -
- *                      Sept. 2011
- */
-
-/**
  *
  * Abstrakte Klasse AbstractContext </ br>
  * alle default methoden implemetiert </ br>
