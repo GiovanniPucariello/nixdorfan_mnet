@@ -1,11 +1,8 @@
-/**
- *
- * Copyright (c) 2013.10.04
- * M-net Telekommunikations GmbH
- * 
- * @author nixdorfan
- * Java-JDK : Java(TM) SE Runtime Environment 1.7.0_04-b22
- * 
+/*
+ * ||
+ * netbeans 201306052037 | 1.23
+ * Java(TM) SE Runtime Environment 1.7.0_25-b15 (mixed mode little endian)
+ * de.bite.framework.context.impl.SimpleUsageContext.java 1.0 | 2013.12.21 bas | UTF8 | tab 2
  */
 
 package de.bite.framework.context.impl;
@@ -19,6 +16,8 @@ import de.bite.framework.context.extension.impl.ContextType;
 
 //~--- JDK imports ------------------------------------------------------------
 
+import java.io.Serializable;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -28,7 +27,7 @@ import java.util.Set;
  *
  * @author nixdorfan
  */
-public class SimpleUsageContext extends AbstractContext
+public class SimpleUsageContext extends AbstractContext implements Serializable
 {
 
   //~--- methods --------------------------------------------------------------

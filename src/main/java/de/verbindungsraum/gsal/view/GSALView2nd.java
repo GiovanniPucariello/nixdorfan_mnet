@@ -48,13 +48,14 @@ public class GSALView2nd extends javax.swing.JFrame
   private String                pathToFileOrDirectory;
   private Server                server;
 
-  // Variables declaration - do not modify//GEN-BEGIN:variables
+   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JMenuBar  jMenuBar1;
   private javax.swing.JPanel    mainPanel;
   private javax.swing.JMenuItem menuItemServerStart;
   private javax.swing.JMenuItem menuItemServerStop;
   private javax.swing.JMenu     menuModuls;
   private javax.swing.JMenu     menuTools;
+ // End of variables declaration//GEN-END:variables
 
   //~--- constructors ---------------------------------------------------------
 
@@ -148,7 +149,7 @@ public class GSALView2nd extends javax.swing.JFrame
    */
   @SuppressWarnings("unchecked")
 
-  // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+ // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents()
   {
 
@@ -197,7 +198,7 @@ public class GSALView2nd extends javax.swing.JFrame
     setJMenuBar(jMenuBar1);
     pack();
 
-  }    // </editor-fold>//GEN-END:initComponents
+  }// End of variables declaration//GEN-END:variables
 
   /**
    * 
@@ -303,8 +304,6 @@ public class GSALView2nd extends javax.swing.JFrame
       }
     });
   }
-
-  // End of variables declaration//GEN-END:variables
 }
 
 
